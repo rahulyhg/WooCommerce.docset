@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class CssConvertHslColorsMinifierPlugin | WooCommerce</title>
+
+	<script type="text/javascript" src="resources/combined.js?843538251"></script>
+	<script type="text/javascript" src="elementlist.js?2762052405"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?2450451432" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?1319793728" />
+
+</head>
+
+<body>
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class CssConvertHslColorsMinifierPlugin</h1>
+
+
+	<div class="description">
+	
+<p>This <code><a href="class-aCssMinifierPlugin.html">aCssMinifierPlugin</a></code> will convert a color value in hsl notation to
+hexadecimal notation.</p>
+
+<p>Example:</p>
+
+<pre>
+color: hsl(<span class="php-num">232</span>,<span
+class="php-num">36</span>%,<span class="php-num">48</span>%);
+</pre>
+
+<p>Will get converted to:</p>
+
+<pre>
+color:<span class="php-comment">#4e5aa7;</span>
+</pre>
+
+	</div>
+
+	<dl class="tree well">
+		<dd style="padding-left:0px">
+			<a href="class-aCssMinifierPlugin.html"><span>aCssMinifierPlugin</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>CssConvertHslColorsMinifierPlugin</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		
+		<b>Package:</b> <a href="package-CssMin.html">CssMin</a>\<a href="package-CssMin.Minifier.html">Minifier</a>\<a href="package-CssMin.Minifier.Plugins.html">Plugins</a><br />
+
+				<b>Copyright:</b>
+				2008 - 2011 Joe Scylla &lt;<a
+href="mailto:joe.scylla&#64;gmail.com">joe.scylla&#64;<!---->gmail.com</a>&gt;<br />
+				<b>License:</b>
+				<a href="http://opensource.org/licenses/mit-license.php">MIT License</a><br />
+				<b>Author:</b>
+				Joe Scylla &lt;<a
+href="mailto:joe.scylla&#64;gmail.com">joe.scylla&#64;<!---->gmail.com</a>&gt;<br />
+				<b>Version:</b>
+				3.0.1<br />
+				<b>Link:</b>
+				<a href="http://code.google.com/p/cssmin/">http://code.google.com/p/cssmin/</a><br />
+		<b>Located at</b> <a href="source-class-CssConvertHslColorsMinifierPlugin.html#3379-3505" title="Go to source code">includes/libraries/class-cssmin.php</a><br />
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped" id="methods">
+		<tr data-order="apply" id="_apply">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_apply">#</a>
+			<code><a href="source-class-CssConvertHslColorsMinifierPlugin.html#3407-3420" title="Go to source code">apply</a>( <span><code><a href="class-aCssToken.html">aCssToken</a></code> <var>&amp; $token</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Implements aCssMinifierPlugin::minify().</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Implements aCssMinifierPlugin::minify().</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$token</var></dt>
+						<dd><code><code><a href="class-aCssToken.html">aCssToken</a></code></code><br>$token Token to process</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>Return TRUE to break the processing of this token; FALSE to continue<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getTriggerTokens" id="_getTriggerTokens">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getTriggerTokens">#</a>
+			<code><a href="source-class-CssConvertHslColorsMinifierPlugin.html#3421-3434" title="Go to source code">getTriggerTokens</a>( )</code>
+
+			<div class="description short">
+				
+<p>Implements aMinifierPlugin::getTriggerTokens()</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Implements aMinifierPlugin::getTriggerTokens()</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+		<h3>Methods inherited from <a href="class-aCssMinifierPlugin.html#methods">aCssMinifierPlugin</a></h3>
+		<p class="elementList">
+			<code><a href="class-aCssMinifierPlugin.html#___construct">__construct()</a></code>
+		</p>
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+
+
+
+		<h2>Properties summary</h2>
+
+		<h3>Properties inherited from <a href="class-aCssMinifierPlugin.html#properties">aCssMinifierPlugin</a></h3>
+		<p class="elementList">
+			<code><a href="class-aCssMinifierPlugin.html#$configuration"><var>$configuration</var></a></code>, 
+			<code><a href="class-aCssMinifierPlugin.html#$minifier"><var>$minifier</var></a></code>
+		</p>
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		WooCommerce API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</body>
+</html>

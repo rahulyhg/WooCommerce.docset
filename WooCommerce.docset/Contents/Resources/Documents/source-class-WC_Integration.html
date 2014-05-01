@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+	<meta name="robots" content="noindex" />
+
+	<title>File includes/abstracts/abstract-wc-integration.php | WooCommerce</title>
+
+	<script type="text/javascript" src="resources/combined.js?843538251"></script>
+	<script type="text/javascript" src="elementlist.js?2762052405"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?2450451432" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?1319793728" />
+
+</head>
+
+<body>
+<div id="right">
+	<div id="rightInner">
+<pre id="source"><code><span id="1" class="l"><a class="l" href="#1"> 1 </a><span class="xlang">&lt;?php</span>
+</span><span id="2" class="l"><a class="l" href="#2"> 2 </a>
+</span><span id="3" class="l"><a class="l" href="#3"> 3 </a><span class="php-keyword1">if</span> ( ! <span class="php-keyword2">defined</span>( <span class="php-quote">'ABSPATH'</span> ) ) <span class="php-keyword1">exit</span>; <span class="php-comment">// Exit if accessed directly</span>
+</span><span id="4" class="l"><a class="l" href="#4"> 4 </a>
+</span><span id="5" class="l"><a class="l" href="#5"> 5 </a><span class="php-comment">/**
+</span></span><span id="6" class="l"><a class="l" href="#6"> 6 </a><span class="php-comment"> * WooCommerce Integration class
+</span></span><span id="7" class="l"><a class="l" href="#7"> 7 </a><span class="php-comment"> *
+</span></span><span id="8" class="l"><a class="l" href="#8"> 8 </a><span class="php-comment"> * Extended by individual integrations to offer additional functionality.
+</span></span><span id="9" class="l"><a class="l" href="#9"> 9 </a><span class="php-comment"> *
+</span></span><span id="10" class="l"><a class="l" href="#10">10 </a><span class="php-comment"> * @class       WC_Integration
+</span></span><span id="11" class="l"><a class="l" href="#11">11 </a><span class="php-comment"> * @extends     WC_Settings_API
+</span></span><span id="12" class="l"><a class="l" href="#12">12 </a><span class="php-comment"> * @version     2.0.0
+</span></span><span id="13" class="l"><a class="l" href="#13">13 </a><span class="php-comment"> * @package     WooCommerce/Abstracts
+</span></span><span id="14" class="l"><a class="l" href="#14">14 </a><span class="php-comment"> * @category    Abstract Class
+</span></span><span id="15" class="l"><a class="l" href="#15">15 </a><span class="php-comment"> * @author      WooThemes
+</span></span><span id="16" class="l"><a class="l" href="#16">16 </a><span class="php-comment"> */</span>
+</span><span id="17" class="l"><a class="l" href="#17">17 </a><span class="php-keyword1">abstract</span> <span class="php-keyword1">class</span> <a id="WC_Integration" href="#WC_Integration">WC_Integration</a> <span class="php-keyword1">extends</span> WC_Settings_API {
+</span><span id="18" class="l"><a class="l" href="#18">18 </a>
+</span><span id="19" class="l"><a class="l" href="#19">19 </a>    <span class="php-comment">/**
+</span></span><span id="20" class="l"><a class="l" href="#20">20 </a><span class="php-comment">     * Admin Options
+</span></span><span id="21" class="l"><a class="l" href="#21">21 </a><span class="php-comment">     *
+</span></span><span id="22" class="l"><a class="l" href="#22">22 </a><span class="php-comment">     * Setup the gateway settings screen.
+</span></span><span id="23" class="l"><a class="l" href="#23">23 </a><span class="php-comment">     * Override this in your gateway.
+</span></span><span id="24" class="l"><a class="l" href="#24">24 </a><span class="php-comment">     *
+</span></span><span id="25" class="l"><a class="l" href="#25">25 </a><span class="php-comment">     * @access public
+</span></span><span id="26" class="l"><a class="l" href="#26">26 </a><span class="php-comment">     * @return void
+</span></span><span id="27" class="l"><a class="l" href="#27">27 </a><span class="php-comment">     */</span>
+</span><span id="28" class="l"><a class="l" href="#28">28 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_admin_options" href="#_admin_options">admin_options</a>() { <span class="xlang">?&gt;</span>
+</span><span id="29" class="l"><a class="l" href="#29">29 </a>
+</span><span id="30" class="l"><a class="l" href="#30">30 </a>        &lt;h3&gt;<span class="xlang">&lt;?php</span> <span class="php-keyword1">echo</span> <span class="php-keyword1">isset</span>( <span class="php-var">$this</span>-&gt;method_title ) ? <span class="php-var">$this</span>-&gt;method_title : __( <span class="php-quote">'Settings'</span>, <span class="php-quote">'woocommerce'</span> ) ; <span class="xlang">?&gt;</span>&lt;/h3&gt;
+</span><span id="31" class="l"><a class="l" href="#31">31 </a>
+</span><span id="32" class="l"><a class="l" href="#32">32 </a>        <span class="xlang">&lt;?php</span> <span class="php-keyword1">echo</span> <span class="php-keyword1">isset</span>( <span class="php-var">$this</span>-&gt;method_description ) ? wpautop( <span class="php-var">$this</span>-&gt;method_description ) : <span class="php-quote">''</span>; <span class="xlang">?&gt;</span>
+</span><span id="33" class="l"><a class="l" href="#33">33 </a>
+</span><span id="34" class="l"><a class="l" href="#34">34 </a>        &lt;table <span class="php-keyword1">class</span>=<span class="php-quote">&quot;form-table&quot;</span>&gt;
+</span><span id="35" class="l"><a class="l" href="#35">35 </a>            <span class="xlang">&lt;?php</span> <span class="php-var">$this</span>-&gt;generate_settings_html(); <span class="xlang">?&gt;</span>
+</span><span id="36" class="l"><a class="l" href="#36">36 </a>        &lt;/table&gt;
+</span><span id="37" class="l"><a class="l" href="#37">37 </a>
+</span><span id="38" class="l"><a class="l" href="#38">38 </a>        &lt;!-- Section --&gt;
+</span><span id="39" class="l"><a class="l" href="#39">39 </a>        &lt;div&gt;&lt;input type=<span class="php-quote">&quot;hidden&quot;</span> name=<span class="php-quote">&quot;section&quot;</span> value=<span class="php-quote">&quot;&lt;?php echo </span><span class="php-var">$this</span><span class="php-quote">-&gt;id; ?&gt;&quot;</span> /&gt;&lt;/div&gt;
+</span><span id="40" class="l"><a class="l" href="#40">40 </a>
+</span><span id="41" class="l"><a class="l" href="#41">41 </a>        <span class="xlang">&lt;?php</span>
+</span><span id="42" class="l"><a class="l" href="#42">42 </a>    }
+</span><span id="43" class="l"><a class="l" href="#43">43 </a></span>}</code></pre>
+	</div>
+
+	<div id="footer">
+		WooCommerce API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</body>
+</html>

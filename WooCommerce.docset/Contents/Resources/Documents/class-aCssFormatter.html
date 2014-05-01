@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class aCssFormatter | WooCommerce</title>
+
+	<script type="text/javascript" src="resources/combined.js?843538251"></script>
+	<script type="text/javascript" src="elementlist.js?2762052405"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?2450451432" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?1319793728" />
+
+</head>
+
+<body>
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class aCssFormatter</h1>
+
+
+	<div class="description">
+	
+<p>Abstract formatter definition.</p>
+
+<p>Every formatter have to extend this class.</p>
+
+	</div>
+
+
+
+	<div>
+		<h3>Direct known subclasses</h3>
+		<p class="elementList">
+			<code><a href="class-CssOtbsFormatter.html">CssOtbsFormatter</a></code>, 
+			<code><a href="class-CssWhitesmithsFormatter.html">CssWhitesmithsFormatter</a></code>
+		</p>
+	</div>
+
+
+
+
+
+
+	<div class="alert alert-info">
+		<b>Abstract</b><br />
+		
+		
+		<b>Package:</b> <a href="package-CssMin.html">CssMin</a>\<a href="package-CssMin.Formatter.html">Formatter</a><br />
+
+				<b>Copyright:</b>
+				2008 - 2011 Joe Scylla &lt;<a
+href="mailto:joe.scylla&#64;gmail.com">joe.scylla&#64;<!---->gmail.com</a>&gt;<br />
+				<b>License:</b>
+				<a href="http://opensource.org/licenses/mit-license.php">MIT License</a><br />
+				<b>Author:</b>
+				Joe Scylla &lt;<a
+href="mailto:joe.scylla&#64;gmail.com">joe.scylla&#64;<!---->gmail.com</a>&gt;<br />
+				<b>Version:</b>
+				3.0.1<br />
+				<b>Link:</b>
+				<a href="http://code.google.com/p/cssmin/">http://code.google.com/p/cssmin/</a><br />
+		<b>Located at</b> <a href="source-class-aCssFormatter.html#267-318" title="Go to source code">includes/libraries/class-cssmin.php</a><br />
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped" id="methods">
+		<tr data-order="__construct" id="___construct">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___construct">#</a>
+			<code><a href="source-class-aCssFormatter.html#299-311" title="Go to source code">__construct</a>( <span>array <var>$tokens</var></span>, <span>string <var>$indent</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$padding</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Constructor.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Constructor.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$tokens</var></dt>
+						<dd><code>array</code><br>$tokens Array of CssToken</dd>
+						<dt><var>$indent</var></dt>
+						<dd><code>string</code><br>$indent Indent string [optional]</dd>
+						<dt><var>$padding</var></dt>
+						<dd><code>integer</code><br>$padding Declaration value padding [optional]</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="__toString" id="___toString">
+
+			<td class="attributes"><code>
+				abstract public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___toString">#</a>
+			<code><a href="source-class-aCssFormatter.html#312-317" title="Go to source code">__toString</a>( )</code>
+
+			<div class="description short">
+				
+<p>Returns the array of aCssToken as formatted string.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Returns the array of aCssToken as formatted string.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+
+
+
+		<h2>Properties summary</h2>
+		<table class="summary table table-bordered table-striped" id="properties">
+		<tr data-order="indent" id="$indent">
+			<td class="attributes"><code>
+				protected  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-aCssFormatter.html#281-286" title="Go to source code"><var>$indent</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$indent" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Indent string.</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Indent string.</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="padding" id="$padding">
+			<td class="attributes"><code>
+				protected  
+				integer
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-aCssFormatter.html#287-292" title="Go to source code"><var>$padding</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$padding" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Declaration padding.</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Declaration padding.</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="tokens" id="$tokens">
+			<td class="attributes"><code>
+				protected  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-aCssFormatter.html#293-298" title="Go to source code"><var>$tokens</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$tokens" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Tokens.</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Tokens.</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		WooCommerce API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</body>
+</html>

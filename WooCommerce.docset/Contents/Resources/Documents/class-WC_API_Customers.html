@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class WC_API_Customers | WooCommerce</title>
+
+	<script type="text/javascript" src="resources/combined.js?843538251"></script>
+	<script type="text/javascript" src="elementlist.js?2762052405"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?2450451432" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?1319793728" />
+
+</head>
+
+<body>
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class WC_API_Customers</h1>
+
+
+
+	<dl class="tree well">
+		<dd style="padding-left:0px">
+			<a href="class-WC_API_Resource.html"><span>WC_API_Resource</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>WC_API_Customers</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		
+		<b>Package:</b> <a href="package-WooCommerce.html">WooCommerce</a>\<a href="package-WooCommerce.API.html">API</a><br />
+
+				<b>Author:</b>
+				WooThemes<br />
+		<b>Located at</b> <a href="source-class-WC_API_Customers.html#15-498" title="Go to source code">includes/api/class-wc-api-customers.php</a><br />
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped" id="methods">
+		<tr data-order="__construct" id="___construct">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-WC_API_Customers.html">WC_API_Customers</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___construct">#</a>
+			<code><a href="source-class-WC_API_Customers.html#26-42" title="Go to source code">__construct</a>( <span><code><a href="class-WC_API_Server.html">WC_API_Server</a></code> <var>$server</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Setup class, overridden to provide customer data to order response</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Setup class, overridden to provide customer data to order response</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$server</var></dt>
+						<dd><code><code><a href="class-WC_API_Server.html">WC_API_Server</a></code></code><br>$server</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-WC_API_Customers.html">WC_API_Customers</a></code></code><br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							2.1<br />
+					</div>
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-WC_API_Resource.html#___construct">WC_API_Resource::__construct</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="register_routes" id="_register_routes">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_register_routes">#</a>
+			<code><a href="source-class-WC_API_Customers.html#44-79" title="Go to source code">register_routes</a>( <span>array <var>$routes</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Register the routes for this class</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Register the routes for this class</p>
+
+<p>GET /customers GET /customers/count GET /customers/&lt;id&gt; GET
+/customers/&lt;id&gt;/orders</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$routes</var></dt>
+						<dd><code>array</code><br>$routes</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							2.1<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_customers" id="_get_customers">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_customers">#</a>
+			<code><a href="source-class-WC_API_Customers.html#81-109" title="Go to source code">get_customers</a>( <span>array <var>$fields</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$filter</var> = <span class="php-keyword1">array</span>()</span>, <span>integer <var>$page</var> = <span class="php-num">1</span> </span> )</code>
+
+			<div class="description short">
+				
+<p>Get all customers</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get all customers</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$fields</var></dt>
+						<dd><code>array</code><br>$fields</dd>
+						<dt><var>$filter</var></dt>
+						<dd><code>array</code><br>$filter</dd>
+						<dt><var>$page</var></dt>
+						<dd><code>integer</code><br>$page</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							2.1<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_customer" id="_get_customer">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_customer">#</a>
+			<code><a href="source-class-WC_API_Customers.html#111-178" title="Go to source code">get_customer</a>( <span>integer <var>$id</var></span>, <span>string <var>$fields</var> = <span class="php-keyword1">null</span> </span> )</code>
+
+			<div class="description short">
+				
+<p>Get the customer for the given ID</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the customer for the given ID</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$id</var></dt>
+						<dd><code>integer</code><br>$id the customer ID</dd>
+						<dt><var>$fields</var></dt>
+						<dd><code>string</code><br>$fields</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							2.1<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_customers_count" id="_get_customers_count">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_customers_count">#</a>
+			<code><a href="source-class-WC_API_Customers.html#180-195" title="Go to source code">get_customers_count</a>( <span>array <var>$filter</var> = <span class="php-keyword1">array</span>() </span> )</code>
+
+			<div class="description short">
+				
+<p>Get the total number of customers</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the total number of customers</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$filter</var></dt>
+						<dd><code>array</code><br>$filter</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							2.1<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="create_customer" id="_create_customer">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_create_customer">#</a>
+			<code><a href="source-class-WC_API_Customers.html#198-211" title="Go to source code">create_customer</a>( <span>array <var>$data</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Create a customer</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Create a customer</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$data</var></dt>
+						<dd><code>array</code><br>$data</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br />
+					</div>
+
+
+					<h4>TODO</h4>
+					<div class="list">
+							implement in 2.2 with woocommerce_create_new_customer()<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="edit_customer" id="_edit_customer">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_edit_customer">#</a>
+			<code><a href="source-class-WC_API_Customers.html#213-229" title="Go to source code">edit_customer</a>( <span>integer <var>$id</var></span>, <span>array <var>$data</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Edit a customer</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Edit a customer</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$id</var></dt>
+						<dd><code>integer</code><br>$id the customer ID</dd>
+						<dt><var>$data</var></dt>
+						<dd><code>array</code><br>$data</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br />
+					</div>
+
+
+					<h4>TODO</h4>
+					<div class="list">
+							implement in 2.2<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="delete_customer" id="_delete_customer">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_delete_customer">#</a>
+			<code><a href="source-class-WC_API_Customers.html#231-246" title="Go to source code">delete_customer</a>( <span>integer <var>$id</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Delete a customer</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Delete a customer</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$id</var></dt>
+						<dd><code>integer</code><br>$id the customer ID</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br />
+					</div>
+
+
+					<h4>TODO</h4>
+					<div class="list">
+							enable along with PUT/POST in 2.2<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_customer_orders" id="_get_customer_orders">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_customer_orders">#</a>
+			<code><a href="source-class-WC_API_Customers.html#248-283" title="Go to source code">get_customer_orders</a>( <span>integer <var>$id</var></span>, <span>string <var>$fields</var> = <span class="php-keyword1">null</span> </span> )</code>
+
+			<div class="description short">
+				
+<p>Get the orders for a customer</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the orders for a customer</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$id</var></dt>
+						<dd><code>integer</code><br>$id the customer ID</dd>
+						<dt><var>$fields</var></dt>
+						<dd><code>string</code><br>$fields fields to include in response</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							2.1<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="add_customer_data" id="_add_customer_data">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_add_customer_data">#</a>
+			<code><a href="source-class-WC_API_Customers.html#349-399" title="Go to source code">add_customer_data</a>( <span>mixed <var>$order_data</var></span>, <span>mixed <var>$order</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Add customer data to orders</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Add customer data to orders</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$order_data</var></dt>
+						<dd><code>mixed</code><br>$order_data</dd>
+						<dt><var>$order</var></dt>
+						<dd><code>mixed</code><br>$order</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							2.1<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="modify_user_query" id="_modify_user_query">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_modify_user_query">#</a>
+			<code><a href="source-class-WC_API_Customers.html#401-414" title="Go to source code">modify_user_query</a>( <span>WP_User_Query <var>$query</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Modify the WP_User_Query to support filtering on the date the customer was
+created</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Modify the WP_User_Query to support filtering on the date the customer was
+created</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$query</var></dt>
+						<dd><code>WP_User_Query</code><br>$query</dd>
+					</dl></div>
+
+
+
+					<h4>Since</h4>
+					<div class="list">
+							2.1<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="validate_request" id="_validate_request">
+
+			<td class="attributes"><code>
+				 protected 
+				integer|WP_Error
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_validate_request">#</a>
+			<code><a href="source-class-WC_API_Customers.html#435-483" title="Go to source code">validate_request</a>( <span>string|integer <var>$id</var></span>, <span>string <var>$type</var></span>, <span>string <var>$context</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Validate the request by checking:</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Validate the request by checking:</p>
+
+<ol>
+	<li>the ID is a valid integer</li>
+
+	<li>the ID returns a valid WP_User</li>
+
+	<li>the current user has the proper permissions</li>
+</ol>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$id</var></dt>
+						<dd><code>string|integer</code><br>$id the customer ID</dd>
+						<dt><var>$type</var></dt>
+						<dd><code>string</code><br>$type the request type, unused because this method overrides the parent class</dd>
+						<dt><var>$context</var></dt>
+						<dd><code>string</code><br>$context the context of the request, either <code>read</code>, <code>edit</code>
+or <code>delete</code></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>integer|WP_Error</code><br>valid user ID or WP_Error if any of the checks fails<br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							2.1<br />
+					</div>
+					<h4>See</h4>
+					<div class="list">
+							<code><code><a href="class-WC_API_Resource.html#_validate_request">WC_API_Resource::validate_request()</a></code></code><br />
+					</div>
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-WC_API_Resource.html#_validate_request">WC_API_Resource::validate_request</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="is_readable" id="_is_readable">
+
+			<td class="attributes"><code>
+				 protected 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_is_readable">#</a>
+			<code><a href="source-class-WC_API_Customers.html#485-496" title="Go to source code">is_readable</a>( <span>integer|WP_Post <var>$post</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Check if the current user can read users</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Check if the current user can read users</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$post</var></dt>
+						<dd><code>integer|WP_Post</code><br>$post unused</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>true if the current user can read users, false otherwise<br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							2.1<br />
+					</div>
+					<h4>See</h4>
+					<div class="list">
+							<code><code><a href="class-WC_API_Resource.html#_is_readable">WC_API_Resource::is_readable()</a></code></code><br />
+					</div>
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-WC_API_Resource.html#_is_readable">WC_API_Resource::is_readable</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+		<h3>Methods inherited from <a href="class-WC_API_Resource.html#methods">WC_API_Resource</a></h3>
+		<p class="elementList">
+			<code><a href="class-WC_API_Resource.html#_delete">delete()</a></code>, 
+			<code><a href="class-WC_API_Resource.html#_filter_response_fields">filter_response_fields()</a></code>, 
+			<code><a href="class-WC_API_Resource.html#_is_deletable">is_deletable()</a></code>, 
+			<code><a href="class-WC_API_Resource.html#_is_editable">is_editable()</a></code>, 
+			<code><a href="class-WC_API_Resource.html#_maybe_add_meta">maybe_add_meta()</a></code>, 
+			<code><a href="class-WC_API_Resource.html#_merge_query_args">merge_query_args()</a></code>
+		</p>
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+
+
+
+		<h2>Properties summary</h2>
+		<table class="summary table table-bordered table-striped" id="properties">
+		<tr data-order="base" id="$base">
+			<td class="attributes"><code>
+				protected  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-WC_API_Customers.html#17-18" title="Go to source code"><var>$base</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$base" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>$base the route base</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>$base the route base</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		</table>
+
+		<h3>Properties inherited from <a href="class-WC_API_Resource.html#properties">WC_API_Resource</a></h3>
+		<p class="elementList">
+			<code><a href="class-WC_API_Resource.html#$server"><var>$server</var></a></code>
+		</p>
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		WooCommerce API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</body>
+</html>

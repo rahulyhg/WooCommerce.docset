@@ -1,0 +1,4157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class lessc | WooCommerce</title>
+
+	<script type="text/javascript" src="resources/combined.js?843538251"></script>
+	<script type="text/javascript" src="elementlist.js?2762052405"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?2450451432" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?1319793728" />
+
+</head>
+
+<body>
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class lessc</h1>
+
+
+	<div class="description">
+	
+<p>The LESS compiler and parser.</p>
+
+<p>Converting LESS to CSS is a three stage process. The incoming file is parsed
+by <code>lessc_parser</code> into a syntax tree, then it is compiled into
+another tree representing the CSS structure by <code>lessc</code>. The CSS tree
+is fed into a formatter, like <code>lessc_formatter</code> which then outputs
+CSS as a string.</p>
+
+<p>During the first compile, all values are <em>reduced</em>, which means that
+their types are brought to the lowest form before being dump as strings. This
+handles math equations, variable dereferences, and the like.</p>
+
+<p>The <code>parse</code> function of <code>lessc</code> is the entry point.</p>
+
+<p>In summary:</p>
+
+<p>The <code>lessc</code> class creates an instance of the parser, feeds it LESS
+code, then transforms the resulting tree to a CSS tree. This class also holds
+the evaluation context, such as all available mixins and variables at any given
+time.</p>
+
+<p>The <code>lessc_parser</code> class is only concerned with parsing its
+input.</p>
+
+<p>The <code>lessc_formatter</code> takes a CSS tree, and dumps it to a
+formatted string, handling things like indentation.</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		
+		
+
+		<b>Located at</b> <a href="source-class-lessc.html#14-2268" title="Go to source code">includes/libraries/class-lessc.php</a><br />
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped" id="methods">
+		<tr data-order="findImport" id="_findImport">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_findImport">#</a>
+			<code><a href="source-class-lessc.html#69-78" title="Go to source code">findImport</a>( <span>mixed <var>$url</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="fileExists" id="_fileExists">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_fileExists">#</a>
+			<code><a href="source-class-lessc.html#80-82" title="Go to source code">fileExists</a>( <span>mixed <var>$name</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="compressList" id="_compressList">
+
+			<td class="attributes"><code>
+				 public static
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_compressList">#</a>
+			<code><a href="source-class-lessc.html#84-87" title="Go to source code">compressList</a>( <span>mixed <var>$items</var></span>, <span>mixed <var>$delim</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="preg_quote" id="_preg_quote">
+
+			<td class="attributes"><code>
+				 public static
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_preg_quote">#</a>
+			<code><a href="source-class-lessc.html#89-91" title="Go to source code">preg_quote</a>( <span>mixed <var>$what</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="tryImport" id="_tryImport">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_tryImport">#</a>
+			<code><a href="source-class-lessc.html#93-149" title="Go to source code">tryImport</a>( <span>mixed <var>$importPath</var></span>, <span>mixed <var>$parentBlock</var></span>, <span>mixed <var>$out</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="compileImportedProps" id="_compileImportedProps">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_compileImportedProps">#</a>
+			<code><a href="source-class-lessc.html#151-166" title="Go to source code">compileImportedProps</a>( <span>mixed <var>$props</var></span>, <span>mixed <var>$block</var></span>, <span>mixed <var>$out</var></span>, <span>mixed <var>$sourceParser</var></span>, <span>mixed <var>$importDir</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="compileBlock" id="_compileBlock">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_compileBlock">#</a>
+			<code><a href="source-class-lessc.html#168-211" title="Go to source code">compileBlock</a>( <span>mixed <var>$block</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Recursively compiles a block.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Recursively compiles a block.</p>
+
+<p>A block is analogous to a CSS block in most cases. A single LESS document is
+encapsulated in a block when parsed, but it does not have parent tags so all of
+it's children appear on the root level when compiled.</p>
+
+<p>Blocks are made up of props and children.</p>
+
+<p>Props are property instructions, array tuples which describe an action to be
+taken, eg. write a property, set a variable, mixin a block.</p>
+
+<p>The children of a block are just all the blocks that are defined within. This
+is used to look up mixins when performing a mixin.</p>
+
+<p>Compiling the block involves pushing a fresh environment on the stack, and
+iterating through the props, compiling each one.</p>
+
+<p>See lessc::compileProp()</p>
+
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="compileCSSBlock" id="_compileCSSBlock">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_compileCSSBlock">#</a>
+			<code><a href="source-class-lessc.html#213-225" title="Go to source code">compileCSSBlock</a>( <span>mixed <var>$block</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="compileMedia" id="_compileMedia">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_compileMedia">#</a>
+			<code><a href="source-class-lessc.html#227-250" title="Go to source code">compileMedia</a>( <span>mixed <var>$media</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="mediaParent" id="_mediaParent">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_mediaParent">#</a>
+			<code><a href="source-class-lessc.html#252-261" title="Go to source code">mediaParent</a>( <span>mixed <var>$scope</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="compileNestedBlock" id="_compileNestedBlock">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_compileNestedBlock">#</a>
+			<code><a href="source-class-lessc.html#263-272" title="Go to source code">compileNestedBlock</a>( <span>mixed <var>$block</var></span>, <span>mixed <var>$selectors</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="compileRoot" id="_compileRoot">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_compileRoot">#</a>
+			<code><a href="source-class-lessc.html#274-279" title="Go to source code">compileRoot</a>( <span>mixed <var>$root</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="compileProps" id="_compileProps">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_compileProps">#</a>
+			<code><a href="source-class-lessc.html#281-286" title="Go to source code">compileProps</a>( <span>mixed <var>$block</var></span>, <span>mixed <var>$out</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="deduplicate" id="_deduplicate">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_deduplicate">#</a>
+			<code><a href="source-class-lessc.html#288-309" title="Go to source code">deduplicate</a>( <span>mixed <var>$lines</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Deduplicate lines in a block. Comments are not deduplicated. If a duplicate
+rule is detected, the comments immediately preceding each occurence are
+consolidated.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Deduplicate lines in a block. Comments are not deduplicated. If a duplicate
+rule is detected, the comments immediately preceding each occurence are
+consolidated.</p>
+
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="sortProps" id="_sortProps">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_sortProps">#</a>
+			<code><a href="source-class-lessc.html#311-353" title="Go to source code">sortProps</a>( <span>mixed <var>$props</var></span>, <span>mixed <var>$split</var> = <span class="php-keyword1">false</span></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="compileMediaQuery" id="_compileMediaQuery">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_compileMediaQuery">#</a>
+			<code><a href="source-class-lessc.html#355-389" title="Go to source code">compileMediaQuery</a>( <span>mixed <var>$queries</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="multiplyMedia" id="_multiplyMedia">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_multiplyMedia">#</a>
+			<code><a href="source-class-lessc.html#391-416" title="Go to source code">multiplyMedia</a>( <span>mixed <var>$env</var></span>, <span>mixed <var>$childQueries</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="expandParentSelectors" id="_expandParentSelectors">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_expandParentSelectors">#</a>
+			<code><a href="source-class-lessc.html#418-427" title="Go to source code">expandParentSelectors</a>( <span>mixed <var>&amp; $tag</var></span>, <span>mixed <var>$replace</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="findClosestSelectors" id="_findClosestSelectors">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_findClosestSelectors">#</a>
+			<code><a href="source-class-lessc.html#429-441" title="Go to source code">findClosestSelectors</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="multiplySelectors" id="_multiplySelectors">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_multiplySelectors">#</a>
+			<code><a href="source-class-lessc.html#445-473" title="Go to source code">multiplySelectors</a>( <span>mixed <var>$selectors</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="compileSelectors" id="_compileSelectors">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_compileSelectors">#</a>
+			<code><a href="source-class-lessc.html#476-489" title="Go to source code">compileSelectors</a>( <span>mixed <var>$selectors</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="eq" id="_eq">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_eq">#</a>
+			<code><a href="source-class-lessc.html#491-493" title="Go to source code">eq</a>( <span>mixed <var>$left</var></span>, <span>mixed <var>$right</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="patternMatch" id="_patternMatch">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_patternMatch">#</a>
+			<code><a href="source-class-lessc.html#495-576" title="Go to source code">patternMatch</a>( <span>mixed <var>$block</var></span>, <span>mixed <var>$orderedArgs</var></span>, <span>mixed <var>$keywordArgs</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="patternMatchAll" id="_patternMatchAll">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_patternMatchAll">#</a>
+			<code><a href="source-class-lessc.html#578-592" title="Go to source code">patternMatchAll</a>( <span>mixed <var>$blocks</var></span>, <span>mixed <var>$orderedArgs</var></span>, <span>mixed <var>$keywordArgs</var></span>, <span>mixed <var>$skip</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="findBlocks" id="_findBlocks">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_findBlocks">#</a>
+			<code><a href="source-class-lessc.html#595-629" title="Go to source code">findBlocks</a>( <span>mixed <var>$searchIn</var></span>, <span>mixed <var>$path</var></span>, <span>mixed <var>$orderedArgs</var></span>, <span>mixed <var>$keywordArgs</var></span>, <span>mixed <var>$seen</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="zipSetArgs" id="_zipSetArgs">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_zipSetArgs">#</a>
+			<code><a href="source-class-lessc.html#633-672" title="Go to source code">zipSetArgs</a>( <span>mixed <var>$args</var></span>, <span>mixed <var>$orderedValues</var></span>, <span>mixed <var>$keywordValues</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="compileProp" id="_compileProp">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_compileProp">#</a>
+			<code><a href="source-class-lessc.html#675-808" title="Go to source code">compileProp</a>( <span>mixed <var>$prop</var></span>, <span>mixed <var>$block</var></span>, <span>mixed <var>$out</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="compileValue" id="_compileValue">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_compileValue">#</a>
+			<code><a href="source-class-lessc.html#811-884" title="Go to source code">compileValue</a>( <span>mixed <var>$value</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Compiles a primitive value into a CSS property value.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Compiles a primitive value into a CSS property value.</p>
+
+<p>Values in lessphp are typed by being wrapped in arrays, their format is
+typically:<br />
+array(type, contents [, additional_contents]*)</p>
+
+<p>The input is expected to be reduced. This function will not work on things
+like expressions and variables.</p>
+
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lib_pow" id="_lib_pow">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lib_pow">#</a>
+			<code><a href="source-class-lessc.html#886-889" title="Go to source code">lib_pow</a>( <span>mixed <var>$args</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lib_pi" id="_lib_pi">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lib_pi">#</a>
+			<code><a href="source-class-lessc.html#891-893" title="Go to source code">lib_pi</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lib_mod" id="_lib_mod">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lib_mod">#</a>
+			<code><a href="source-class-lessc.html#895-898" title="Go to source code">lib_mod</a>( <span>mixed <var>$args</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lib_tan" id="_lib_tan">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lib_tan">#</a>
+			<code><a href="source-class-lessc.html#900-902" title="Go to source code">lib_tan</a>( <span>mixed <var>$num</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lib_sin" id="_lib_sin">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lib_sin">#</a>
+			<code><a href="source-class-lessc.html#904-906" title="Go to source code">lib_sin</a>( <span>mixed <var>$num</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lib_cos" id="_lib_cos">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lib_cos">#</a>
+			<code><a href="source-class-lessc.html#908-910" title="Go to source code">lib_cos</a>( <span>mixed <var>$num</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lib_atan" id="_lib_atan">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lib_atan">#</a>
+			<code><a href="source-class-lessc.html#912-915" title="Go to source code">lib_atan</a>( <span>mixed <var>$num</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lib_asin" id="_lib_asin">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lib_asin">#</a>
+			<code><a href="source-class-lessc.html#917-920" title="Go to source code">lib_asin</a>( <span>mixed <var>$num</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lib_acos" id="_lib_acos">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lib_acos">#</a>
+			<code><a href="source-class-lessc.html#922-925" title="Go to source code">lib_acos</a>( <span>mixed <var>$num</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lib_sqrt" id="_lib_sqrt">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lib_sqrt">#</a>
+			<code><a href="source-class-lessc.html#927-929" title="Go to source code">lib_sqrt</a>( <span>mixed <var>$num</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lib_extract" id="_lib_extract">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lib_extract">#</a>
+			<code><a href="source-class-lessc.html#931-938" title="Go to source code">lib_extract</a>( <span>mixed <var>$value</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lib_isnumber" id="_lib_isnumber">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lib_isnumber">#</a>
+			<code><a href="source-class-lessc.html#940-942" title="Go to source code">lib_isnumber</a>( <span>mixed <var>$value</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lib_isstring" id="_lib_isstring">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lib_isstring">#</a>
+			<code><a href="source-class-lessc.html#944-946" title="Go to source code">lib_isstring</a>( <span>mixed <var>$value</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lib_iscolor" id="_lib_iscolor">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lib_iscolor">#</a>
+			<code><a href="source-class-lessc.html#948-950" title="Go to source code">lib_iscolor</a>( <span>mixed <var>$value</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lib_iskeyword" id="_lib_iskeyword">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lib_iskeyword">#</a>
+			<code><a href="source-class-lessc.html#952-954" title="Go to source code">lib_iskeyword</a>( <span>mixed <var>$value</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lib_ispixel" id="_lib_ispixel">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lib_ispixel">#</a>
+			<code><a href="source-class-lessc.html#956-958" title="Go to source code">lib_ispixel</a>( <span>mixed <var>$value</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lib_ispercentage" id="_lib_ispercentage">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lib_ispercentage">#</a>
+			<code><a href="source-class-lessc.html#960-962" title="Go to source code">lib_ispercentage</a>( <span>mixed <var>$value</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lib_isem" id="_lib_isem">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lib_isem">#</a>
+			<code><a href="source-class-lessc.html#964-966" title="Go to source code">lib_isem</a>( <span>mixed <var>$value</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lib_isrem" id="_lib_isrem">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lib_isrem">#</a>
+			<code><a href="source-class-lessc.html#968-970" title="Go to source code">lib_isrem</a>( <span>mixed <var>$value</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lib_rgbahex" id="_lib_rgbahex">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lib_rgbahex">#</a>
+			<code><a href="source-class-lessc.html#972-980" title="Go to source code">lib_rgbahex</a>( <span>mixed <var>$color</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lib_argb" id="_lib_argb">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lib_argb">#</a>
+			<code><a href="source-class-lessc.html#982-984" title="Go to source code">lib_argb</a>( <span>mixed <var>$color</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lib_data_uri" id="_lib_data_uri">
+
+			<td class="attributes"><code>
+				 protected 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lib_data_uri">#</a>
+			<code><a href="source-class-lessc.html#986-1017" title="Go to source code">lib_data_uri</a>( <span>array <var>$value</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Given an url, decide whether to output a regular link or the base64-encoded
+contents of the file</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Given an url, decide whether to output a regular link or the base64-encoded
+contents of the file</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$value</var></dt>
+						<dd><code>array</code><br>$value either an argument list (two strings) or a single string</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>formatted url(), either as a link or base64-encoded<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lib_e" id="_lib_e">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lib_e">#</a>
+			<code><a href="source-class-lessc.html#1020-1036" title="Go to source code">lib_e</a>( <span>mixed <var>$arg</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lib__sprintf" id="_lib__sprintf">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lib__sprintf">#</a>
+			<code><a href="source-class-lessc.html#1038-1064" title="Go to source code">lib__sprintf</a>( <span>mixed <var>$args</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lib_floor" id="_lib_floor">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lib_floor">#</a>
+			<code><a href="source-class-lessc.html#1066-1069" title="Go to source code">lib_floor</a>( <span>mixed <var>$arg</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lib_ceil" id="_lib_ceil">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lib_ceil">#</a>
+			<code><a href="source-class-lessc.html#1071-1074" title="Go to source code">lib_ceil</a>( <span>mixed <var>$arg</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lib_round" id="_lib_round">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lib_round">#</a>
+			<code><a href="source-class-lessc.html#1076-1085" title="Go to source code">lib_round</a>( <span>mixed <var>$arg</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lib_unit" id="_lib_unit">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lib_unit">#</a>
+			<code><a href="source-class-lessc.html#1087-1095" title="Go to source code">lib_unit</a>( <span>mixed <var>$arg</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="colorArgs" id="_colorArgs">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_colorArgs">#</a>
+			<code><a href="source-class-lessc.html#1097-1110" title="Go to source code">colorArgs</a>( <span>mixed <var>$args</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Helper function to get arguments for color manipulation functions. takes a
+list that contains a color like thing and a percentage</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Helper function to get arguments for color manipulation functions. takes a
+list that contains a color like thing and a percentage</p>
+
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lib_darken" id="_lib_darken">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lib_darken">#</a>
+			<code><a href="source-class-lessc.html#1112-1118" title="Go to source code">lib_darken</a>( <span>mixed <var>$args</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lib_lighten" id="_lib_lighten">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lib_lighten">#</a>
+			<code><a href="source-class-lessc.html#1120-1126" title="Go to source code">lib_lighten</a>( <span>mixed <var>$args</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lib_saturate" id="_lib_saturate">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lib_saturate">#</a>
+			<code><a href="source-class-lessc.html#1128-1134" title="Go to source code">lib_saturate</a>( <span>mixed <var>$args</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lib_desaturate" id="_lib_desaturate">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lib_desaturate">#</a>
+			<code><a href="source-class-lessc.html#1136-1142" title="Go to source code">lib_desaturate</a>( <span>mixed <var>$args</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lib_spin" id="_lib_spin">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lib_spin">#</a>
+			<code><a href="source-class-lessc.html#1144-1153" title="Go to source code">lib_spin</a>( <span>mixed <var>$args</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lib_fadeout" id="_lib_fadeout">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lib_fadeout">#</a>
+			<code><a href="source-class-lessc.html#1155-1159" title="Go to source code">lib_fadeout</a>( <span>mixed <var>$args</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lib_fadein" id="_lib_fadein">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lib_fadein">#</a>
+			<code><a href="source-class-lessc.html#1161-1165" title="Go to source code">lib_fadein</a>( <span>mixed <var>$args</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lib_hue" id="_lib_hue">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lib_hue">#</a>
+			<code><a href="source-class-lessc.html#1167-1170" title="Go to source code">lib_hue</a>( <span>mixed <var>$color</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lib_saturation" id="_lib_saturation">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lib_saturation">#</a>
+			<code><a href="source-class-lessc.html#1172-1175" title="Go to source code">lib_saturation</a>( <span>mixed <var>$color</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lib_lightness" id="_lib_lightness">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lib_lightness">#</a>
+			<code><a href="source-class-lessc.html#1177-1180" title="Go to source code">lib_lightness</a>( <span>mixed <var>$color</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lib_alpha" id="_lib_alpha">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lib_alpha">#</a>
+			<code><a href="source-class-lessc.html#1184-1188" title="Go to source code">lib_alpha</a>( <span>mixed <var>$value</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lib_fade" id="_lib_fade">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lib_fade">#</a>
+			<code><a href="source-class-lessc.html#1191-1195" title="Go to source code">lib_fade</a>( <span>mixed <var>$args</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lib_percentage" id="_lib_percentage">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lib_percentage">#</a>
+			<code><a href="source-class-lessc.html#1197-1200" title="Go to source code">lib_percentage</a>( <span>mixed <var>$arg</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lib_mix" id="_lib_mix">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lib_mix">#</a>
+			<code><a href="source-class-lessc.html#1205-1239" title="Go to source code">lib_mix</a>( <span>mixed <var>$args</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lib_contrast" id="_lib_contrast">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lib_contrast">#</a>
+			<code><a href="source-class-lessc.html#1241-1272" title="Go to source code">lib_contrast</a>( <span>mixed <var>$args</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lib_luma" id="_lib_luma">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lib_luma">#</a>
+			<code><a href="source-class-lessc.html#1274-1277" title="Go to source code">lib_luma</a>( <span>mixed <var>$color</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="assertColor" id="_assertColor">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_assertColor">#</a>
+			<code><a href="source-class-lessc.html#1280-1284" title="Go to source code">assertColor</a>( <span>mixed <var>$value</var></span>, <span>mixed <var>$error</var> = <span class="php-quote">&quot;expected color value&quot;</span></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="assertNumber" id="_assertNumber">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_assertNumber">#</a>
+			<code><a href="source-class-lessc.html#1286-1289" title="Go to source code">assertNumber</a>( <span>mixed <var>$value</var></span>, <span>mixed <var>$error</var> = <span class="php-quote">&quot;expecting number&quot;</span></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="assertArgs" id="_assertArgs">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_assertArgs">#</a>
+			<code><a href="source-class-lessc.html#1291-1308" title="Go to source code">assertArgs</a>( <span>mixed <var>$value</var></span>, <span>mixed <var>$expectedArgs</var></span>, <span>mixed <var>$name</var> = <span class="php-quote">&quot;&quot;</span></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="toHSL" id="_toHSL">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_toHSL">#</a>
+			<code><a href="source-class-lessc.html#1310-1343" title="Go to source code">toHSL</a>( <span>mixed <var>$color</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="toRGB_helper" id="_toRGB_helper">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_toRGB_helper">#</a>
+			<code><a href="source-class-lessc.html#1345-1354" title="Go to source code">toRGB_helper</a>( <span>mixed <var>$comp</var></span>, <span>mixed <var>$temp1</var></span>, <span>mixed <var>$temp2</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="toRGB" id="_toRGB">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_toRGB">#</a>
+			<code><a href="source-class-lessc.html#1356-1385" title="Go to source code">toRGB</a>( <span>mixed <var>$color</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Converts a hsl array into a color value in rgb. Expects H to be in range of 0
+to 360, S and L in 0 to 100</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Converts a hsl array into a color value in rgb. Expects H to be in range of 0
+to 360, S and L in 0 to 100</p>
+
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="clamp" id="_clamp">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_clamp">#</a>
+			<code><a href="source-class-lessc.html#1387-1389" title="Go to source code">clamp</a>( <span>mixed <var>$v</var></span>, <span>mixed <var>$max</var> = <span class="php-num">1</span></span>, <span>mixed <var>$min</var> = <span class="php-num">0</span></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="funcToColor" id="_funcToColor">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_funcToColor">#</a>
+			<code><a href="source-class-lessc.html#1391-1445" title="Go to source code">funcToColor</a>( <span>mixed <var>$func</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Convert the rgb, rgba, hsl color literals of function type as returned by the
+parser into values of color type.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Convert the rgb, rgba, hsl color literals of function type as returned by the
+parser into values of color type.</p>
+
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="reduce" id="_reduce">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_reduce">#</a>
+			<code><a href="source-class-lessc.html#1447-1558" title="Go to source code">reduce</a>( <span>mixed <var>$value</var></span>, <span>mixed <var>$forExpression</var> = <span class="php-keyword1">false</span></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="coerceColor" id="_coerceColor">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_coerceColor">#</a>
+			<code><a href="source-class-lessc.html#1562-1591" title="Go to source code">coerceColor</a>( <span>mixed <var>$value</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="coerceString" id="_coerceString">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_coerceString">#</a>
+			<code><a href="source-class-lessc.html#1594-1602" title="Go to source code">coerceString</a>( <span>mixed <var>$value</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="flattenList" id="_flattenList">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_flattenList">#</a>
+			<code><a href="source-class-lessc.html#1605-1610" title="Go to source code">flattenList</a>( <span>mixed <var>$value</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="toBool" id="_toBool">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_toBool">#</a>
+			<code><a href="source-class-lessc.html#1612-1615" title="Go to source code">toBool</a>( <span>mixed <var>$a</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="evaluate" id="_evaluate">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_evaluate">#</a>
+			<code><a href="source-class-lessc.html#1618-1661" title="Go to source code">evaluate</a>( <span>mixed <var>$exp</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="stringConcatenate" id="_stringConcatenate">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_stringConcatenate">#</a>
+			<code><a href="source-class-lessc.html#1663-1676" title="Go to source code">stringConcatenate</a>( <span>mixed <var>$left</var></span>, <span>mixed <var>$right</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="fixColor" id="_fixColor">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_fixColor">#</a>
+			<code><a href="source-class-lessc.html#1680-1687" title="Go to source code">fixColor</a>( <span>mixed <var>$c</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="op_number_color" id="_op_number_color">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_op_number_color">#</a>
+			<code><a href="source-class-lessc.html#1689-1693" title="Go to source code">op_number_color</a>( <span>mixed <var>$op</var></span>, <span>mixed <var>$lft</var></span>, <span>mixed <var>$rgt</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="op_color_number" id="_op_color_number">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_op_color_number">#</a>
+			<code><a href="source-class-lessc.html#1695-1700" title="Go to source code">op_color_number</a>( <span>mixed <var>$op</var></span>, <span>mixed <var>$lft</var></span>, <span>mixed <var>$rgt</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="op_color_color" id="_op_color_color">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_op_color_color">#</a>
+			<code><a href="source-class-lessc.html#1702-1730" title="Go to source code">op_color_color</a>( <span>mixed <var>$op</var></span>, <span>mixed <var>$left</var></span>, <span>mixed <var>$right</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lib_red" id="_lib_red">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lib_red">#</a>
+			<code><a href="source-class-lessc.html#1732-1739" title="Go to source code">lib_red</a>( <span>mixed <var>$color</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lib_green" id="_lib_green">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lib_green">#</a>
+			<code><a href="source-class-lessc.html#1741-1748" title="Go to source code">lib_green</a>( <span>mixed <var>$color</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="lib_blue" id="_lib_blue">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_lib_blue">#</a>
+			<code><a href="source-class-lessc.html#1750-1757" title="Go to source code">lib_blue</a>( <span>mixed <var>$color</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="op_number_number" id="_op_number_number">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_op_number_number">#</a>
+			<code><a href="source-class-lessc.html#1761-1795" title="Go to source code">op_number_number</a>( <span>mixed <var>$op</var></span>, <span>mixed <var>$left</var></span>, <span>mixed <var>$right</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="makeOutputBlock" id="_makeOutputBlock">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_makeOutputBlock">#</a>
+			<code><a href="source-class-lessc.html#1800-1808" title="Go to source code">makeOutputBlock</a>( <span>mixed <var>$type</var></span>, <span>mixed <var>$selectors</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="pushEnv" id="_pushEnv">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_pushEnv">#</a>
+			<code><a href="source-class-lessc.html#1811-1819" title="Go to source code">pushEnv</a>( <span>mixed <var>$block</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="popEnv" id="_popEnv">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_popEnv">#</a>
+			<code><a href="source-class-lessc.html#1822-1826" title="Go to source code">popEnv</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="set" id="_set">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_set">#</a>
+			<code><a href="source-class-lessc.html#1829-1831" title="Go to source code">set</a>( <span>mixed <var>$name</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get" id="_get">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get">#</a>
+			<code><a href="source-class-lessc.html#1835-1853" title="Go to source code">get</a>( <span>mixed <var>$name</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="injectVariables" id="_injectVariables">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_injectVariables">#</a>
+			<code><a href="source-class-lessc.html#1856-1869" title="Go to source code">injectVariables</a>( <span>mixed <var>$args</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="__construct" id="___construct">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___construct">#</a>
+			<code><a href="source-class-lessc.html#1871-1880" title="Go to source code">__construct</a>( <span>mixed <var>$fname</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Initialize any static state, can initialize parser for a file $opts isn't
+used yet</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Initialize any static state, can initialize parser for a file $opts isn't
+used yet</p>
+
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="compile" id="_compile">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_compile">#</a>
+			<code><a href="source-class-lessc.html#1882-1906" title="Go to source code">compile</a>( <span>mixed <var>$string</var></span>, <span>mixed <var>$name</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="compileFile" id="_compileFile">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_compileFile">#</a>
+			<code><a href="source-class-lessc.html#1908-1931" title="Go to source code">compileFile</a>( <span>mixed <var>$fname</var></span>, <span>mixed <var>$outFname</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="checkedCompile" id="_checkedCompile">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_checkedCompile">#</a>
+			<code><a href="source-class-lessc.html#1934-1940" title="Go to source code">checkedCompile</a>( <span>mixed <var>$in</var></span>, <span>mixed <var>$out</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="cachedCompile" id="_cachedCompile">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_cachedCompile">#</a>
+			<code><a href="source-class-lessc.html#1942-2004" title="Go to source code">cachedCompile</a>( <span>mixed <var>$in</var></span>, <span>boolean <var>$force</var> = <span class="php-keyword1">false</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Execute lessphp on a .less file or a lessphp cache structure</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Execute lessphp on a .less file or a lessphp cache structure</p>
+
+<p>The lessphp cache structure contains information about a specific less file
+having been parsed. It can be used as a hint for future calls to determine
+whether or not a rebuild is required.</p>
+
+<p>The cache structure contains two important keys that may be used
+externally:</p>
+
+<p>compiled: The final compiled CSS updated: The time (in seconds) the CSS was
+last compiled</p>
+
+<p>The cache structure is a plain-ol' PHP associative array and can be
+serialized and unserialized without a hitch.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$in</var></dt>
+						<dd><code>mixed</code><br>$in Input</dd>
+						<dt><var>$force</var></dt>
+						<dd><code>boolean</code><br>$force Force rebuild?</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br>lessphp cache structure<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="parse" id="_parse">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_parse">#</a>
+			<code><a href="source-class-lessc.html#2008-2031" title="Go to source code">parse</a>( <span>mixed <var>$str</var> = <span class="php-keyword1">null</span></span>, <span>mixed <var>$initialVariables</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="makeParser" id="_makeParser">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_makeParser">#</a>
+			<code><a href="source-class-lessc.html#2033-2038" title="Go to source code">makeParser</a>( <span>mixed <var>$name</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setFormatter" id="_setFormatter">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setFormatter">#</a>
+			<code><a href="source-class-lessc.html#2040-2042" title="Go to source code">setFormatter</a>( <span>mixed <var>$name</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="newFormatter" id="_newFormatter">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_newFormatter">#</a>
+			<code><a href="source-class-lessc.html#2044-2053" title="Go to source code">newFormatter</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setPreserveComments" id="_setPreserveComments">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setPreserveComments">#</a>
+			<code><a href="source-class-lessc.html#2055-2057" title="Go to source code">setPreserveComments</a>( <span>mixed <var>$preserve</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="registerFunction" id="_registerFunction">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_registerFunction">#</a>
+			<code><a href="source-class-lessc.html#2059-2061" title="Go to source code">registerFunction</a>( <span>mixed <var>$name</var></span>, <span>mixed <var>$func</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="unregisterFunction" id="_unregisterFunction">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_unregisterFunction">#</a>
+			<code><a href="source-class-lessc.html#2063-2065" title="Go to source code">unregisterFunction</a>( <span>mixed <var>$name</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setVariables" id="_setVariables">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setVariables">#</a>
+			<code><a href="source-class-lessc.html#2067-2069" title="Go to source code">setVariables</a>( <span>mixed <var>$variables</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="unsetVariable" id="_unsetVariable">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_unsetVariable">#</a>
+			<code><a href="source-class-lessc.html#2071-2073" title="Go to source code">unsetVariable</a>( <span>mixed <var>$name</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setImportDir" id="_setImportDir">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setImportDir">#</a>
+			<code><a href="source-class-lessc.html#2075-2077" title="Go to source code">setImportDir</a>( <span>mixed <var>$dirs</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="addImportDir" id="_addImportDir">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_addImportDir">#</a>
+			<code><a href="source-class-lessc.html#2079-2082" title="Go to source code">addImportDir</a>( <span>mixed <var>$dir</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="allParsedFiles" id="_allParsedFiles">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_allParsedFiles">#</a>
+			<code><a href="source-class-lessc.html#2084-2086" title="Go to source code">allParsedFiles</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="addParsedFile" id="_addParsedFile">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_addParsedFile">#</a>
+			<code><a href="source-class-lessc.html#2088-2090" title="Go to source code">addParsedFile</a>( <span>mixed <var>$file</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="throwError" id="_throwError">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_throwError">#</a>
+			<code><a href="source-class-lessc.html#2092-2100" title="Go to source code">throwError</a>( <span>mixed <var>$msg</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Uses the current value of $this-&gt;count to show line and line number</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Uses the current value of $this-&gt;count to show line and line number</p>
+
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="ccompile" id="_ccompile">
+
+			<td class="attributes"><code>
+				 public static
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_ccompile">#</a>
+			<code><a href="source-class-lessc.html#2104-2109" title="Go to source code">ccompile</a>( <span>mixed <var>$in</var></span>, <span>mixed <var>$out</var></span>, <span>mixed <var>$less</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="cexecute" id="_cexecute">
+
+			<td class="attributes"><code>
+				 public static
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_cexecute">#</a>
+			<code><a href="source-class-lessc.html#2111-2116" title="Go to source code">cexecute</a>( <span>mixed <var>$in</var></span>, <span>mixed <var>$force</var> = <span class="php-keyword1">false</span></span>, <span>mixed <var>$less</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+
+
+
+		<h2>Properties summary</h2>
+		<table class="summary table table-bordered table-striped" id="properties">
+		<tr data-order="VERSION" id="$VERSION">
+			<td class="attributes"><code>
+				public static 
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-lessc.html#41" title="Go to source code"><var>$VERSION</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$VERSION" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="TRUE" id="$TRUE">
+			<td class="attributes"><code>
+				public static 
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-lessc.html#43" title="Go to source code"><var>$TRUE</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$TRUE" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="FALSE" id="$FALSE">
+			<td class="attributes"><code>
+				public static 
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-lessc.html#44" title="Go to source code"><var>$FALSE</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$FALSE" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="libFunctions" id="$libFunctions">
+			<td class="attributes"><code>
+				protected  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-lessc.html#46" title="Go to source code"><var>$libFunctions</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$libFunctions" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="registeredVars" id="$registeredVars">
+			<td class="attributes"><code>
+				protected  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-lessc.html#47" title="Go to source code"><var>$registeredVars</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$registeredVars" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="preserveComments" id="$preserveComments">
+			<td class="attributes"><code>
+				protected  
+				boolean
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-lessc.html#48" title="Go to source code"><var>$preserveComments</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$preserveComments" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="vPrefix" id="$vPrefix">
+			<td class="attributes"><code>
+				public  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-lessc.html#50" title="Go to source code"><var>$vPrefix</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$vPrefix" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="mPrefix" id="$mPrefix">
+			<td class="attributes"><code>
+				public  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-lessc.html#51" title="Go to source code"><var>$mPrefix</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$mPrefix" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="parentSelector" id="$parentSelector">
+			<td class="attributes"><code>
+				public  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-lessc.html#52" title="Go to source code"><var>$parentSelector</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$parentSelector" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="importDisabled" id="$importDisabled">
+			<td class="attributes"><code>
+				public  
+				boolean
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-lessc.html#54" title="Go to source code"><var>$importDisabled</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$importDisabled" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="importDir" id="$importDir">
+			<td class="attributes"><code>
+				public  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-lessc.html#55" title="Go to source code"><var>$importDir</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$importDir" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="numberPrecision" id="$numberPrecision">
+			<td class="attributes"><code>
+				protected  
+				mixed
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-lessc.html#57" title="Go to source code"><var>$numberPrecision</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$numberPrecision" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="allParsedFiles" id="$allParsedFiles">
+			<td class="attributes"><code>
+				protected  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-lessc.html#59" title="Go to source code"><var>$allParsedFiles</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$allParsedFiles" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="sourceParser" id="$sourceParser">
+			<td class="attributes"><code>
+				protected  
+				mixed
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-lessc.html#63" title="Go to source code"><var>$sourceParser</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$sourceParser" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="sourceLoc" id="$sourceLoc">
+			<td class="attributes"><code>
+				protected  
+				mixed
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-lessc.html#64" title="Go to source code"><var>$sourceLoc</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$sourceLoc" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="nextImportId" id="$nextImportId">
+			<td class="attributes"><code>
+				protected static 
+				integer
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-lessc.html#66" title="Go to source code"><var>$nextImportId</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$nextImportId" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="cssColors" id="$cssColors">
+			<td class="attributes"><code>
+				protected static 
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-lessc.html#2118-2267" title="Go to source code"><var>$cssColors</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$cssColors" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		WooCommerce API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</body>
+</html>

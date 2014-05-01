@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class WC_Makepot | WooCommerce</title>
+
+	<script type="text/javascript" src="resources/combined.js?843538251"></script>
+	<script type="text/javascript" src="elementlist.js?2762052405"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?2450451432" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?1319793728" />
+
+</head>
+
+<body>
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class WC_Makepot</h1>
+
+
+	<div class="description">
+	
+<p>WooCommerce POT Generator</p>
+
+<p>Contains the methods for generating the woocommerce.pot and
+woocommerce-admin.pot files. Code is based on: <a
+href="http://i18n.trac.wordpress.org/browser/tools/trunk/makepot.php">http://i18n.trac.wordpress.org/browser/tools/trunk/makepot.php</a></p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		
+		<b>Package:</b> <a href="package-WooCommerce.html">WooCommerce</a><br />
+
+				<b>Author:</b>
+				Geert De Deckere<br />
+				<b>Since:</b>
+				2.0<br />
+				<b>Class:</b>
+				WC_Makepot<br />
+		<b>Located at</b> <a href="source-class-WC_Makepot.html#2-205" title="Go to source code">i18n/makepot/makepot.php</a><br />
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped" id="methods">
+		<tr data-order="__construct" id="___construct">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___construct">#</a>
+			<code><a href="source-class-WC_Makepot.html#57-91" title="Go to source code">__construct</a>( )</code>
+
+			<div class="description short">
+				
+<p>Constructor</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Constructor</p>
+
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="set_woocommerce_path" id="_set_woocommerce_path">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_set_woocommerce_path">#</a>
+			<code><a href="source-class-WC_Makepot.html#93-101" title="Go to source code">set_woocommerce_path</a>( <span>string <var>$path</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Sets the WooCommerce filesystem directory path</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Sets the WooCommerce filesystem directory path</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$path</var></dt>
+						<dd><code>string</code><br>$path</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="generate_pot" id="_generate_pot">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_generate_pot">#</a>
+			<code><a href="source-class-WC_Makepot.html#103-143" title="Go to source code">generate_pot</a>( <span>string <var>$project</var> = <span class="php-quote">'woocommerce'</span> </span> )</code>
+
+			<div class="description short">
+				
+<p>POT generator</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>POT generator</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$project</var></dt>
+						<dd><code>string</code><br>$project "woocommerce" or "woocommerce-admin"</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>true on success, false on error<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="woocommerce_version" id="_woocommerce_version">
+
+			<td class="attributes"><code>
+				 public 
+				string|false
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_woocommerce_version">#</a>
+			<code><a href="source-class-WC_Makepot.html#145-166" title="Go to source code">woocommerce_version</a>( )</code>
+
+			<div class="description short">
+				
+<p>Retrieves the WooCommerce version from the woocommerce.php file.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Retrieves the WooCommerce version from the woocommerce.php file.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string|false</code><br>WooCommerce version number, false if not found<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_first_lines" id="_get_first_lines">
+
+			<td class="attributes"><code>
+				 public static
+				string|boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_first_lines">#</a>
+			<code><a href="source-class-WC_Makepot.html#168-189" title="Go to source code">get_first_lines</a>( <span>mixed <var>$filename</var></span>, <span>integer <var>$lines</var> = <span class="php-num">30</span></span> )</code>
+
+			<div class="description short">
+				
+<p>get_first_lines function.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>get_first_lines function.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$filename</var></dt>
+						<dd><code>mixed</code><br>$filename</dd>
+						<dt><var>$lines</var></dt>
+						<dd><code>integer</code><br>$lines (default: 30)</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string|boolean</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_addon_header" id="_get_addon_header">
+
+			<td class="attributes"><code>
+				 public static
+				string|boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_addon_header">#</a>
+			<code><a href="source-class-WC_Makepot.html#191-204" title="Go to source code">get_addon_header</a>( <span>mixed <var>$header</var></span>, <span>mixed <var>&amp; $source</var></span> )</code>
+
+			<div class="description short">
+				
+<p>get_addon_header function.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>get_addon_header function.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$header</var></dt>
+						<dd><code>mixed</code><br>$header</dd>
+						<dt><var>$source</var></dt>
+						<dd><code>mixed</code><br>&amp;$source</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string|boolean</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+
+
+
+		<h2>Properties summary</h2>
+		<table class="summary table table-bordered table-striped" id="properties">
+		<tr data-order="woocommerce_path" id="$woocommerce_path">
+			<td class="attributes"><code>
+				public  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-WC_Makepot.html#15-18" title="Go to source code"><var>$woocommerce_path</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$woocommerce_path" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Filesystem directory path for the WooCommerce plugin (with trailing
+slash)</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Filesystem directory path for the WooCommerce plugin (with trailing
+slash)</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="projects" id="$projects">
+			<td class="attributes"><code>
+				public  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-WC_Makepot.html#20-23" title="Go to source code"><var>$projects</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$projects" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>All available projects with their settings</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>All available projects with their settings</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="extractor" id="$extractor">
+			<td class="attributes"><code>
+				public  
+				object
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-WC_Makepot.html#25-28" title="Go to source code"><var>$extractor</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$extractor" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>StringExtractor</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>StringExtractor</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="rules" id="$rules">
+			<td class="attributes"><code>
+				public  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-WC_Makepot.html#30-55" title="Go to source code"><var>$rules</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$rules" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Rules for StringExtractor</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Rules for StringExtractor</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		WooCommerce API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class WC_Admin_Report | WooCommerce</title>
+
+	<script type="text/javascript" src="resources/combined.js?843538251"></script>
+	<script type="text/javascript" src="elementlist.js?2762052405"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?2450451432" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?1319793728" />
+
+</head>
+
+<body>
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class WC_Admin_Report</h1>
+
+
+	<div class="description">
+	
+<p>Admin Report</p>
+
+<p>Extended by reports to show charts and stats in admin.</p>
+
+	</div>
+
+
+
+	<div>
+		<h3>Direct known subclasses</h3>
+		<p class="elementList">
+			<code><a href="class-WC_Report_Coupon_Usage.html">WC_Report_Coupon_Usage</a></code>, 
+			<code><a href="class-WC_Report_Customers.html">WC_Report_Customers</a></code>, 
+			<code><a href="class-WC_Report_Sales_By_Category.html">WC_Report_Sales_By_Category</a></code>, 
+			<code><a href="class-WC_Report_Sales_By_Date.html">WC_Report_Sales_By_Date</a></code>, 
+			<code><a href="class-WC_Report_Sales_By_Product.html">WC_Report_Sales_By_Product</a></code>, 
+			<code><a href="class-WC_Report_Taxes_By_Code.html">WC_Report_Taxes_By_Code</a></code>, 
+			<code><a href="class-WC_Report_Taxes_By_Date.html">WC_Report_Taxes_By_Date</a></code>
+		</p>
+	</div>
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		
+		<b>Package:</b> <a href="package-WooCommerce.html">WooCommerce</a>\<a href="package-WooCommerce.Admin.html">Admin</a>\<a href="package-WooCommerce.Admin.Reports.html">Reports</a><br />
+
+				<b>Category:</b>
+				Admin<br />
+				<b>Author:</b>
+				WooThemes<br />
+				<b>Version:</b>
+				2.1.0<br />
+		<b>Located at</b> <a href="source-class-WC_Admin_Report.html#4-492" title="Go to source code">includes/admin/reports/class-wc-admin-report.php</a><br />
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped" id="methods">
+		<tr data-order="get_order_report_data" id="_get_order_report_data">
+
+			<td class="attributes"><code>
+				 public 
+				array|string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_order_report_data">#</a>
+			<code><a href="source-class-WC_Admin_Report.html#23-249" title="Go to source code">get_order_report_data</a>( <span>array <var>$args</var> = <span class="php-keyword1">array</span>() </span> )</code>
+
+			<div class="description short">
+				
+<p>Get report totals such as order totals and discount amounts.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get report totals such as order totals and discount amounts.</p>
+
+<p>Data example:</p>
+
+<p>'_order_total' =&gt; array( 'type' =&gt; 'meta', 'function' =&gt; 'SUM',
+'name' =&gt; 'total_sales' )</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$args</var></dt>
+						<dd><code>array</code><br>$args</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array|string</code><br>depending on query_type<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="prepare_chart_data" id="_prepare_chart_data">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_prepare_chart_data">#</a>
+			<code><a href="source-class-WC_Admin_Report.html#251-301" title="Go to source code">prepare_chart_data</a>( <span>array <var>$data</var></span>, <span>string <var>$date_key</var></span>, <span>string <var>$data_key</var></span>, <span>integer <var>$interval</var></span>, <span>string <var>$start_date</var></span>, <span>string <var>$group_by</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Put data with post_date's into an array of times</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Put data with post_date's into an array of times</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$data</var></dt>
+						<dd><code>array</code><br>$data array of your data</dd>
+						<dt><var>$date_key</var></dt>
+						<dd><code>string</code><br>$date_key key for the 'date' field. e.g. 'post_date'</dd>
+						<dt><var>$data_key</var></dt>
+						<dd><code>string</code><br>$data_key key for the data you are charting</dd>
+						<dt><var>$interval</var></dt>
+						<dd><code>integer</code><br>$interval</dd>
+						<dt><var>$start_date</var></dt>
+						<dd><code>string</code><br>$start_date</dd>
+						<dt><var>$group_by</var></dt>
+						<dd><code>string</code><br>$group_by</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="sales_sparkline" id="_sales_sparkline">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_sales_sparkline">#</a>
+			<code><a href="source-class-WC_Admin_Report.html#303-392" title="Go to source code">sales_sparkline</a>( <span>integer <var>$id</var> = <span class="php-quote">''</span></span>, <span>integer <var>$days</var> = <span class="php-num">7</span></span>, <span>string <var>$type</var> = <span class="php-quote">'sales'</span> </span> )</code>
+
+			<div class="description short">
+				
+<p>Prepares a sparkline to show sales in the last X days</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Prepares a sparkline to show sales in the last X days</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$id</var></dt>
+						<dd><code>integer</code><br>$id ID of the product to show. Blank to get all orders.</dd>
+						<dt><var>$days</var></dt>
+						<dd><code>integer</code><br>$days Days of stats to get.</dd>
+						<dt><var>$type</var></dt>
+						<dd><code>string</code><br>$type Type of sparkline to get. Ignored if ID is not set.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="calculate_current_range" id="_calculate_current_range">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_calculate_current_range">#</a>
+			<code><a href="source-class-WC_Admin_Report.html#394-459" title="Go to source code">calculate_current_range</a>( <span>string <var>$current_range</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Get the current range and calculate the start and end dates</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the current range and calculate the start and end dates</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$current_range</var></dt>
+						<dd><code>string</code><br>$current_range</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_main_chart" id="_get_main_chart">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_main_chart">#</a>
+			<code><a href="source-class-WC_Admin_Report.html#461-465" title="Go to source code">get_main_chart</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get the main chart</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the main chart</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_chart_legend" id="_get_chart_legend">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_chart_legend">#</a>
+			<code><a href="source-class-WC_Admin_Report.html#467-473" title="Go to source code">get_chart_legend</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get the legend for the main chart sidebar</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the legend for the main chart sidebar</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_chart_widgets" id="_get_chart_widgets">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_chart_widgets">#</a>
+			<code><a href="source-class-WC_Admin_Report.html#475-481" title="Go to source code">get_chart_widgets</a>( )</code>
+
+			<div class="description short">
+				
+<p>[get_chart_widgets description]</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>[get_chart_widgets description]</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_export_button" id="_get_export_button">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_export_button">#</a>
+			<code><a href="source-class-WC_Admin_Report.html#483-486" title="Go to source code">get_export_button</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get an export link if needed</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get an export link if needed</p>
+
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="output_report" id="_output_report">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_output_report">#</a>
+			<code><a href="source-class-WC_Admin_Report.html#488-491" title="Go to source code">output_report</a>( )</code>
+
+			<div class="description short">
+				
+<p>Output the report</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Output the report</p>
+
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+
+
+
+		<h2>Properties summary</h2>
+		<table class="summary table table-bordered table-striped" id="properties">
+		<tr data-order="chart_interval" id="$chart_interval">
+			<td class="attributes"><code>
+				public  
+				mixed
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-WC_Admin_Report.html#16" title="Go to source code"><var>$chart_interval</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$chart_interval" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="group_by_query" id="$group_by_query">
+			<td class="attributes"><code>
+				public  
+				mixed
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-WC_Admin_Report.html#17" title="Go to source code"><var>$group_by_query</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$group_by_query" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="barwidth" id="$barwidth">
+			<td class="attributes"><code>
+				public  
+				mixed
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-WC_Admin_Report.html#18" title="Go to source code"><var>$barwidth</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$barwidth" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="chart_groupby" id="$chart_groupby">
+			<td class="attributes"><code>
+				public  
+				mixed
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-WC_Admin_Report.html#19" title="Go to source code"><var>$chart_groupby</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$chart_groupby" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="start_date" id="$start_date">
+			<td class="attributes"><code>
+				public  
+				mixed
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-WC_Admin_Report.html#20" title="Go to source code"><var>$start_date</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$start_date" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="end_date" id="$end_date">
+			<td class="attributes"><code>
+				public  
+				mixed
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-WC_Admin_Report.html#21" title="Go to source code"><var>$end_date</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$end_date" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		WooCommerce API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</body>
+</html>

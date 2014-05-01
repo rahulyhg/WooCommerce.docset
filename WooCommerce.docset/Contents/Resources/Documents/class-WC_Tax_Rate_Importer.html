@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class WC_Tax_Rate_Importer | WooCommerce</title>
+
+	<script type="text/javascript" src="resources/combined.js?843538251"></script>
+	<script type="text/javascript" src="elementlist.js?2762052405"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?2450451432" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?1319793728" />
+
+</head>
+
+<body>
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class WC_Tax_Rate_Importer</h1>
+
+
+
+	<dl class="tree well">
+		<dd style="padding-left:0px">
+WP_Importer
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>WC_Tax_Rate_Importer</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		
+		<b>Package:</b> <a href="package-WooCommerce.html">WooCommerce</a>\<a href="package-WooCommerce.Admin.html">Admin</a>\<a href="package-WooCommerce.Admin.Importers.html">Importers</a><br />
+
+				<b>Author:</b>
+				WooThemes<br />
+		<b>Located at</b> <a href="source-class-WC_Tax_Rate_Importer.html#14-345" title="Go to source code">includes/admin/importers/class-wc-tax-rate-importer.php</a><br />
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped" id="methods">
+		<tr data-order="__construct" id="___construct">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___construct">#</a>
+			<code><a href="source-class-WC_Tax_Rate_Importer.html#24-32" title="Go to source code">__construct</a>( )</code>
+
+			<div class="description short">
+				
+<p>__construct function.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>__construct function.</p>
+
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="dispatch" id="_dispatch">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_dispatch">#</a>
+			<code><a href="source-class-WC_Tax_Rate_Importer.html#34-76" title="Go to source code">dispatch</a>( )</code>
+
+			<div class="description short">
+				
+<p>Registered callback function for the WordPress Importer</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Registered callback function for the WordPress Importer</p>
+
+<p>Manages the three separate stages of the CSV import process</p>
+
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="format_data_from_csv" id="_format_data_from_csv">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_format_data_from_csv">#</a>
+			<code><a href="source-class-WC_Tax_Rate_Importer.html#78-88" title="Go to source code">format_data_from_csv</a>( <span>mixed <var>$data</var></span>, <span>string <var>$enc</var></span> )</code>
+
+			<div class="description short">
+				
+<p>format_data_from_csv function.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>format_data_from_csv function.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$data</var></dt>
+						<dd><code>mixed</code><br>$data</dd>
+						<dt><var>$enc</var></dt>
+						<dd><code>string</code><br>$enc</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="import" id="_import">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_import">#</a>
+			<code><a href="source-class-WC_Tax_Rate_Importer.html#90-206" title="Go to source code">import</a>( <span>mixed <var>$file</var></span> )</code>
+
+			<div class="description short">
+				
+<p>import function.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>import function.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$file</var></dt>
+						<dd><code>mixed</code><br>$file</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="import_end" id="_import_end">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_import_end">#</a>
+			<code><a href="source-class-WC_Tax_Rate_Importer.html#208-215" title="Go to source code">import_end</a>( )</code>
+
+			<div class="description short">
+				
+<p>Performs post-import cleanup of files and the cache</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Performs post-import cleanup of files and the cache</p>
+
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="handle_upload" id="_handle_upload">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_handle_upload">#</a>
+			<code><a href="source-class-WC_Tax_Rate_Importer.html#217-253" title="Go to source code">handle_upload</a>( )</code>
+
+			<div class="description short">
+				
+<p>Handles the CSV upload and initial parsing of the file to prepare for
+displaying author import options</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Handles the CSV upload and initial parsing of the file to prepare for
+displaying author import options</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>False if error uploading or invalid file, true otherwise<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="header" id="_header">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_header">#</a>
+			<code><a href="source-class-WC_Tax_Rate_Importer.html#255-264" title="Go to source code">header</a>( )</code>
+
+			<div class="description short">
+				
+<p>header function.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>header function.</p>
+
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="footer" id="_footer">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_footer">#</a>
+			<code><a href="source-class-WC_Tax_Rate_Importer.html#266-274" title="Go to source code">footer</a>( )</code>
+
+			<div class="description short">
+				
+<p>footer function.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>footer function.</p>
+
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="greet" id="_greet">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_greet">#</a>
+			<code><a href="source-class-WC_Tax_Rate_Importer.html#276-335" title="Go to source code">greet</a>( )</code>
+
+			<div class="description short">
+				
+<p>greet function.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>greet function.</p>
+
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="bump_request_timeout" id="_bump_request_timeout">
+
+			<td class="attributes"><code>
+				 public 
+				integer
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_bump_request_timeout">#</a>
+			<code><a href="source-class-WC_Tax_Rate_Importer.html#337-344" title="Go to source code">bump_request_timeout</a>( <span>integer <var>$val</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Added to http_request_timeout filter to force timeout at 60 seconds during
+import</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Added to http_request_timeout filter to force timeout at 60 seconds during
+import</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$val</var></dt>
+						<dd><code>integer</code><br>$val</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>integer</code><br>60<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+
+
+
+		<h2>Properties summary</h2>
+		<table class="summary table table-bordered table-striped" id="properties">
+		<tr data-order="id" id="$id">
+			<td class="attributes"><code>
+				public  
+				mixed
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-WC_Tax_Rate_Importer.html#16" title="Go to source code"><var>$id</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$id" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="file_url" id="$file_url">
+			<td class="attributes"><code>
+				public  
+				mixed
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-WC_Tax_Rate_Importer.html#17" title="Go to source code"><var>$file_url</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$file_url" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="import_page" id="$import_page">
+			<td class="attributes"><code>
+				public  
+				mixed
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-WC_Tax_Rate_Importer.html#18" title="Go to source code"><var>$import_page</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$import_page" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="delimiter" id="$delimiter">
+			<td class="attributes"><code>
+				public  
+				mixed
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-WC_Tax_Rate_Importer.html#19" title="Go to source code"><var>$delimiter</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$delimiter" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="posts" id="$posts">
+			<td class="attributes"><code>
+				public  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-WC_Tax_Rate_Importer.html#20" title="Go to source code"><var>$posts</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$posts" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="imported" id="$imported">
+			<td class="attributes"><code>
+				public  
+				mixed
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-WC_Tax_Rate_Importer.html#21" title="Go to source code"><var>$imported</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$imported" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="skipped" id="$skipped">
+			<td class="attributes"><code>
+				public  
+				mixed
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-WC_Tax_Rate_Importer.html#22" title="Go to source code"><var>$skipped</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$skipped" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		WooCommerce API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+	<meta name="robots" content="noindex" />
+
+	<title>File includes/admin/class-wc-admin-help.php | WooCommerce</title>
+
+	<script type="text/javascript" src="resources/combined.js?843538251"></script>
+	<script type="text/javascript" src="elementlist.js?2762052405"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?2450451432" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?1319793728" />
+
+</head>
+
+<body>
+<div id="right">
+	<div id="rightInner">
+<pre id="source"><code><span id="1" class="l"><a class="l" href="#1"> 1 </a><span class="xlang">&lt;?php</span>
+</span><span id="2" class="l"><a class="l" href="#2"> 2 </a><span class="php-comment">/**
+</span></span><span id="3" class="l"><a class="l" href="#3"> 3 </a><span class="php-comment"> * Add some content to the help tab.
+</span></span><span id="4" class="l"><a class="l" href="#4"> 4 </a><span class="php-comment"> *
+</span></span><span id="5" class="l"><a class="l" href="#5"> 5 </a><span class="php-comment"> * @author      WooThemes
+</span></span><span id="6" class="l"><a class="l" href="#6"> 6 </a><span class="php-comment"> * @category    Admin
+</span></span><span id="7" class="l"><a class="l" href="#7"> 7 </a><span class="php-comment"> * @package     WooCommerce/Admin
+</span></span><span id="8" class="l"><a class="l" href="#8"> 8 </a><span class="php-comment"> * @version     2.1.0
+</span></span><span id="9" class="l"><a class="l" href="#9"> 9 </a><span class="php-comment"> */</span>
+</span><span id="10" class="l"><a class="l" href="#10">10 </a>
+</span><span id="11" class="l"><a class="l" href="#11">11 </a><span class="php-keyword1">if</span> ( ! <span class="php-keyword2">defined</span>( <span class="php-quote">'ABSPATH'</span> ) ) <span class="php-keyword1">exit</span>; <span class="php-comment">// Exit if accessed directly</span>
+</span><span id="12" class="l"><a class="l" href="#12">12 </a>
+</span><span id="13" class="l"><a class="l" href="#13">13 </a><span class="php-keyword1">if</span> ( ! <span class="php-keyword2">class_exists</span>( <span class="php-quote">'WC_Admin_Help'</span> ) ) :
+</span><span id="14" class="l"><a class="l" href="#14">14 </a>
+</span><span id="15" class="l"><a class="l" href="#15">15 </a><span class="php-comment">/**
+</span></span><span id="16" class="l"><a class="l" href="#16">16 </a><span class="php-comment"> * WC_Admin_Help Class
+</span></span><span id="17" class="l"><a class="l" href="#17">17 </a><span class="php-comment"> */</span>
+</span><span id="18" class="l"><a class="l" href="#18">18 </a><span class="php-keyword1">class</span> <a id="WC_Admin_Help" href="#WC_Admin_Help">WC_Admin_Help</a> {
+</span><span id="19" class="l"><a class="l" href="#19">19 </a>
+</span><span id="20" class="l"><a class="l" href="#20">20 </a>    <span class="php-comment">/**
+</span></span><span id="21" class="l"><a class="l" href="#21">21 </a><span class="php-comment">     * Hook in tabs.
+</span></span><span id="22" class="l"><a class="l" href="#22">22 </a><span class="php-comment">     */</span>
+</span><span id="23" class="l"><a class="l" href="#23">23 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="___construct" href="#___construct">__construct</a>() {
+</span><span id="24" class="l"><a class="l" href="#24">24 </a>        add_action( <span class="php-quote">&quot;current_screen&quot;</span>, <span class="php-keyword1">array</span>( <span class="php-var">$this</span>, <span class="php-quote">'add_tabs'</span> ), <span class="php-num">50</span> );
+</span><span id="25" class="l"><a class="l" href="#25">25 </a>    }
+</span><span id="26" class="l"><a class="l" href="#26">26 </a>
+</span><span id="27" class="l"><a class="l" href="#27">27 </a>    <span class="php-comment">/**
+</span></span><span id="28" class="l"><a class="l" href="#28">28 </a><span class="php-comment">     * Add help tabs
+</span></span><span id="29" class="l"><a class="l" href="#29">29 </a><span class="php-comment">     */</span>
+</span><span id="30" class="l"><a class="l" href="#30">30 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_add_tabs" href="#_add_tabs">add_tabs</a>() {
+</span><span id="31" class="l"><a class="l" href="#31">31 </a>        <span class="php-var">$screen</span> = get_current_screen();
+</span><span id="32" class="l"><a class="l" href="#32">32 </a>
+</span><span id="33" class="l"><a class="l" href="#33">33 </a>        <span class="php-keyword1">if</span> ( ! <span class="php-keyword2">in_array</span>( <span class="php-var">$screen</span>-&gt;id, wc_get_screen_ids() ) )
+</span><span id="34" class="l"><a class="l" href="#34">34 </a>            <span class="php-keyword1">return</span>;
+</span><span id="35" class="l"><a class="l" href="#35">35 </a>
+</span><span id="36" class="l"><a class="l" href="#36">36 </a>        <span class="php-var">$screen</span>-&gt;add_help_tab( <span class="php-keyword1">array</span>(
+</span><span id="37" class="l"><a class="l" href="#37">37 </a>            <span class="php-quote">'id'</span>    =&gt; <span class="php-quote">'woocommerce_docs_tab'</span>,
+</span><span id="38" class="l"><a class="l" href="#38">38 </a>            <span class="php-quote">'title'</span> =&gt; __( <span class="php-quote">'Documentation'</span>, <span class="php-quote">'woocommerce'</span> ),
+</span><span id="39" class="l"><a class="l" href="#39">39 </a>            <span class="php-quote">'content'</span>   =&gt;
+</span><span id="40" class="l"><a class="l" href="#40">40 </a>
+</span><span id="41" class="l"><a class="l" href="#41">41 </a>                <span class="php-quote">'&lt;p&gt;'</span> . __( <span class="php-quote">'Thank you for using WooCommerce :) Should you need help using or extending WooCommerce please read the documentation.'</span>, <span class="php-quote">'woocommerce'</span> ) . <span class="php-quote">'&lt;/p&gt;'</span> .
+</span><span id="42" class="l"><a class="l" href="#42">42 </a>
+</span><span id="43" class="l"><a class="l" href="#43">43 </a>                <span class="php-quote">'&lt;p&gt;&lt;a href=&quot;'</span> . <span class="php-quote">'http://docs.woothemes.com/documentation/plugins/woocommerce/'</span> . <span class="php-quote">'&quot; class=&quot;button button-primary&quot;&gt;'</span> . __( <span class="php-quote">'WooCommerce Documentation'</span>, <span class="php-quote">'woocommerce'</span> ) . <span class="php-quote">'&lt;/a&gt; &lt;a href=&quot;'</span> . <span class="php-quote">'http://docs.woothemes.com/wc-apidocs/'</span> . <span class="php-quote">'&quot; class=&quot;button&quot;&gt;'</span> . __( <span class="php-quote">'Developer API Docs'</span>, <span class="php-quote">'woocommerce'</span> ) . <span class="php-quote">'&lt;/a&gt;&lt;/p&gt;'</span>
+</span><span id="44" class="l"><a class="l" href="#44">44 </a>
+</span><span id="45" class="l"><a class="l" href="#45">45 </a>        ) );
+</span><span id="46" class="l"><a class="l" href="#46">46 </a>
+</span><span id="47" class="l"><a class="l" href="#47">47 </a>        <span class="php-var">$screen</span>-&gt;add_help_tab( <span class="php-keyword1">array</span>(
+</span><span id="48" class="l"><a class="l" href="#48">48 </a>            <span class="php-quote">'id'</span>    =&gt; <span class="php-quote">'woocommerce_support_tab'</span>,
+</span><span id="49" class="l"><a class="l" href="#49">49 </a>            <span class="php-quote">'title'</span> =&gt; __( <span class="php-quote">'Support'</span>, <span class="php-quote">'woocommerce'</span> ),
+</span><span id="50" class="l"><a class="l" href="#50">50 </a>            <span class="php-quote">'content'</span>   =&gt;
+</span><span id="51" class="l"><a class="l" href="#51">51 </a>
+</span><span id="52" class="l"><a class="l" href="#52">52 </a>                <span class="php-quote">'&lt;p&gt;'</span> . <span class="php-keyword2">sprintf</span>(__( <span class="php-quote">'After &lt;a href=&quot;%s&quot;&gt;reading the documentation&lt;/a&gt;, for further assistance you can use the &lt;a href=&quot;%s&quot;&gt;community forum&lt;/a&gt;, or if you have access as a WooThemes customer, &lt;a href=&quot;%s&quot;&gt;our support desk&lt;/a&gt;.'</span>, <span class="php-quote">'woocommerce'</span> ), <span class="php-quote">'http://docs.woothemes.com/documentation/plugins/woocommerce/'</span>, <span class="php-quote">'http://wordpress.org/support/plugin/woocommerce'</span>, <span class="php-quote">'http://support.woothemes.com'</span> ) . <span class="php-quote">'&lt;/p&gt;'</span> .
+</span><span id="53" class="l"><a class="l" href="#53">53 </a>
+</span><span id="54" class="l"><a class="l" href="#54">54 </a>                <span class="php-quote">'&lt;p&gt;'</span> . __( <span class="php-quote">'Before asking for help we recommend checking the status page to identify any problems with your configuration.'</span>, <span class="php-quote">'woocommerce'</span> ) . <span class="php-quote">'&lt;/p&gt;'</span> .
+</span><span id="55" class="l"><a class="l" href="#55">55 </a>
+</span><span id="56" class="l"><a class="l" href="#56">56 </a>                <span class="php-quote">'&lt;p&gt;&lt;a href=&quot;'</span> . admin_url(<span class="php-quote">'admin.php?page=wc-status'</span>) . <span class="php-quote">'&quot; class=&quot;button button-primary&quot;&gt;'</span> . __( <span class="php-quote">'System Status'</span>, <span class="php-quote">'woocommerce'</span> ) . <span class="php-quote">'&lt;/a&gt; &lt;a href=&quot;'</span> . <span class="php-quote">'http://wordpress.org/support/plugin/woocommerce'</span> . <span class="php-quote">'&quot; class=&quot;button&quot;&gt;'</span> . __( <span class="php-quote">'Community Support'</span>, <span class="php-quote">'woocommerce'</span> ) . <span class="php-quote">'&lt;/a&gt; &lt;a href=&quot;'</span> . <span class="php-quote">'http://support.woothemes.com'</span> . <span class="php-quote">'&quot; class=&quot;button&quot;&gt;'</span> . __( <span class="php-quote">'Customer Support'</span>, <span class="php-quote">'woocommerce'</span> ) . <span class="php-quote">'&lt;/a&gt;&lt;/p&gt;'</span>
+</span><span id="57" class="l"><a class="l" href="#57">57 </a>
+</span><span id="58" class="l"><a class="l" href="#58">58 </a>        ) );
+</span><span id="59" class="l"><a class="l" href="#59">59 </a>
+</span><span id="60" class="l"><a class="l" href="#60">60 </a>        <span class="php-var">$screen</span>-&gt;add_help_tab( <span class="php-keyword1">array</span>(
+</span><span id="61" class="l"><a class="l" href="#61">61 </a>            <span class="php-quote">'id'</span>    =&gt; <span class="php-quote">'woocommerce_bugs_tab'</span>,
+</span><span id="62" class="l"><a class="l" href="#62">62 </a>            <span class="php-quote">'title'</span> =&gt; __( <span class="php-quote">'Found a bug?'</span>, <span class="php-quote">'woocommerce'</span> ),
+</span><span id="63" class="l"><a class="l" href="#63">63 </a>            <span class="php-quote">'content'</span>   =&gt;
+</span><span id="64" class="l"><a class="l" href="#64">64 </a>
+</span><span id="65" class="l"><a class="l" href="#65">65 </a>                <span class="php-quote">'&lt;p&gt;'</span> . <span class="php-keyword2">sprintf</span>(__( <span class="php-quote">'If you find a bug within WooCommerce core you can create a ticket via &lt;a href=&quot;%s&quot;&gt;Github issues&lt;/a&gt;. Ensure you read the &lt;a href=&quot;%s&quot;&gt;contribution guide&lt;/a&gt; prior to submitting your report. Be as descriptive as possible and please include your &lt;a href=&quot;%s&quot;&gt;system status report&lt;/a&gt;.'</span>, <span class="php-quote">'woocommerce'</span> ), <span class="php-quote">'https://github.com/woothemes/woocommerce/issues?state=open'</span>, <span class="php-quote">'https://github.com/woothemes/woocommerce/blob/master/CONTRIBUTING.md'</span>, admin_url( <span class="php-quote">'admin.php?page=wc-status'</span> ) ) . <span class="php-quote">'&lt;/p&gt;'</span> .
+</span><span id="66" class="l"><a class="l" href="#66">66 </a>
+</span><span id="67" class="l"><a class="l" href="#67">67 </a>                <span class="php-quote">'&lt;p&gt;&lt;a href=&quot;https://github.com/woothemes/woocommerce/issues?state=open&quot; class=&quot;button button-primary&quot;&gt;'</span> . __( <span class="php-quote">'Report a bug'</span>, <span class="php-quote">'woocommerce'</span> ) . <span class="php-quote">'&lt;/a&gt; &lt;a href=&quot;'</span> . admin_url(<span class="php-quote">'admin.php?page=wc-status'</span>) . <span class="php-quote">'&quot; class=&quot;button&quot;&gt;'</span> . __( <span class="php-quote">'System Status'</span>, <span class="php-quote">'woocommerce'</span> ) . <span class="php-quote">'&lt;/a&gt;&lt;/p&gt;'</span>
+</span><span id="68" class="l"><a class="l" href="#68">68 </a>
+</span><span id="69" class="l"><a class="l" href="#69">69 </a>        ) );
+</span><span id="70" class="l"><a class="l" href="#70">70 </a>
+</span><span id="71" class="l"><a class="l" href="#71">71 </a>
+</span><span id="72" class="l"><a class="l" href="#72">72 </a>        <span class="php-var">$screen</span>-&gt;set_help_sidebar(
+</span><span id="73" class="l"><a class="l" href="#73">73 </a>            <span class="php-quote">'&lt;p&gt;&lt;strong&gt;'</span> . __( <span class="php-quote">'For more information:'</span>, <span class="php-quote">'woocommerce'</span> ) . <span class="php-quote">'&lt;/strong&gt;&lt;/p&gt;'</span> .
+</span><span id="74" class="l"><a class="l" href="#74">74 </a>            <span class="php-quote">'&lt;p&gt;&lt;a href=&quot;http://www.woothemes.com/woocommerce/&quot; target=&quot;_blank&quot;&gt;'</span> . __( <span class="php-quote">'About WooCommerce'</span>, <span class="php-quote">'woocommerce'</span> ) . <span class="php-quote">'&lt;/a&gt;&lt;/p&gt;'</span> .
+</span><span id="75" class="l"><a class="l" href="#75">75 </a>            <span class="php-quote">'&lt;p&gt;&lt;a href=&quot;http://wordpress.org/extend/plugins/woocommerce/&quot; target=&quot;_blank&quot;&gt;'</span> . __( <span class="php-quote">'Project on WordPress.org'</span>, <span class="php-quote">'woocommerce'</span> ) . <span class="php-quote">'&lt;/a&gt;&lt;/p&gt;'</span> .
+</span><span id="76" class="l"><a class="l" href="#76">76 </a>            <span class="php-quote">'&lt;p&gt;&lt;a href=&quot;https://github.com/woothemes/woocommerce&quot; target=&quot;_blank&quot;&gt;'</span> . __( <span class="php-quote">'Project on Github'</span>, <span class="php-quote">'woocommerce'</span> ) . <span class="php-quote">'&lt;/a&gt;&lt;/p&gt;'</span> .
+</span><span id="77" class="l"><a class="l" href="#77">77 </a>            <span class="php-quote">'&lt;p&gt;&lt;a href=&quot;http://www.woothemes.com/product-category/woocommerce-extensions/&quot; target=&quot;_blank&quot;&gt;'</span> . __( <span class="php-quote">'Official Extensions'</span>, <span class="php-quote">'woocommerce'</span> ) . <span class="php-quote">'&lt;/a&gt;&lt;/p&gt;'</span> .
+</span><span id="78" class="l"><a class="l" href="#78">78 </a>            <span class="php-quote">'&lt;p&gt;&lt;a href=&quot;http://www.woothemes.com/product-category/themes/woocommerce/&quot; target=&quot;_blank&quot;&gt;'</span> . __( <span class="php-quote">'Official Themes'</span>, <span class="php-quote">'woocommerce'</span> ) . <span class="php-quote">'&lt;/a&gt;&lt;/p&gt;'</span>
+</span><span id="79" class="l"><a class="l" href="#79">79 </a>        );
+</span><span id="80" class="l"><a class="l" href="#80">80 </a>    }
+</span><span id="81" class="l"><a class="l" href="#81">81 </a>
+</span><span id="82" class="l"><a class="l" href="#82">82 </a>}
+</span><span id="83" class="l"><a class="l" href="#83">83 </a>
+</span><span id="84" class="l"><a class="l" href="#84">84 </a><span class="php-keyword1">endif</span>;
+</span><span id="85" class="l"><a class="l" href="#85">85 </a>
+</span><span id="86" class="l"><a class="l" href="#86">86 </a></span><span class="php-keyword1">return</span> <span class="php-keyword1">new</span> WC_Admin_Help();</code></pre>
+	</div>
+
+	<div id="footer">
+		WooCommerce API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</body>
+</html>

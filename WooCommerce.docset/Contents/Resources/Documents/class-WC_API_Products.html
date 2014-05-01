@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class WC_API_Products | WooCommerce</title>
+
+	<script type="text/javascript" src="resources/combined.js?843538251"></script>
+	<script type="text/javascript" src="elementlist.js?2762052405"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?2450451432" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?1319793728" />
+
+</head>
+
+<body>
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class WC_API_Products</h1>
+
+
+
+	<dl class="tree well">
+		<dd style="padding-left:0px">
+			<a href="class-WC_API_Resource.html"><span>WC_API_Resource</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>WC_API_Products</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		
+		<b>Package:</b> <a href="package-WooCommerce.html">WooCommerce</a>\<a href="package-WooCommerce.API.html">API</a><br />
+
+				<b>Author:</b>
+				WooThemes<br />
+		<b>Located at</b> <a href="source-class-WC_API_Products.html#15-539" title="Go to source code">includes/api/class-wc-api-products.php</a><br />
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped" id="methods">
+		<tr data-order="register_routes" id="_register_routes">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_register_routes">#</a>
+			<code><a href="source-class-WC_API_Products.html#20-55" title="Go to source code">register_routes</a>( <span>array <var>$routes</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Register the routes for this class</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Register the routes for this class</p>
+
+<p>GET /products GET /products/count GET /products/&lt;id&gt; GET
+/products/&lt;id&gt;/reviews</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$routes</var></dt>
+						<dd><code>array</code><br>$routes</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							2.1<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_products" id="_get_products">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_products">#</a>
+			<code><a href="source-class-WC_API_Products.html#57-89" title="Go to source code">get_products</a>( <span>string <var>$fields</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$type</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$filter</var> = <span class="php-keyword1">array</span>()</span>, <span>integer <var>$page</var> = <span class="php-num">1</span> </span> )</code>
+
+			<div class="description short">
+				
+<p>Get all products</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get all products</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$fields</var></dt>
+						<dd><code>string</code><br>$fields</dd>
+						<dt><var>$type</var></dt>
+						<dd><code>string</code><br>$type</dd>
+						<dt><var>$filter</var></dt>
+						<dd><code>array</code><br>$filter</dd>
+						<dt><var>$page</var></dt>
+						<dd><code>integer</code><br>$page</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							2.1<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_product" id="_get_product">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_product">#</a>
+			<code><a href="source-class-WC_API_Products.html#91-124" title="Go to source code">get_product</a>( <span>integer <var>$id</var></span>, <span>string <var>$fields</var> = <span class="php-keyword1">null</span> </span> )</code>
+
+			<div class="description short">
+				
+<p>Get the product for the given ID</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the product for the given ID</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$id</var></dt>
+						<dd><code>integer</code><br>$id the product ID</dd>
+						<dt><var>$fields</var></dt>
+						<dd><code>string</code><br>$fields</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							2.1<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_products_count" id="_get_products_count">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_products_count">#</a>
+			<code><a href="source-class-WC_API_Products.html#126-145" title="Go to source code">get_products_count</a>( <span>string <var>$type</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$filter</var> = <span class="php-keyword1">array</span>() </span> )</code>
+
+			<div class="description short">
+				
+<p>Get the total number of orders</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the total number of orders</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$type</var></dt>
+						<dd><code>string</code><br>$type</dd>
+						<dt><var>$filter</var></dt>
+						<dd><code>array</code><br>$filter</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							2.1<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="edit_product" id="_edit_product">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_edit_product">#</a>
+			<code><a href="source-class-WC_API_Products.html#147-163" title="Go to source code">edit_product</a>( <span>integer <var>$id</var></span>, <span>array <var>$data</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Edit a product</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Edit a product</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$id</var></dt>
+						<dd><code>integer</code><br>$id the product ID</dd>
+						<dt><var>$data</var></dt>
+						<dd><code>array</code><br>$data</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br />
+					</div>
+
+
+					<h4>TODO</h4>
+					<div class="list">
+							implement in 2.2<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="delete_product" id="_delete_product">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_delete_product">#</a>
+			<code><a href="source-class-WC_API_Products.html#165-181" title="Go to source code">delete_product</a>( <span>integer <var>$id</var></span>, <span>boolean <var>$force</var> = <span class="php-keyword1">false</span> </span> )</code>
+
+			<div class="description short">
+				
+<p>Delete a product</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Delete a product</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$id</var></dt>
+						<dd><code>integer</code><br>$id the product ID</dd>
+						<dt><var>$force</var></dt>
+						<dd><code>boolean</code><br>$force true to permanently delete order, false to move to trash</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br />
+					</div>
+
+
+					<h4>TODO</h4>
+					<div class="list">
+							enable along with PUT/POST in 2.2<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_product_reviews" id="_get_product_reviews">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_product_reviews">#</a>
+			<code><a href="source-class-WC_API_Products.html#183-221" title="Go to source code">get_product_reviews</a>( <span>integer <var>$id</var></span>, <span>string <var>$fields</var> = <span class="php-keyword1">null</span> </span> )</code>
+
+			<div class="description short">
+				
+<p>Get the reviews for a product</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the reviews for a product</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$id</var></dt>
+						<dd><code>integer</code><br>$id the product ID to get reviews for</dd>
+						<dt><var>$fields</var></dt>
+						<dd><code>string</code><br>$fields fields to include in response</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							2.1<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+		<h3>Methods inherited from <a href="class-WC_API_Resource.html#methods">WC_API_Resource</a></h3>
+		<p class="elementList">
+			<code><a href="class-WC_API_Resource.html#___construct">__construct()</a></code>, 
+			<code><a href="class-WC_API_Resource.html#_delete">delete()</a></code>, 
+			<code><a href="class-WC_API_Resource.html#_filter_response_fields">filter_response_fields()</a></code>, 
+			<code><a href="class-WC_API_Resource.html#_is_deletable">is_deletable()</a></code>, 
+			<code><a href="class-WC_API_Resource.html#_is_editable">is_editable()</a></code>, 
+			<code><a href="class-WC_API_Resource.html#_is_readable">is_readable()</a></code>, 
+			<code><a href="class-WC_API_Resource.html#_maybe_add_meta">maybe_add_meta()</a></code>, 
+			<code><a href="class-WC_API_Resource.html#_merge_query_args">merge_query_args()</a></code>, 
+			<code><a href="class-WC_API_Resource.html#_validate_request">validate_request()</a></code>
+		</p>
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+
+
+
+		<h2>Properties summary</h2>
+		<table class="summary table table-bordered table-striped" id="properties">
+		<tr data-order="base" id="$base">
+			<td class="attributes"><code>
+				protected  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-WC_API_Products.html#17-18" title="Go to source code"><var>$base</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$base" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>$base the route base</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>$base the route base</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		</table>
+
+		<h3>Properties inherited from <a href="class-WC_API_Resource.html#properties">WC_API_Resource</a></h3>
+		<p class="elementList">
+			<code><a href="class-WC_API_Resource.html#$server"><var>$server</var></a></code>
+		</p>
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		WooCommerce API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</body>
+</html>

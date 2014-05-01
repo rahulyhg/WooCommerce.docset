@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class WC_Session_Handler | WooCommerce</title>
+
+	<script type="text/javascript" src="resources/combined.js?843538251"></script>
+	<script type="text/javascript" src="elementlist.js?2762052405"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?2450451432" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?1319793728" />
+
+</head>
+
+<body>
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class WC_Session_Handler</h1>
+
+
+	<div class="description">
+	
+<p>Handle data for the current customers session. Implements the WC_Session
+abstract class</p>
+
+<p>Long term plan will be, if <a
+href="https://github.com/ericmann/wp-session-manager/">https://github.com/ericmann/wp-session-manager/</a>
+gains traction in WP core, this will be switched out to use it and maintain
+backwards compatibility :)</p>
+
+<p>Partly based on WP SESSION by Eric Mann.</p>
+
+	</div>
+
+	<dl class="tree well">
+		<dd style="padding-left:0px">
+			<a href="class-WC_Session.html"><span>WC_Session</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>WC_Session_Handler</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		
+		<b>Package:</b> <a href="package-WooCommerce.html">WooCommerce</a>\<a href="package-WooCommerce.Classes.html">Classes</a><br />
+
+				<b>Category:</b>
+				Class<br />
+				<b>Author:</b>
+				WooThemes<br />
+				<b>Version:</b>
+				2.0.0<br />
+				<b>Class:</b>
+				WC_Session_Handler<br />
+		<b>Located at</b> <a href="source-class-WC_Session_Handler.html#5-198" title="Go to source code">includes/class-wc-session-handler.php</a><br />
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped" id="methods">
+		<tr data-order="__construct" id="___construct">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___construct">#</a>
+			<code><a href="source-class-WC_Session_Handler.html#31-68" title="Go to source code">__construct</a>( )</code>
+
+			<div class="description short">
+				
+<p>Constructor for the session class.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Constructor for the session class.</p>
+
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="set_customer_session_cookie" id="_set_customer_session_cookie">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_set_customer_session_cookie">#</a>
+			<code><a href="source-class-WC_Session_Handler.html#70-87" title="Go to source code">set_customer_session_cookie</a>( <span>mixed <var>$set</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Sets the session cookie on-demand (usually after adding an item to the
+cart).</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Sets the session cookie on-demand (usually after adding an item to the
+cart).</p>
+
+<p>Since the cookie name (as of 2.1) is prepended with wp, cache systems like
+batcache will not cache pages when set.</p>
+
+<p>Warning: Cookies will only be set if this is called before the headers are
+sent.</p>
+
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="set_session_expiration" id="_set_session_expiration">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_set_session_expiration">#</a>
+			<code><a href="source-class-WC_Session_Handler.html#89-98" title="Go to source code">set_session_expiration</a>( )</code>
+
+			<div class="description short">
+				
+<p>set_session_expiration function.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>set_session_expiration function.</p>
+
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="generate_customer_id" id="_generate_customer_id">
+
+			<td class="attributes"><code>
+				 public 
+				mixed
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_generate_customer_id">#</a>
+			<code><a href="source-class-WC_Session_Handler.html#100-111" title="Go to source code">generate_customer_id</a>( )</code>
+
+			<div class="description short">
+				
+<p>generate_customer_id function.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>generate_customer_id function.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>mixed</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_session_cookie" id="_get_session_cookie">
+
+			<td class="attributes"><code>
+				 public 
+				mixed
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_session_cookie">#</a>
+			<code><a href="source-class-WC_Session_Handler.html#113-133" title="Go to source code">get_session_cookie</a>( )</code>
+
+			<div class="description short">
+				
+<p>get_session_cookie function.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>get_session_cookie function.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>mixed</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_session_data" id="_get_session_data">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_session_data">#</a>
+			<code><a href="source-class-WC_Session_Handler.html#135-143" title="Go to source code">get_session_data</a>( )</code>
+
+			<div class="description short">
+				
+<p>get_session_data function.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>get_session_data function.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="save_data" id="_save_data">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_save_data">#</a>
+			<code><a href="source-class-WC_Session_Handler.html#145-165" title="Go to source code">save_data</a>( )</code>
+
+			<div class="description short">
+				
+<p>save_data function.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>save_data function.</p>
+
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="cleanup_sessions" id="_cleanup_sessions">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_cleanup_sessions">#</a>
+			<code><a href="source-class-WC_Session_Handler.html#167-197" title="Go to source code">cleanup_sessions</a>( )</code>
+
+			<div class="description short">
+				
+<p>cleanup_sessions function.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>cleanup_sessions function.</p>
+
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+		<h3>Methods inherited from <a href="class-WC_Session.html#methods">WC_Session</a></h3>
+		<p class="elementList">
+			<code><a href="class-WC_Session.html#___get">__get()</a></code>, 
+			<code><a href="class-WC_Session.html#___isset">__isset()</a></code>, 
+			<code><a href="class-WC_Session.html#___set">__set()</a></code>, 
+			<code><a href="class-WC_Session.html#___unset">__unset()</a></code>, 
+			<code><a href="class-WC_Session.html#_get">get()</a></code>, 
+			<code><a href="class-WC_Session.html#_get_customer_id">get_customer_id()</a></code>, 
+			<code><a href="class-WC_Session.html#_set">set()</a></code>
+		</p>
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+
+
+
+		<h2>Properties summary</h2>
+
+		<h3>Properties inherited from <a href="class-WC_Session.html#properties">WC_Session</a></h3>
+		<p class="elementList">
+			<code><a href="class-WC_Session.html#$_customer_id"><var>$_customer_id</var></a></code>, 
+			<code><a href="class-WC_Session.html#$_data"><var>$_data</var></a></code>, 
+			<code><a href="class-WC_Session.html#$_dirty"><var>$_dirty</var></a></code>
+		</p>
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		WooCommerce API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</body>
+</html>

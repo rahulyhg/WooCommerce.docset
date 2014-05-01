@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class aCssMinifierPlugin | WooCommerce</title>
+
+	<script type="text/javascript" src="resources/combined.js?843538251"></script>
+	<script type="text/javascript" src="elementlist.js?2762052405"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?2450451432" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?1319793728" />
+
+</head>
+
+<body>
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class aCssMinifierPlugin</h1>
+
+
+	<div class="description">
+	
+<p>Abstract definition of a minifier plugin class.</p>
+
+<p>Minifier plugin process the parsed tokens one by one to apply changes to the
+token. Every minifier plugin has to extend this class.</p>
+
+	</div>
+
+
+
+	<div>
+		<h3>Direct known subclasses</h3>
+		<p class="elementList">
+			<code><a href="class-CssCompressColorValuesMinifierPlugin.html">CssCompressColorValuesMinifierPlugin</a></code>, 
+			<code><a href="class-CssCompressExpressionValuesMinifierPlugin.html">CssCompressExpressionValuesMinifierPlugin</a></code>, 
+			<code><a href="class-CssCompressUnitValuesMinifierPlugin.html">CssCompressUnitValuesMinifierPlugin</a></code>, 
+			<code><a href="class-CssConvertFontWeightMinifierPlugin.html">CssConvertFontWeightMinifierPlugin</a></code>, 
+			<code><a href="class-CssConvertHslColorsMinifierPlugin.html">CssConvertHslColorsMinifierPlugin</a></code>, 
+			<code><a href="class-CssConvertNamedColorsMinifierPlugin.html">CssConvertNamedColorsMinifierPlugin</a></code>, 
+			<code><a href="class-CssConvertRgbColorsMinifierPlugin.html">CssConvertRgbColorsMinifierPlugin</a></code>, 
+			<code><a href="class-CssVariablesMinifierPlugin.html">CssVariablesMinifierPlugin</a></code>
+		</p>
+	</div>
+
+
+
+
+
+
+	<div class="alert alert-info">
+		<b>Abstract</b><br />
+		
+		
+		<b>Package:</b> <a href="package-CssMin.html">CssMin</a>\<a href="package-CssMin.Minifier.html">Minifier</a>\<a href="package-CssMin.Minifier.Plugins.html">Plugins</a><br />
+
+				<b>Copyright:</b>
+				2008 - 2011 Joe Scylla &lt;<a
+href="mailto:joe.scylla&#64;gmail.com">joe.scylla&#64;<!---->gmail.com</a>&gt;<br />
+				<b>License:</b>
+				<a href="http://opensource.org/licenses/mit-license.php">MIT License</a><br />
+				<b>Author:</b>
+				Joe Scylla &lt;<a
+href="mailto:joe.scylla&#64;gmail.com">joe.scylla&#64;<!---->gmail.com</a>&gt;<br />
+				<b>Version:</b>
+				3.0.1<br />
+				<b>Link:</b>
+				<a href="http://code.google.com/p/cssmin/">http://code.google.com/p/cssmin/</a><br />
+		<b>Located at</b> <a href="source-class-aCssMinifierPlugin.html#165-217" title="Go to source code">includes/libraries/class-cssmin.php</a><br />
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped" id="methods">
+		<tr data-order="__construct" id="___construct">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___construct">#</a>
+			<code><a href="source-class-aCssMinifierPlugin.html#192-203" title="Go to source code">__construct</a>( <span><code><a href="class-CssMinifier.html">CssMinifier</a></code> <var>$minifier</var></span>, <span>array <var>$configuration</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+			<div class="description short">
+				
+<p>Constructor.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Constructor.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$minifier</var></dt>
+						<dd><code><code><a href="class-CssMinifier.html">CssMinifier</a></code></code><br>$minifier The CssMinifier object of this plugin.</dd>
+						<dt><var>$configuration</var></dt>
+						<dd><code>array</code><br>$configuration Plugin configuration [optional]</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="apply" id="_apply">
+
+			<td class="attributes"><code>
+				abstract public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_apply">#</a>
+			<code><a href="source-class-aCssMinifierPlugin.html#204-210" title="Go to source code">apply</a>( <span><code><a href="class-aCssToken.html">aCssToken</a></code> <var>&amp; $token</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Apply the plugin to the token.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Apply the plugin to the token.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$token</var></dt>
+						<dd><code><code><a href="class-aCssToken.html">aCssToken</a></code></code><br>$token Token to process</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>Return TRUE to break the processing of this token; FALSE to continue<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getTriggerTokens" id="_getTriggerTokens">
+
+			<td class="attributes"><code>
+				abstract public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getTriggerTokens">#</a>
+			<code><a href="source-class-aCssMinifierPlugin.html#211-216" title="Go to source code">getTriggerTokens</a>( )</code>
+
+			<div class="description short">
+				
+<p>--</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>--</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+
+
+
+		<h2>Properties summary</h2>
+		<table class="summary table table-bordered table-striped" id="properties">
+		<tr data-order="configuration" id="$configuration">
+			<td class="attributes"><code>
+				protected  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-aCssMinifierPlugin.html#180-185" title="Go to source code"><var>$configuration</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$configuration" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Plugin configuration.</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Plugin configuration.</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="minifier" id="$minifier">
+			<td class="attributes"><code>
+				protected  
+				<code><a href="class-CssMinifier.html">CssMinifier</a></code>
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-aCssMinifierPlugin.html#186-191" title="Go to source code"><var>$minifier</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$minifier" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>The CssMinifier of the plugin.</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>The CssMinifier of the plugin.</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		WooCommerce API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</body>
+</html>

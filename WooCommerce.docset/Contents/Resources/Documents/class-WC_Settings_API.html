@@ -1,0 +1,1611 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class WC_Settings_API | WooCommerce</title>
+
+	<script type="text/javascript" src="resources/combined.js?843538251"></script>
+	<script type="text/javascript" src="elementlist.js?2762052405"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?2450451432" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?1319793728" />
+
+</head>
+
+<body>
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class WC_Settings_API</h1>
+
+
+	<div class="description">
+	
+<p>Admin Settings API used by Shipping Methods and Payment Gateways</p>
+
+	</div>
+
+
+
+	<div>
+		<h3>Direct known subclasses</h3>
+		<p class="elementList">
+			<code><a href="class-WC_Email.html">WC_Email</a></code>, 
+			<code><a href="class-WC_Integration.html">WC_Integration</a></code>, 
+			<code><a href="class-WC_Payment_Gateway.html">WC_Payment_Gateway</a></code>, 
+			<code><a href="class-WC_Shipping_Method.html">WC_Shipping_Method</a></code>
+		</p>
+	</div>
+
+	<div>
+		<h3>Indirect known subclasses</h3>
+		<p class="elementList">
+			<code><a href="class-WC_Email_Customer_Completed_Order.html">WC_Email_Customer_Completed_Order</a></code>, 
+			<code><a href="class-WC_Email_Customer_Invoice.html">WC_Email_Customer_Invoice</a></code>, 
+			<code><a href="class-WC_Gateway_Mijireh.html">WC_Gateway_Mijireh</a></code>, 
+			<code><a href="class-WC_Gateway_Paypal.html">WC_Gateway_Paypal</a></code>, 
+			<code><a href="class-WC_Shipping_Flat_Rate.html">WC_Shipping_Flat_Rate</a></code>, 
+			<code><a href="class-WC_Shipping_Free_Shipping.html">WC_Shipping_Free_Shipping</a></code>, 
+			<code><a href="class-WC_Shipping_International_Delivery.html">WC_Shipping_International_Delivery</a></code>, 
+			<code><a href="class-WC_Shipping_Local_Delivery.html">WC_Shipping_Local_Delivery</a></code>, 
+			<code><a href="class-WC_Shipping_Local_Pickup.html">WC_Shipping_Local_Pickup</a></code>, 
+			<code><a href="class-WC_Email_Customer_New_Account.html">WC_Email_Customer_New_Account</a></code>, 
+			<code><a href="class-WC_Email_Customer_Note.html">WC_Email_Customer_Note</a></code>, 
+			<code><a href="class-WC_Email_Customer_Processing_Order.html">WC_Email_Customer_Processing_Order</a></code>, 
+			<code><a href="class-WC_Email_Customer_Reset_Password.html">WC_Email_Customer_Reset_Password</a></code>, 
+			<code><a href="class-WC_Email_New_Order.html">WC_Email_New_Order</a></code>, 
+			<code><a href="class-WC_Gateway_BACS.html">WC_Gateway_BACS</a></code>, 
+			<code><a href="class-WC_Gateway_Cheque.html">WC_Gateway_Cheque</a></code>, 
+			<code><a href="class-WC_Gateway_COD.html">WC_Gateway_COD</a></code>
+		</p>
+	</div>
+
+
+
+
+
+	<div class="alert alert-info">
+		<b>Abstract</b><br />
+		
+		
+		<b>Package:</b> <a href="package-WooCommerce.html">WooCommerce</a>\<a href="package-WooCommerce.Abstracts.html">Abstracts</a><br />
+
+				<b>Category:</b>
+				Abstract Class<br />
+				<b>Author:</b>
+				WooThemes<br />
+				<b>Version:</b>
+				2.1.0<br />
+				<b>Class:</b>
+				WC_Settings_API<br />
+		<b>Located at</b> <a href="source-class-WC_Settings_API.html#2-813" title="Go to source code">includes/abstracts/abstract-wc-settings-api.php</a><br />
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped" id="methods">
+		<tr data-order="admin_options" id="_admin_options">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_admin_options">#</a>
+			<code><a href="source-class-WC_Settings_API.html#28-46" title="Go to source code">admin_options</a>( )</code>
+
+			<div class="description short">
+				
+<p>Admin Options</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Admin Options</p>
+
+<p>Setup the gateway settings screen. Override this in your gateway.</p>
+
+
+
+
+
+
+					<h4>Since</h4>
+					<div class="list">
+							1.0.0<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="init_form_fields" id="_init_form_fields">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_init_form_fields">#</a>
+			<code><a href="source-class-WC_Settings_API.html#48-58" title="Go to source code">init_form_fields</a>( )</code>
+
+			<div class="description short">
+				
+<p>Initialise Settings Form Fields</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Initialise Settings Form Fields</p>
+
+<p>Add an array of fields to be displayed on the gateway's settings screen.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							1.0.0<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_form_fields" id="_get_form_fields">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_form_fields">#</a>
+			<code><a href="source-class-WC_Settings_API.html#60-67" title="Go to source code">get_form_fields</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get the form fields after they are initialized</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the form fields after they are initialized</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br>of options<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="process_admin_options" id="_process_admin_options">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_process_admin_options">#</a>
+			<code><a href="source-class-WC_Settings_API.html#69-88" title="Go to source code">process_admin_options</a>( )</code>
+
+			<div class="description short">
+				
+<p>Admin Panel Options Processing</p>
+
+<ul>
+	<li>Saves the options to the DB</li>
+</ul>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Admin Panel Options Processing</p>
+
+<ul>
+	<li>Saves the options to the DB</li>
+</ul>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							1.0.0<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="display_errors" id="_display_errors">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_display_errors">#</a>
+			<code><a href="source-class-WC_Settings_API.html#90-97" title="Go to source code">display_errors</a>( )</code>
+
+			<div class="description short">
+				
+<p>Display admin error messages.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Display admin error messages.</p>
+
+
+
+
+
+
+					<h4>Since</h4>
+					<div class="list">
+							1.0.0<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="init_settings" id="_init_settings">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_init_settings">#</a>
+			<code><a href="source-class-WC_Settings_API.html#99-129" title="Go to source code">init_settings</a>( )</code>
+
+			<div class="description short">
+				
+<p>Initialise Gateway Settings</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Initialise Gateway Settings</p>
+
+<p>Store all settings in a single database entry and make sure the $settings
+array is either the default or the settings stored in the database.</p>
+
+
+
+
+
+
+					<h4>Since</h4>
+					<div class="list">
+							1.0.0<br />
+					</div>
+					<h4>Uses</h4>
+					<div class="list">
+							get_option(), add_option()<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_option" id="_get_option">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_option">#</a>
+			<code><a href="source-class-WC_Settings_API.html#131-155" title="Go to source code">get_option</a>( <span>string <var>$key</var></span>, <span>mixed <var>$empty_value</var> = <span class="php-keyword1">null</span> </span> )</code>
+
+			<div class="description short">
+				
+<p>get_option function.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>get_option function.</p>
+
+<p>Gets and option from the settings API, using defaults if necessary to prevent
+undefined notices.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$key</var></dt>
+						<dd><code>string</code><br>$key</dd>
+						<dt><var>$empty_value</var></dt>
+						<dd><code>mixed</code><br>$empty_value</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>The value specified for the option or a default value for the option<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="format_settings" id="_format_settings">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_format_settings">#</a>
+			<code><a href="source-class-WC_Settings_API.html#157-166" title="Go to source code">format_settings</a>( <span>mixed <var>$value</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Decode values for settings.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Decode values for settings.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$value</var></dt>
+						<dd><code>mixed</code><br>$value</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="generate_settings_html" id="_generate_settings_html">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_generate_settings_html">#</a>
+			<code><a href="source-class-WC_Settings_API.html#168-197" title="Go to source code">generate_settings_html</a>( <span>boolean <var>$form_fields</var> = <span class="php-keyword1">false</span> </span> )</code>
+
+			<div class="description short">
+				
+<p>Generate Settings HTML.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Generate Settings HTML.</p>
+
+<p>Generate the HTML for the fields on the "settings" screen.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$form_fields</var></dt>
+						<dd><code>boolean</code><br>$form_fields (default: false)</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>the html for the settings<br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							1.0.0<br />
+					</div>
+					<h4>Uses</h4>
+					<div class="list">
+							method_exists()<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_tooltip_html" id="_get_tooltip_html">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_tooltip_html">#</a>
+			<code><a href="source-class-WC_Settings_API.html#199-214" title="Go to source code">get_tooltip_html</a>( <span>array <var>$data</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Get HTML for tooltips</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get HTML for tooltips</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$data</var></dt>
+						<dd><code>array</code><br>$data</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_description_html" id="_get_description_html">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_description_html">#</a>
+			<code><a href="source-class-WC_Settings_API.html#216-233" title="Go to source code">get_description_html</a>( <span>array <var>$data</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Get HTML for descriptions</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get HTML for descriptions</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$data</var></dt>
+						<dd><code>array</code><br>$data</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_custom_attribute_html" id="_get_custom_attribute_html">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_custom_attribute_html">#</a>
+			<code><a href="source-class-WC_Settings_API.html#235-248" title="Go to source code">get_custom_attribute_html</a>( <span>array <var>$data</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Get custom attributes</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get custom attributes</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$data</var></dt>
+						<dd><code>array</code><br>$data</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="generate_text_html" id="_generate_text_html">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_generate_text_html">#</a>
+			<code><a href="source-class-WC_Settings_API.html#250-292" title="Go to source code">generate_text_html</a>( <span>mixed <var>$key</var></span>, <span>mixed <var>$data</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Generate Text Input HTML.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Generate Text Input HTML.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$key</var></dt>
+						<dd><code>mixed</code><br>$key</dd>
+						<dt><var>$data</var></dt>
+						<dd><code>mixed</code><br>$data</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							1.0.0<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="generate_price_html" id="_generate_price_html">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_generate_price_html">#</a>
+			<code><a href="source-class-WC_Settings_API.html#294-336" title="Go to source code">generate_price_html</a>( <span>mixed <var>$key</var></span>, <span>mixed <var>$data</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Generate Password Input HTML.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Generate Password Input HTML.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$key</var></dt>
+						<dd><code>mixed</code><br>$key</dd>
+						<dt><var>$data</var></dt>
+						<dd><code>mixed</code><br>$data</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							1.0.0<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="generate_decimal_html" id="_generate_decimal_html">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_generate_decimal_html">#</a>
+			<code><a href="source-class-WC_Settings_API.html#338-380" title="Go to source code">generate_decimal_html</a>( <span>mixed <var>$key</var></span>, <span>mixed <var>$data</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Generate Password Input HTML.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Generate Password Input HTML.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$key</var></dt>
+						<dd><code>mixed</code><br>$key</dd>
+						<dt><var>$data</var></dt>
+						<dd><code>mixed</code><br>$data</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							1.0.0<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="generate_password_html" id="_generate_password_html">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_generate_password_html">#</a>
+			<code><a href="source-class-WC_Settings_API.html#382-394" title="Go to source code">generate_password_html</a>( <span>mixed <var>$key</var></span>, <span>mixed <var>$data</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Generate Password Input HTML.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Generate Password Input HTML.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$key</var></dt>
+						<dd><code>mixed</code><br>$key</dd>
+						<dt><var>$data</var></dt>
+						<dd><code>mixed</code><br>$data</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							1.0.0<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="generate_textarea_html" id="_generate_textarea_html">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_generate_textarea_html">#</a>
+			<code><a href="source-class-WC_Settings_API.html#396-438" title="Go to source code">generate_textarea_html</a>( <span>mixed <var>$key</var></span>, <span>mixed <var>$data</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Generate Textarea HTML.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Generate Textarea HTML.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$key</var></dt>
+						<dd><code>mixed</code><br>$key</dd>
+						<dt><var>$data</var></dt>
+						<dd><code>mixed</code><br>$data</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							1.0.0<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="generate_checkbox_html" id="_generate_checkbox_html">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_generate_checkbox_html">#</a>
+			<code><a href="source-class-WC_Settings_API.html#440-486" title="Go to source code">generate_checkbox_html</a>( <span>mixed <var>$key</var></span>, <span>mixed <var>$data</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Generate Checkbox HTML.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Generate Checkbox HTML.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$key</var></dt>
+						<dd><code>mixed</code><br>$key</dd>
+						<dt><var>$data</var></dt>
+						<dd><code>mixed</code><br>$data</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							1.0.0<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="generate_select_html" id="_generate_select_html">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_generate_select_html">#</a>
+			<code><a href="source-class-WC_Settings_API.html#488-535" title="Go to source code">generate_select_html</a>( <span>mixed <var>$key</var></span>, <span>mixed <var>$data</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Generate Select HTML.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Generate Select HTML.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$key</var></dt>
+						<dd><code>mixed</code><br>$key</dd>
+						<dt><var>$data</var></dt>
+						<dd><code>mixed</code><br>$data</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							1.0.0<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="generate_multiselect_html" id="_generate_multiselect_html">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_generate_multiselect_html">#</a>
+			<code><a href="source-class-WC_Settings_API.html#537-584" title="Go to source code">generate_multiselect_html</a>( <span>mixed <var>$key</var></span>, <span>mixed <var>$data</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Generate Multiselect HTML.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Generate Multiselect HTML.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$key</var></dt>
+						<dd><code>mixed</code><br>$key</dd>
+						<dt><var>$data</var></dt>
+						<dd><code>mixed</code><br>$data</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							1.0.0<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="generate_title_html" id="_generate_title_html">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_generate_title_html">#</a>
+			<code><a href="source-class-WC_Settings_API.html#586-614" title="Go to source code">generate_title_html</a>( <span>mixed <var>$key</var></span>, <span>mixed <var>$data</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Generate Title HTML.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Generate Title HTML.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$key</var></dt>
+						<dd><code>mixed</code><br>$key</dd>
+						<dt><var>$data</var></dt>
+						<dd><code>mixed</code><br>$data</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							1.6.2<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="validate_settings_fields" id="_validate_settings_fields">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_validate_settings_fields">#</a>
+			<code><a href="source-class-WC_Settings_API.html#616-651" title="Go to source code">validate_settings_fields</a>( <span>boolean <var>$form_fields</var> = <span class="php-keyword1">false</span> </span> )</code>
+
+			<div class="description short">
+				
+<p>Validate Settings Field Data.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Validate Settings Field Data.</p>
+
+<p>Validate the data on the "Settings" form.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$form_fields</var></dt>
+						<dd><code>boolean</code><br>$form_fields (default: false)</dd>
+					</dl></div>
+
+
+
+					<h4>Since</h4>
+					<div class="list">
+							1.0.0<br />
+					</div>
+					<h4>Uses</h4>
+					<div class="list">
+							method_exists()<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="validate_checkbox_field" id="_validate_checkbox_field">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_validate_checkbox_field">#</a>
+			<code><a href="source-class-WC_Settings_API.html#653-670" title="Go to source code">validate_checkbox_field</a>( <span>mixed <var>$key</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Validate Checkbox Field.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Validate Checkbox Field.</p>
+
+<p>If not set, return "no", otherwise return "yes".</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$key</var></dt>
+						<dd><code>mixed</code><br>$key</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							1.0.0<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="validate_text_field" id="_validate_text_field">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_validate_text_field">#</a>
+			<code><a href="source-class-WC_Settings_API.html#672-685" title="Go to source code">validate_text_field</a>( <span>mixed <var>$key</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Validate Text Field.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Validate Text Field.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$key</var></dt>
+						<dd><code>mixed</code><br>$key</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="validate_price_field" id="_validate_price_field">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_validate_price_field">#</a>
+			<code><a href="source-class-WC_Settings_API.html#687-704" title="Go to source code">validate_price_field</a>( <span>mixed <var>$key</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Validate Price Field.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Validate Price Field.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$key</var></dt>
+						<dd><code>mixed</code><br>$key</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="validate_decimal_field" id="_validate_decimal_field">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_validate_decimal_field">#</a>
+			<code><a href="source-class-WC_Settings_API.html#706-723" title="Go to source code">validate_decimal_field</a>( <span>mixed <var>$key</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Validate Price Field.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Validate Price Field.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$key</var></dt>
+						<dd><code>mixed</code><br>$key</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="validate_password_field" id="_validate_password_field">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_validate_password_field">#</a>
+			<code><a href="source-class-WC_Settings_API.html#725-743" title="Go to source code">validate_password_field</a>( <span>mixed <var>$key</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Validate Password Field.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Validate Password Field.</p>
+
+<p>Make sure the data is escaped correctly, etc.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$key</var></dt>
+						<dd><code>mixed</code><br>$key</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							1.0.0<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="validate_textarea_field" id="_validate_textarea_field">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_validate_textarea_field">#</a>
+			<code><a href="source-class-WC_Settings_API.html#745-770" title="Go to source code">validate_textarea_field</a>( <span>mixed <var>$key</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Validate Textarea Field.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Validate Textarea Field.</p>
+
+<p>Make sure the data is escaped correctly, etc.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$key</var></dt>
+						<dd><code>mixed</code><br>$key</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							1.0.0<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="validate_select_field" id="_validate_select_field">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_validate_select_field">#</a>
+			<code><a href="source-class-WC_Settings_API.html#772-790" title="Go to source code">validate_select_field</a>( <span>mixed <var>$key</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Validate Select Field.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Validate Select Field.</p>
+
+<p>Make sure the data is escaped correctly, etc.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$key</var></dt>
+						<dd><code>mixed</code><br>$key</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							1.0.0<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="validate_multiselect_field" id="_validate_multiselect_field">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_validate_multiselect_field">#</a>
+			<code><a href="source-class-WC_Settings_API.html#792-812" title="Go to source code">validate_multiselect_field</a>( <span>mixed <var>$key</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Validate Multiselect Field.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Validate Multiselect Field.</p>
+
+<p>Make sure the data is escaped correctly, etc.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$key</var></dt>
+						<dd><code>mixed</code><br>$key</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							1.0.0<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+
+
+
+		<h2>Properties summary</h2>
+		<table class="summary table table-bordered table-striped" id="properties">
+		<tr data-order="plugin_id" id="$plugin_id">
+			<td class="attributes"><code>
+				public  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-WC_Settings_API.html#13-14" title="Go to source code"><var>$plugin_id</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$plugin_id" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>The plugin ID. Used for option names.</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>The plugin ID. Used for option names.</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="settings" id="$settings">
+			<td class="attributes"><code>
+				public  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-WC_Settings_API.html#16-17" title="Go to source code"><var>$settings</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$settings" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Array of setting values.</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Array of setting values.</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="form_fields" id="$form_fields">
+			<td class="attributes"><code>
+				public  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-WC_Settings_API.html#19-20" title="Go to source code"><var>$form_fields</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$form_fields" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Array of form option fields.</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Array of form option fields.</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="errors" id="$errors">
+			<td class="attributes"><code>
+				public  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-WC_Settings_API.html#22-23" title="Go to source code"><var>$errors</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$errors" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Array of validation errors.</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Array of validation errors.</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="sanitized_fields" id="$sanitized_fields">
+			<td class="attributes"><code>
+				public  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-WC_Settings_API.html#25-26" title="Go to source code"><var>$sanitized_fields</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$sanitized_fields" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Sanitized fields after validation.</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Sanitized fields after validation.</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		WooCommerce API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</body>
+</html>

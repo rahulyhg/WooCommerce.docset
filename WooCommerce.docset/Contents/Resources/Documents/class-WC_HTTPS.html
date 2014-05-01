@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class WC_HTTPS | WooCommerce</title>
+
+	<script type="text/javascript" src="resources/combined.js?843538251"></script>
+	<script type="text/javascript" src="elementlist.js?2762052405"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?2450451432" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?1319793728" />
+
+</head>
+
+<body>
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class WC_HTTPS</h1>
+
+
+	<div class="description">
+	
+<p>WC_HTTPS class.</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		
+		<b>Package:</b> <a href="package-WooCommerce.html">WooCommerce</a>\<a href="package-WooCommerce.Classes.html">Classes</a><br />
+
+				<b>Category:</b>
+				Class<br />
+				<b>Author:</b>
+				WooThemes<br />
+				<b>Version:</b>
+				2.1.0<br />
+				<b>Class:</b>
+				WC_HTTPS<br />
+		<b>Located at</b> <a href="source-class-WC_HTTPS.html#5-101" title="Go to source code">includes/class-wc-https.php</a><br />
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped" id="methods">
+		<tr data-order="__construct" id="___construct">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___construct">#</a>
+			<code><a href="source-class-WC_HTTPS.html#16-36" title="Go to source code">__construct</a>( )</code>
+
+			<div class="description short">
+				
+<p>Hook in our HTTPS functions if we're on the frontend. This will ensure any
+links output to a page (when viewing via HTTPS) are also served over HTTPS.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Hook in our HTTPS functions if we're on the frontend. This will ensure any
+links output to a page (when viewing via HTTPS) are also served over HTTPS.</p>
+
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="force_https_url" id="_force_https_url">
+
+			<td class="attributes"><code>
+				 public static
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_force_https_url">#</a>
+			<code><a href="source-class-WC_HTTPS.html#38-52" title="Go to source code">force_https_url</a>( <span>mixed <var>$content</var></span> )</code>
+
+			<div class="description short">
+				
+<p>force_https_url function.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>force_https_url function.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$content</var></dt>
+						<dd><code>mixed</code><br>$content</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="force_https_page_link" id="_force_https_page_link">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_force_https_page_link">#</a>
+			<code><a href="source-class-WC_HTTPS.html#54-68" title="Go to source code">force_https_page_link</a>( <span>string <var>$link</var></span>, <span>object <var>$page_id</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Force a post link to be SSL if needed</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Force a post link to be SSL if needed</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$link</var></dt>
+						<dd><code>string</code><br>$post_link</dd>
+						<dt><var>$page_id</var></dt>
+						<dd><code>object</code><br>$post</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="force_https_template_redirect" id="_force_https_template_redirect">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_force_https_template_redirect">#</a>
+			<code><a href="source-class-WC_HTTPS.html#70-84" title="Go to source code">force_https_template_redirect</a>( )</code>
+
+			<div class="description short">
+				
+<p>Template redirect - if we end up on a page ensure it has the correct
+http/https url</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Template redirect - if we end up on a page ensure it has the correct
+http/https url</p>
+
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="unforce_https_template_redirect" id="_unforce_https_template_redirect">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_unforce_https_template_redirect">#</a>
+			<code><a href="source-class-WC_HTTPS.html#86-100" title="Go to source code">unforce_https_template_redirect</a>( )</code>
+
+			<div class="description short">
+				
+<p>Template redirect - if we end up on a page ensure it has the correct
+http/https url</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Template redirect - if we end up on a page ensure it has the correct
+http/https url</p>
+
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		WooCommerce API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</body>
+</html>

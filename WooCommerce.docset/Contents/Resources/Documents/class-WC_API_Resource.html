@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class WC_API_Resource | WooCommerce</title>
+
+	<script type="text/javascript" src="resources/combined.js?843538251"></script>
+	<script type="text/javascript" src="elementlist.js?2762052405"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?2450451432" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?1319793728" />
+
+</head>
+
+<body>
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class WC_API_Resource</h1>
+
+
+
+
+
+	<div>
+		<h3>Direct known subclasses</h3>
+		<p class="elementList">
+			<code><a href="class-WC_API_Coupons.html">WC_API_Coupons</a></code>, 
+			<code><a href="class-WC_API_Customers.html">WC_API_Customers</a></code>, 
+			<code><a href="class-WC_API_Orders.html">WC_API_Orders</a></code>, 
+			<code><a href="class-WC_API_Products.html">WC_API_Products</a></code>, 
+			<code><a href="class-WC_API_Reports.html">WC_API_Reports</a></code>
+		</p>
+	</div>
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		
+		<b>Package:</b> <a href="package-WooCommerce.html">WooCommerce</a>\<a href="package-WooCommerce.API.html">API</a><br />
+
+				<b>Author:</b>
+				WooThemes<br />
+		<b>Located at</b> <a href="source-class-WC_API_Resource.html#15-399" title="Go to source code">includes/api/class-wc-api-resource.php</a><br />
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped" id="methods">
+		<tr data-order="__construct" id="___construct">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-WC_API_Resource.html">WC_API_Resource</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___construct">#</a>
+			<code><a href="source-class-WC_API_Resource.html#23-45" title="Go to source code">__construct</a>( <span><code><a href="class-WC_API_Server.html">WC_API_Server</a></code> <var>$server</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Setup class</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Setup class</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$server</var></dt>
+						<dd><code><code><a href="class-WC_API_Server.html">WC_API_Server</a></code></code><br>$server</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-WC_API_Resource.html">WC_API_Resource</a></code></code><br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							2.1<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="validate_request" id="_validate_request">
+
+			<td class="attributes"><code>
+				 protected 
+				integer|WP_Error
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_validate_request">#</a>
+			<code><a href="source-class-WC_API_Resource.html#47-106" title="Go to source code">validate_request</a>( <span>string|integer <var>$id</var></span>, <span>string <var>$type</var></span>, <span>string <var>$context</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Validate the request by checking:</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Validate the request by checking:</p>
+
+<ol>
+	<li>the ID is a valid integer</li>
+
+	<li>the ID returns a valid post object and matches the provided post type</li>
+
+	<li>the current user has the proper permissions to read/edit/delete the
+	post</li>
+</ol>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$id</var></dt>
+						<dd><code>string|integer</code><br>$id the post ID</dd>
+						<dt><var>$type</var></dt>
+						<dd><code>string</code><br>$type the post type, either <code>shop_order</code>, <code>shop_coupon</code>,
+or <code>product</code></dd>
+						<dt><var>$context</var></dt>
+						<dd><code>string</code><br>$context the context of the request, either <code>read</code>, <code>edit</code>
+or <code>delete</code></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>integer|WP_Error</code><br>valid post ID or WP_Error if any of the checks fails<br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							2.1<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="merge_query_args" id="_merge_query_args">
+
+			<td class="attributes"><code>
+				 protected 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_merge_query_args">#</a>
+			<code><a href="source-class-WC_API_Resource.html#108-158" title="Go to source code">merge_query_args</a>( <span>array <var>$base_args</var></span>, <span>array <var>$request_args</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Add common request arguments to argument list before WP_Query is run</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Add common request arguments to argument list before WP_Query is run</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$base_args</var></dt>
+						<dd><code>array</code><br>$base_args required arguments for the query (e.g. <code>post_type</code>, etc)</dd>
+						<dt><var>$request_args</var></dt>
+						<dd><code>array</code><br>$request_args arguments provided in the request</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							2.1<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="maybe_add_meta" id="_maybe_add_meta">
+
+			<td class="attributes"><code>
+				 public 
+				mixed
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_maybe_add_meta">#</a>
+			<code><a href="source-class-WC_API_Resource.html#160-224" title="Go to source code">maybe_add_meta</a>( <span>array <var>$data</var></span>, <span>object <var>$resource</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Add meta to resources when requested by the client. Meta is added as a
+top-level <code>&lt;resource_name&gt;_meta</code> attribute (e.g.
+<code>order_meta</code>) as a list of key/value pairs</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Add meta to resources when requested by the client. Meta is added as a
+top-level <code>&lt;resource_name&gt;_meta</code> attribute (e.g.
+<code>order_meta</code>) as a list of key/value pairs</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$data</var></dt>
+						<dd><code>array</code><br>$data the resource data</dd>
+						<dt><var>$resource</var></dt>
+						<dd><code>object</code><br>$resource the resource object (e.g WC_Order)</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>mixed</code><br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							2.1<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="filter_response_fields" id="_filter_response_fields">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_filter_response_fields">#</a>
+			<code><a href="source-class-WC_API_Resource.html#226-279" title="Go to source code">filter_response_fields</a>( <span>array <var>$data</var></span>, <span>object <var>$resource</var></span>, <span>array|string <var>$fields</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Restrict the fields included in the response if the request specified certain
+only certain fields should be returned</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Restrict the fields included in the response if the request specified certain
+only certain fields should be returned</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$data</var></dt>
+						<dd><code>array</code><br>$data the response data</dd>
+						<dt><var>$resource</var></dt>
+						<dd><code>object</code><br>$resource the object that provided the response data, e.g. WC_Coupon or WC_Order</dd>
+						<dt><var>$fields</var></dt>
+						<dd><code>array|string</code><br>the requested list of fields to include in the response</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br>response data<br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							2.1<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="delete" id="_delete">
+
+			<td class="attributes"><code>
+				 protected 
+				array|WP_Error
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_delete">#</a>
+			<code><a href="source-class-WC_API_Resource.html#281-325" title="Go to source code">delete</a>( <span>integer <var>$id</var></span>, <span>string <var>$type</var></span>, <span>boolean <var>$force</var> = <span class="php-keyword1">false</span> </span> )</code>
+
+			<div class="description short">
+				
+<p>Delete a given resource</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Delete a given resource</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$id</var></dt>
+						<dd><code>integer</code><br>$id the resource ID</dd>
+						<dt><var>$type</var></dt>
+						<dd><code>string</code><br>$type the resource post type, or <code>customer</code></dd>
+						<dt><var>$force</var></dt>
+						<dd><code>boolean</code><br>$force true to permanently delete resource, false to move to trash (not
+supported for <code>customer</code>)</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array|WP_Error</code><br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							2.1<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="is_readable" id="_is_readable">
+
+			<td class="attributes"><code>
+				 protected 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_is_readable">#</a>
+			<code><a href="source-class-WC_API_Resource.html#328-339" title="Go to source code">is_readable</a>( <span>WP_Post|integer <var>$post</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Checks if the given post is readable by the current user</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Checks if the given post is readable by the current user</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$post</var></dt>
+						<dd><code>WP_Post|integer</code><br>$post</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							2.1<br />
+					</div>
+					<h4>See</h4>
+					<div class="list">
+							WC_API_Resource::check_permission()<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="is_editable" id="_is_editable">
+
+			<td class="attributes"><code>
+				 protected 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_is_editable">#</a>
+			<code><a href="source-class-WC_API_Resource.html#341-353" title="Go to source code">is_editable</a>( <span>WP_Post|integer <var>$post</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Checks if the given post is editable by the current user</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Checks if the given post is editable by the current user</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$post</var></dt>
+						<dd><code>WP_Post|integer</code><br>$post</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							2.1<br />
+					</div>
+					<h4>See</h4>
+					<div class="list">
+							WC_API_Resource::check_permission()<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="is_deletable" id="_is_deletable">
+
+			<td class="attributes"><code>
+				 protected 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_is_deletable">#</a>
+			<code><a href="source-class-WC_API_Resource.html#355-366" title="Go to source code">is_deletable</a>( <span>WP_Post|integer <var>$post</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Checks if the given post is deletable by the current user</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Checks if the given post is deletable by the current user</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$post</var></dt>
+						<dd><code>WP_Post|integer</code><br>$post</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							2.1<br />
+					</div>
+					<h4>See</h4>
+					<div class="list">
+							WC_API_Resource::check_permission()<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+
+
+
+		<h2>Properties summary</h2>
+		<table class="summary table table-bordered table-striped" id="properties">
+		<tr data-order="server" id="$server">
+			<td class="attributes"><code>
+				protected  
+				<code><a href="class-WC_API_Server.html">WC_API_Server</a></code>
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-WC_API_Resource.html#17-18" title="Go to source code"><var>$server</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$server" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>the API server</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>the API server</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="base" id="$base">
+			<td class="attributes"><code>
+				protected  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-WC_API_Resource.html#20-21" title="Go to source code"><var>$base</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$base" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>sub-classes override this to set a resource-specific base route</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>sub-classes override this to set a resource-specific base route</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		WooCommerce API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</body>
+</html>

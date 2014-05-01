@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class WC_Payment_Gateways | WooCommerce</title>
+
+	<script type="text/javascript" src="resources/combined.js?843538251"></script>
+	<script type="text/javascript" src="elementlist.js?2762052405"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?2450451432" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?1319793728" />
+
+</head>
+
+<body>
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class WC_Payment_Gateways</h1>
+
+
+	<div class="description">
+	
+<p>WooCommerce Payment Gateways class</p>
+
+<p>Loads payment gateways via hooks for use in the store.</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		
+		<b>Package:</b> <a href="package-WooCommerce.html">WooCommerce</a>\<a href="package-WooCommerce.Classes.html">Classes</a>\<a href="package-WooCommerce.Classes.Payment.html">Payment</a><br />
+
+				<b>Category:</b>
+				Class<br />
+				<b>Author:</b>
+				WooThemes<br />
+				<b>Version:</b>
+				1.6.4<br />
+				<b>Class:</b>
+				WC_Payment_Gateways<br />
+		<b>Located at</b> <a href="source-class-WC_Payment_Gateways.html#2-175" title="Go to source code">includes/class-wc-payment-gateways.php</a><br />
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped" id="methods">
+		<tr data-order="instance" id="_instance">
+
+			<td class="attributes"><code>
+				 public static
+				Main
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_instance">#</a>
+			<code><a href="source-class-WC_Payment_Gateways.html#24-38" title="Go to source code">instance</a>( )</code>
+
+			<div class="description short">
+				
+<p>Main WooCommerce Instance</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Main WooCommerce Instance</p>
+
+<p>Ensures only one instance of WooCommerce is loaded or can be loaded.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>Main</code><br>WooCommerce instance<br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							2.1<br />
+					</div>
+					<h4>See</h4>
+					<div class="list">
+							<code><code><a href="function-WC.html">WC()</a></code></code><br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="__clone" id="___clone">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___clone">#</a>
+			<code><a href="source-class-WC_Payment_Gateways.html#40-47" title="Go to source code">__clone</a>( )</code>
+
+			<div class="description short">
+				
+<p>Cloning is forbidden.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Cloning is forbidden.</p>
+
+
+
+
+
+
+					<h4>Since</h4>
+					<div class="list">
+							2.1<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="__wakeup" id="___wakeup">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___wakeup">#</a>
+			<code><a href="source-class-WC_Payment_Gateways.html#49-56" title="Go to source code">__wakeup</a>( )</code>
+
+			<div class="description short">
+				
+<p>Unserializing instances of this class is forbidden.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Unserializing instances of this class is forbidden.</p>
+
+
+
+
+
+
+					<h4>Since</h4>
+					<div class="list">
+							2.1<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="__construct" id="___construct">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___construct">#</a>
+			<code><a href="source-class-WC_Payment_Gateways.html#58-66" title="Go to source code">__construct</a>( )</code>
+
+			<div class="description short">
+				
+<p>__construct function.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>__construct function.</p>
+
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="init" id="_init">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_init">#</a>
+			<code><a href="source-class-WC_Payment_Gateways.html#68-105" title="Go to source code">init</a>( )</code>
+
+			<div class="description short">
+				
+<p>Load gateways and hook in functions.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Load gateways and hook in functions.</p>
+
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="payment_gateways" id="_payment_gateways">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_payment_gateways">#</a>
+			<code><a href="source-class-WC_Payment_Gateways.html#108-123" title="Go to source code">payment_gateways</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get gateways.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get gateways.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_available_payment_gateways" id="_get_available_payment_gateways">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_available_payment_gateways">#</a>
+			<code><a href="source-class-WC_Payment_Gateways.html#126-148" title="Go to source code">get_available_payment_gateways</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get available gateways.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get available gateways.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="process_admin_options" id="_process_admin_options">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_process_admin_options">#</a>
+			<code><a href="source-class-WC_Payment_Gateways.html#151-174" title="Go to source code">process_admin_options</a>( )</code>
+
+			<div class="description short">
+				
+<p>Save options in admin.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Save options in admin.</p>
+
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+
+
+
+		<h2>Properties summary</h2>
+		<table class="summary table table-bordered table-striped" id="properties">
+		<tr data-order="payment_gateways" id="$payment_gateways">
+			<td class="attributes"><code>
+				public  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-WC_Payment_Gateways.html#15-16" title="Go to source code"><var>$payment_gateways</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$payment_gateways" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Array of payment gateway classes.</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Array of payment gateway classes.</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="_instance" id="$_instance">
+			<td class="attributes"><code>
+				protected static 
+				<code><a href="class-WooCommerce.html">WooCommerce</a></code>
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-WC_Payment_Gateways.html#18-22" title="Go to source code"><var>$_instance</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$_instance" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>The single instance of the class</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>The single instance of the class</p>
+
+
+						<h4>Since</h4>
+						<div class="list">
+								2.1<br />
+						</div>
+				</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		WooCommerce API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class WC_Frontend_Scripts | WooCommerce</title>
+
+	<script type="text/javascript" src="resources/combined.js?843538251"></script>
+	<script type="text/javascript" src="elementlist.js?2762052405"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?2450451432" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?1319793728" />
+
+</head>
+
+<body>
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class WC_Frontend_Scripts</h1>
+
+
+	<div class="description">
+	
+<p>Handle frontend forms</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		
+		<b>Package:</b> <a href="package-WooCommerce.html">WooCommerce</a>\<a href="package-WooCommerce.Classes.html">Classes</a>\<a href="package-WooCommerce.Classes..html"></a><br />
+
+				<b>Category:</b>
+				Class<br />
+				<b>Author:</b>
+				WooThemes<br />
+				<b>Version:</b>
+				2.1.0<br />
+				<b>Class:</b>
+				WC_Frontend_Scripts<br />
+		<b>Located at</b> <a href="source-class-WC_Frontend_Scripts.html#2-217" title="Go to source code">includes/class-wc-frontend-scripts.php</a><br />
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped" id="methods">
+		<tr data-order="__construct" id="___construct">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___construct">#</a>
+			<code><a href="source-class-WC_Frontend_Scripts.html#13-20" title="Go to source code">__construct</a>( )</code>
+
+			<div class="description short">
+				
+<p>Constructor</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Constructor</p>
+
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_styles" id="_get_styles">
+
+			<td class="attributes"><code>
+				 public static
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_styles">#</a>
+			<code><a href="source-class-WC_Frontend_Scripts.html#22-47" title="Go to source code">get_styles</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get styles for the frontend</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get styles for the frontend</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="load_scripts" id="_load_scripts">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_load_scripts">#</a>
+			<code><a href="source-class-WC_Frontend_Scripts.html#49-179" title="Go to source code">load_scripts</a>( )</code>
+
+			<div class="description short">
+				
+<p>Register/queue frontend scripts.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Register/queue frontend scripts.</p>
+
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="check_jquery" id="_check_jquery">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_check_jquery">#</a>
+			<code><a href="source-class-WC_Frontend_Scripts.html#181-199" title="Go to source code">check_jquery</a>( )</code>
+
+			<div class="description short">
+				
+<p>WC requires jQuery 1.8 since it uses functions like .on() for events and
+.parseHTML. If, by the time wp_print_scrips is called, jQuery is outdated (i.e
+not using the version in core) we need to deregister it and register the core
+version of the file.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>WC requires jQuery 1.8 since it uses functions like .on() for events and
+.parseHTML. If, by the time wp_print_scrips is called, jQuery is outdated (i.e
+not using the version in core) we need to deregister it and register the core
+version of the file.</p>
+
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="backwards_compat" id="_backwards_compat">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_backwards_compat">#</a>
+			<code><a href="source-class-WC_Frontend_Scripts.html#201-216" title="Go to source code">backwards_compat</a>( <span>array <var>$styles</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Provide backwards compat for old constant</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Provide backwards compat for old constant</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$styles</var></dt>
+						<dd><code>array</code><br>$styles</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		WooCommerce API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</body>
+</html>

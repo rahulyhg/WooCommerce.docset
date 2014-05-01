@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class WC_Shipping_Method | WooCommerce</title>
+
+	<script type="text/javascript" src="resources/combined.js?843538251"></script>
+	<script type="text/javascript" src="elementlist.js?2762052405"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?2450451432" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?1319793728" />
+
+</head>
+
+<body>
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class WC_Shipping_Method</h1>
+
+
+	<div class="description">
+	
+<p>WooCommerce Shipping Method Class</p>
+
+<p>Extended by shipping methods to handle shipping calculations etc.</p>
+
+	</div>
+
+	<dl class="tree well">
+		<dd style="padding-left:0px">
+			<a href="class-WC_Settings_API.html"><span>WC_Settings_API</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>WC_Shipping_Method</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+	<div>
+		<h3>Direct known subclasses</h3>
+		<p class="elementList">
+			<code><a href="class-WC_Shipping_Flat_Rate.html">WC_Shipping_Flat_Rate</a></code>, 
+			<code><a href="class-WC_Shipping_Free_Shipping.html">WC_Shipping_Free_Shipping</a></code>, 
+			<code><a href="class-WC_Shipping_Local_Delivery.html">WC_Shipping_Local_Delivery</a></code>, 
+			<code><a href="class-WC_Shipping_Local_Pickup.html">WC_Shipping_Local_Pickup</a></code>
+		</p>
+	</div>
+
+	<div>
+		<h3>Indirect known subclasses</h3>
+		<p class="elementList">
+			<code><a href="class-WC_Shipping_International_Delivery.html">WC_Shipping_International_Delivery</a></code>
+		</p>
+	</div>
+
+
+
+
+
+	<div class="alert alert-info">
+		<b>Abstract</b><br />
+		
+		
+		<b>Package:</b> <a href="package-WooCommerce.html">WooCommerce</a>\<a href="package-WooCommerce.Abstracts.html">Abstracts</a><br />
+
+				<b>Category:</b>
+				Abstract Class<br />
+				<b>Author:</b>
+				WooThemes<br />
+				<b>Version:</b>
+				1.6.4<br />
+				<b>Class:</b>
+				WC_Shipping_Method<br />
+		<b>Located at</b> <a href="source-class-WC_Shipping_Method.html#5-234" title="Go to source code">includes/abstracts/abstract-wc-shipping-method.php</a><br />
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped" id="methods">
+		<tr data-order="is_taxable" id="_is_taxable">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_is_taxable">#</a>
+			<code><a href="source-class-WC_Shipping_Method.html#57-63" title="Go to source code">is_taxable</a>( )</code>
+
+			<div class="description short">
+				
+<p>Whether or not we need to calculate tax on top of the shipping rate</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Whether or not we need to calculate tax on top of the shipping rate</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="add_rate" id="_add_rate">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_add_rate">#</a>
+			<code><a href="source-class-WC_Shipping_Method.html#65-153" title="Go to source code">add_rate</a>( <span>array <var>$args</var> = <span class="php-keyword1">array</span>() </span> )</code>
+
+			<div class="description short">
+				
+<p>Add a rate</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Add a rate</p>
+
+<p>Add a shipping rate. If taxes are not set they will be calculated based on
+cost.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$args</var></dt>
+						<dd><code>array</code><br>$args (default: array())</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="has_settings" id="_has_settings">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_has_settings">#</a>
+			<code><a href="source-class-WC_Shipping_Method.html#155-163" title="Go to source code">has_settings</a>( )</code>
+
+			<div class="description short">
+				
+<p>has_settings function.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>has_settings function.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="is_available" id="_is_available">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_is_available">#</a>
+			<code><a href="source-class-WC_Shipping_Method.html#165-195" title="Go to source code">is_available</a>( <span>array <var>$package</var></span> )</code>
+
+			<div class="description short">
+				
+<p>is_available function.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>is_available function.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$package</var></dt>
+						<dd><code>array</code><br>$package</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_title" id="_get_title">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_title">#</a>
+			<code><a href="source-class-WC_Shipping_Method.html#197-204" title="Go to source code">get_title</a>( )</code>
+
+			<div class="description short">
+				
+<p>Return the gateways title</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Return the gateways title</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_fee" id="_get_fee">
+
+			<td class="attributes"><code>
+				 public 
+				float
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_fee">#</a>
+			<code><a href="source-class-WC_Shipping_Method.html#206-220" title="Go to source code">get_fee</a>( <span>mixed <var>$fee</var></span>, <span>mixed <var>$total</var></span> )</code>
+
+			<div class="description short">
+				
+<p>get_fee function.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>get_fee function.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$fee</var></dt>
+						<dd><code>mixed</code><br>$fee</dd>
+						<dt><var>$total</var></dt>
+						<dd><code>mixed</code><br>$total</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>float</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="supports" id="_supports">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_supports">#</a>
+			<code><a href="source-class-WC_Shipping_Method.html#222-233" title="Go to source code">supports</a>( <span>mixed <var>$feature</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Check if a shipping method supports a given feature.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Check if a shipping method supports a given feature.</p>
+
+<p>Methods should override this to declare support (or lack of support) for a
+feature.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$feature</var></dt>
+						<dd><code>mixed</code><br>$feature string The name of a feature to test support for.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>True if the gateway supports the feature, false otherwise.<br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							1.5.7<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+		<h3>Methods inherited from <a href="class-WC_Settings_API.html#methods">WC_Settings_API</a></h3>
+		<p class="elementList">
+			<code><a href="class-WC_Settings_API.html#_admin_options">admin_options()</a></code>, 
+			<code><a href="class-WC_Settings_API.html#_display_errors">display_errors()</a></code>, 
+			<code><a href="class-WC_Settings_API.html#_format_settings">format_settings()</a></code>, 
+			<code><a href="class-WC_Settings_API.html#_generate_checkbox_html">generate_checkbox_html()</a></code>, 
+			<code><a href="class-WC_Settings_API.html#_generate_decimal_html">generate_decimal_html()</a></code>, 
+			<code><a href="class-WC_Settings_API.html#_generate_multiselect_html">generate_multiselect_html()</a></code>, 
+			<code><a href="class-WC_Settings_API.html#_generate_password_html">generate_password_html()</a></code>, 
+			<code><a href="class-WC_Settings_API.html#_generate_price_html">generate_price_html()</a></code>, 
+			<code><a href="class-WC_Settings_API.html#_generate_select_html">generate_select_html()</a></code>, 
+			<code><a href="class-WC_Settings_API.html#_generate_settings_html">generate_settings_html()</a></code>, 
+			<code><a href="class-WC_Settings_API.html#_generate_text_html">generate_text_html()</a></code>, 
+			<code><a href="class-WC_Settings_API.html#_generate_textarea_html">generate_textarea_html()</a></code>, 
+			<code><a href="class-WC_Settings_API.html#_generate_title_html">generate_title_html()</a></code>, 
+			<code><a href="class-WC_Settings_API.html#_get_custom_attribute_html">get_custom_attribute_html()</a></code>, 
+			<code><a href="class-WC_Settings_API.html#_get_description_html">get_description_html()</a></code>, 
+			<code><a href="class-WC_Settings_API.html#_get_form_fields">get_form_fields()</a></code>, 
+			<code><a href="class-WC_Settings_API.html#_get_option">get_option()</a></code>, 
+			<code><a href="class-WC_Settings_API.html#_get_tooltip_html">get_tooltip_html()</a></code>, 
+			<code><a href="class-WC_Settings_API.html#_init_form_fields">init_form_fields()</a></code>, 
+			<code><a href="class-WC_Settings_API.html#_init_settings">init_settings()</a></code>, 
+			<code><a href="class-WC_Settings_API.html#_process_admin_options">process_admin_options()</a></code>, 
+			<code><a href="class-WC_Settings_API.html#_validate_checkbox_field">validate_checkbox_field()</a></code>, 
+			<code><a href="class-WC_Settings_API.html#_validate_decimal_field">validate_decimal_field()</a></code>, 
+			<code><a href="class-WC_Settings_API.html#_validate_multiselect_field">validate_multiselect_field()</a></code>, 
+			<code><a href="class-WC_Settings_API.html#_validate_password_field">validate_password_field()</a></code>, 
+			<code><a href="class-WC_Settings_API.html#_validate_price_field">validate_price_field()</a></code>, 
+			<code><a href="class-WC_Settings_API.html#_validate_select_field">validate_select_field()</a></code>, 
+			<code><a href="class-WC_Settings_API.html#_validate_settings_fields">validate_settings_fields()</a></code>, 
+			<code><a href="class-WC_Settings_API.html#_validate_text_field">validate_text_field()</a></code>, 
+			<code><a href="class-WC_Settings_API.html#_validate_textarea_field">validate_textarea_field()</a></code>
+		</p>
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+
+
+
+		<h2>Properties summary</h2>
+		<table class="summary table table-bordered table-striped" id="properties">
+		<tr data-order="id" id="$id">
+			<td class="attributes"><code>
+				public  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-WC_Shipping_Method.html#18-19" title="Go to source code"><var>$id</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$id" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Unique ID for the shipping method - must be set.</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Unique ID for the shipping method - must be set.</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="number" id="$number">
+			<td class="attributes"><code>
+				public  
+				integer
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-WC_Shipping_Method.html#21-22" title="Go to source code"><var>$number</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$number" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Optional instance ID.</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Optional instance ID.</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="method_title" id="$method_title">
+			<td class="attributes"><code>
+				public  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-WC_Shipping_Method.html#24-25" title="Go to source code"><var>$method_title</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$method_title" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Method title</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Method title</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="title" id="$title">
+			<td class="attributes"><code>
+				public  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-WC_Shipping_Method.html#27-28" title="Go to source code"><var>$title</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$title" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>User set title</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>User set title</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="availability" id="$availability">
+			<td class="attributes"><code>
+				public  
+				boolean
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-WC_Shipping_Method.html#30-31" title="Go to source code"><var>$availability</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$availability" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>True if the method is available.</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>True if the method is available.</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="countries" id="$countries">
+			<td class="attributes"><code>
+				public  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-WC_Shipping_Method.html#33-34" title="Go to source code"><var>$countries</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$countries" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Array of countries this method is enabled for.</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Array of countries this method is enabled for.</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="tax_status" id="$tax_status">
+			<td class="attributes"><code>
+				public  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-WC_Shipping_Method.html#36-37" title="Go to source code"><var>$tax_status</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$tax_status" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>If 'taxable' tax will be charged for this method (if applicable)</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>If 'taxable' tax will be charged for this method (if applicable)</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="fee" id="$fee">
+			<td class="attributes"><code>
+				public  
+				mixed
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-WC_Shipping_Method.html#39-40" title="Go to source code"><var>$fee</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$fee" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Fees for the method</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Fees for the method</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="minimum_fee" id="$minimum_fee">
+			<td class="attributes"><code>
+				public  
+				float
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-WC_Shipping_Method.html#42-43" title="Go to source code"><var>$minimum_fee</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$minimum_fee" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Minimum fee for the method</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Minimum fee for the method</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="enabled" id="$enabled">
+			<td class="attributes"><code>
+				public  
+				boolean
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-WC_Shipping_Method.html#45-46" title="Go to source code"><var>$enabled</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$enabled" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Enabled for disabled</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Enabled for disabled</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="has_settings" id="$has_settings">
+			<td class="attributes"><code>
+				public  
+				boolean
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-WC_Shipping_Method.html#48-49" title="Go to source code"><var>$has_settings</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$has_settings" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Whether the method has settings or not (In WooCommerce &gt; Settings &gt;
+Shipping)</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Whether the method has settings or not (In WooCommerce &gt; Settings &gt;
+Shipping)</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="supports" id="$supports">
+			<td class="attributes"><code>
+				public  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-WC_Shipping_Method.html#51-52" title="Go to source code"><var>$supports</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$supports" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Features this method supports.</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Features this method supports.</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="rates" id="$rates">
+			<td class="attributes"><code>
+				public  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-WC_Shipping_Method.html#54-55" title="Go to source code"><var>$rates</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$rates" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>This is an array of rates - methods must populate this array to register
+shipping costs</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>This is an array of rates - methods must populate this array to register
+shipping costs</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		</table>
+
+		<h3>Properties inherited from <a href="class-WC_Settings_API.html#properties">WC_Settings_API</a></h3>
+		<p class="elementList">
+			<code><a href="class-WC_Settings_API.html#$errors"><var>$errors</var></a></code>, 
+			<code><a href="class-WC_Settings_API.html#$form_fields"><var>$form_fields</var></a></code>, 
+			<code><a href="class-WC_Settings_API.html#$plugin_id"><var>$plugin_id</var></a></code>, 
+			<code><a href="class-WC_Settings_API.html#$sanitized_fields"><var>$sanitized_fields</var></a></code>, 
+			<code><a href="class-WC_Settings_API.html#$settings"><var>$settings</var></a></code>
+		</p>
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		WooCommerce API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</body>
+</html>

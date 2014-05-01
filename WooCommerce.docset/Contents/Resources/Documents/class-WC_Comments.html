@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class WC_Comments | WooCommerce</title>
+
+	<script type="text/javascript" src="resources/combined.js?843538251"></script>
+	<script type="text/javascript" src="elementlist.js?2762052405"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?2450451432" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?1319793728" />
+
+</head>
+
+<body>
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class WC_Comments</h1>
+
+
+	<div class="description">
+	
+<p>Comments</p>
+
+<p>Handle comments (reviews and order notes)</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		
+		<b>Package:</b> <a href="package-WooCommerce.html">WooCommerce</a>\<a href="package-WooCommerce.Classes.html">Classes</a>\<a href="package-WooCommerce.Classes.Products.html">Products</a><br />
+
+				<b>Category:</b>
+				Class<br />
+				<b>Author:</b>
+				WooThemes<br />
+				<b>Version:</b>
+				2.1.0<br />
+				<b>Class:</b>
+				WC_Post_types<br />
+		<b>Located at</b> <a href="source-class-WC_Comments.html#5-145" title="Go to source code">includes/class-wc-comments.php</a><br />
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped" id="methods">
+		<tr data-order="__construct" id="___construct">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___construct">#</a>
+			<code><a href="source-class-WC_Comments.html#18-34" title="Go to source code">__construct</a>( )</code>
+
+			<div class="description short">
+				
+<p>Constructor</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Constructor</p>
+
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="exclude_order_comments" id="_exclude_order_comments">
+
+			<td class="attributes"><code>
+				 public static
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_exclude_order_comments">#</a>
+			<code><a href="source-class-WC_Comments.html#36-66" title="Go to source code">exclude_order_comments</a>( <span>array <var>$clauses</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Exclude order comments from queries and RSS</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Exclude order comments from queries and RSS</p>
+
+<p>This code should exclude shop_order comments from queries. Some queries (like
+the recent comments widget on the dashboard) are hardcoded and are not filtered,
+however, the code current_user_can( 'read_post', $comment-&gt;comment_post_ID )
+should keep them safe since only admin and shop managers can view orders
+anyway.</p>
+
+<p>The frontend view order pages get around this filter by using
+remove_filter('comments_clauses', array( 'WC_Comments'
+,'exclude_order_comments'), 10, 1 );</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$clauses</var></dt>
+						<dd><code>array</code><br>$clauses</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="exclude_order_comments_from_feed_join" id="_exclude_order_comments_from_feed_join">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_exclude_order_comments_from_feed_join">#</a>
+			<code><a href="source-class-WC_Comments.html#68-81" title="Go to source code">exclude_order_comments_from_feed_join</a>( <span>string <var>$join</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Exclude order comments from queries and RSS</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Exclude order comments from queries and RSS</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$join</var></dt>
+						<dd><code>string</code><br>$join</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="exclude_order_comments_from_feed_where" id="_exclude_order_comments_from_feed_where">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_exclude_order_comments_from_feed_where">#</a>
+			<code><a href="source-class-WC_Comments.html#83-98" title="Go to source code">exclude_order_comments_from_feed_where</a>( <span>string <var>$where</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Exclude order comments from queries and RSS</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Exclude order comments from queries and RSS</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$where</var></dt>
+						<dd><code>string</code><br>$where</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="check_comment_rating" id="_check_comment_rating">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_check_comment_rating">#</a>
+			<code><a href="source-class-WC_Comments.html#100-113" title="Go to source code">check_comment_rating</a>( <span>array <var>$comment_data</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Validate the comment ratings.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Validate the comment ratings.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$comment_data</var></dt>
+						<dd><code>array</code><br>$comment_data</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="add_comment_rating" id="_add_comment_rating">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_add_comment_rating">#</a>
+			<code><a href="source-class-WC_Comments.html#115-130" title="Go to source code">add_comment_rating</a>( <span>mixed <var>$comment_id</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Rating field for comments.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Rating field for comments.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$comment_id</var></dt>
+						<dd><code>mixed</code><br>$comment_id</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="clear_transients" id="_clear_transients">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_clear_transients">#</a>
+			<code><a href="source-class-WC_Comments.html#132-144" title="Go to source code">clear_transients</a>( <span>mixed <var>$comment_id</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Clear transients for a review.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Clear transients for a review.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$comment_id</var></dt>
+						<dd><code>mixed</code><br>$comment_id</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		WooCommerce API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</body>
+</html>

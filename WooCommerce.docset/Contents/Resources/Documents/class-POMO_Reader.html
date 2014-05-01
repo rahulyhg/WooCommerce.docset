@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class POMO_Reader | WooCommerce</title>
+
+	<script type="text/javascript" src="resources/combined.js?843538251"></script>
+	<script type="text/javascript" src="elementlist.js?2762052405"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?2450451432" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?1319793728" />
+
+</head>
+
+<body>
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class POMO_Reader</h1>
+
+
+
+
+
+	<div>
+		<h3>Direct known subclasses</h3>
+		<p class="elementList">
+			<code><a href="class-POMO_FileReader.html">POMO_FileReader</a></code>, 
+			<code><a href="class-POMO_StringReader.html">POMO_StringReader</a></code>
+		</p>
+	</div>
+
+	<div>
+		<h3>Indirect known subclasses</h3>
+		<p class="elementList">
+			<code><a href="class-POMO_CachedFileReader.html">POMO_CachedFileReader</a></code>, 
+			<code><a href="class-POMO_CachedIntFileReader.html">POMO_CachedIntFileReader</a></code>
+		</p>
+	</div>
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		
+		<b>Package:</b> <a href="package-pomo.html">pomo</a>\<a href="package-pomo.streams.html">streams</a><br />
+
+		<b>Located at</b> <a href="source-class-POMO_Reader.html#12-102" title="Go to source code">i18n/makepot/pomo/streams.php</a><br />
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped" id="methods">
+		<tr data-order="POMO_Reader" id="_POMO_Reader">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_POMO_Reader">#</a>
+			<code><a href="source-class-POMO_Reader.html#17-20" title="Go to source code">POMO_Reader</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setEndian" id="_setEndian">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setEndian">#</a>
+			<code><a href="source-class-POMO_Reader.html#22-29" title="Go to source code">setEndian</a>( <span>mixed <var>$endian</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Sets the endianness of the file.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Sets the endianness of the file.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$endian</var></dt>
+						<dd><code>mixed</code><br>$endian string 'big' or 'little'</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="readint32" id="_readint32">
+
+			<td class="attributes"><code>
+				 public 
+				mixed
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_readint32">#</a>
+			<code><a href="source-class-POMO_Reader.html#31-44" title="Go to source code">readint32</a>( )</code>
+
+			<div class="description short">
+				
+<p>Reads a 32bit Integer from the Stream</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Reads a 32bit Integer from the Stream</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>mixed</code><br>The integer, corresponding to the next 32 bits from the stream of false if there
+are not enough bytes or on error<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="readint32array" id="_readint32array">
+
+			<td class="attributes"><code>
+				 public 
+				mixed
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_readint32array">#</a>
+			<code><a href="source-class-POMO_Reader.html#46-59" title="Go to source code">readint32array</a>( <span>integer <var>$count</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Reads an array of 32-bit Integers from the Stream</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Reads an array of 32-bit Integers from the Stream</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$count</var></dt>
+						<dd><code>integer</code><br>count How many elements should be read</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>mixed</code><br>Array of integers or false if there isn't enough data or on error<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="substr" id="_substr">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_substr">#</a>
+			<code><a href="source-class-POMO_Reader.html#62-68" title="Go to source code">substr</a>( <span>mixed <var>$string</var></span>, <span>mixed <var>$start</var></span>, <span>mixed <var>$length</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="strlen" id="_strlen">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_strlen">#</a>
+			<code><a href="source-class-POMO_Reader.html#70-76" title="Go to source code">strlen</a>( <span>mixed <var>$string</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="str_split" id="_str_split">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_str_split">#</a>
+			<code><a href="source-class-POMO_Reader.html#78-88" title="Go to source code">str_split</a>( <span>mixed <var>$string</var></span>, <span>mixed <var>$chunk_size</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="pos" id="_pos">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_pos">#</a>
+			<code><a href="source-class-POMO_Reader.html#91-93" title="Go to source code">pos</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="is_resource" id="_is_resource">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_is_resource">#</a>
+			<code><a href="source-class-POMO_Reader.html#95-97" title="Go to source code">is_resource</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="close" id="_close">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_close">#</a>
+			<code><a href="source-class-POMO_Reader.html#99-101" title="Go to source code">close</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+
+
+
+		<h2>Properties summary</h2>
+		<table class="summary table table-bordered table-striped" id="properties">
+		<tr data-order="endian" id="$endian">
+			<td class="attributes"><code>
+				public  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-POMO_Reader.html#14" title="Go to source code"><var>$endian</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$endian" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="_post" id="$_post">
+			<td class="attributes"><code>
+				public  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-POMO_Reader.html#15" title="Go to source code"><var>$_post</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$_post" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		WooCommerce API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</body>
+</html>

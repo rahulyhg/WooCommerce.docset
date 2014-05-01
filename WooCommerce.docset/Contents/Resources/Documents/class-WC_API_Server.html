@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class WC_API_Server | WooCommerce</title>
+
+	<script type="text/javascript" src="resources/combined.js?843538251"></script>
+	<script type="text/javascript" src="elementlist.js?2762052405"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?2450451432" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?1319793728" />
+
+</head>
+
+<body>
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class WC_API_Server</h1>
+
+
+
+
+
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		
+		<b>Package:</b> <a href="package-WooCommerce.html">WooCommerce</a>\<a href="package-WooCommerce.API.html">API</a><br />
+
+				<b>Author:</b>
+				WooThemes<br />
+		<b>Located at</b> <a href="source-class-WC_API_Server.html#20-750" title="Go to source code">includes/api/class-wc-api-server.php</a><br />
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped" id="methods">
+		<tr data-order="__construct" id="___construct">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-WC_API_Server.html">WC_API_Server</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___construct">#</a>
+			<code><a href="source-class-WC_API_Server.html#107-146" title="Go to source code">__construct</a>( <span>mixed <var>$path</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Setup class and set request/response handler</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Setup class and set request/response handler</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$path</var></dt>
+						<dd><code>mixed</code><br>$path</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><code><a href="class-WC_API_Server.html">WC_API_Server</a></code></code><br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							2.1<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="check_authentication" id="_check_authentication">
+
+			<td class="attributes"><code>
+				 public 
+				WP_User|WP_Error
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_check_authentication">#</a>
+			<code><a href="source-class-WC_API_Server.html#148-168" title="Go to source code">check_authentication</a>( )</code>
+
+			<div class="description short">
+				
+<p>Check authentication for the request</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Check authentication for the request</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>WP_User|WP_Error</code><br>WP_User object indicates successful login, WP_Error indicates unsuccessful login<br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							2.1<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="error_to_array" id="_error_to_array">
+
+			<td class="attributes"><code>
+				 protected 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_error_to_array">#</a>
+			<code><a href="source-class-WC_API_Server.html#170-189" title="Go to source code">error_to_array</a>( <span>WP_Error <var>$error</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Convert an error to an array</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Convert an error to an array</p>
+
+<p>This iterates over all error codes and messages to change it into a flat
+array. This enables simpler client behaviour, as it is represented as a list in
+JSON rather than an object/map</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$error</var></dt>
+						<dd><code>WP_Error</code><br>$error</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br>List of associative arrays with code and message keys<br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							2.1<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="serve_request" id="_serve_request">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_serve_request">#</a>
+			<code><a href="source-class-WC_API_Server.html#191-244" title="Go to source code">serve_request</a>( )</code>
+
+			<div class="description short">
+				
+<p>Handle serving an API request</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Handle serving an API request</p>
+
+<p>Matches the current server URI to a route and runs the first matching
+callback then outputs a JSON representation of the returned value.</p>
+
+
+
+
+
+
+					<h4>Since</h4>
+					<div class="list">
+							2.1<br />
+					</div>
+					<h4>Uses</h4>
+					<div class="list">
+							<code><code><a href="class-WC_API_Server.html#_dispatch">WC_API_Server::dispatch()</a></code></code> <br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_routes" id="_get_routes">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_routes">#</a>
+			<code><a href="source-class-WC_API_Server.html#246-282" title="Go to source code">get_routes</a>( )</code>
+
+			<div class="description short">
+				
+<p>Retrieve the route map</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Retrieve the route map</p>
+
+<p>The route map is an associative array with path regexes as the keys. The
+value is an indexed array with the callback function/method as the first item,
+and a bitmask of HTTP methods as the second item (see the class constants).</p>
+
+<p>Each route can be mapped to more than one callback by using an array of the
+indexed arrays. This allows mapping e.g. GET requests to one callback and POST
+requests to another.</p>
+
+<p>Note that the path regexes (array keys) must have @ escaped, as this is used
+as the delimiter with preg_match()</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br><code>'/path/regex' =&gt; array( $callback, $bitmask )</code> or
+<code>'/path/regex' =&gt; array( array( $callback, $bitmask ), ...)</code><br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							2.1<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="dispatch" id="_dispatch">
+
+			<td class="attributes"><code>
+				 public 
+				mixed
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_dispatch">#</a>
+			<code><a href="source-class-WC_API_Server.html#284-370" title="Go to source code">dispatch</a>( )</code>
+
+			<div class="description short">
+				
+<p>Match the request to a callback and call it</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Match the request to a callback and call it</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>mixed</code><br>The value returned by the callback, or a WP_Error instance<br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							2.1<br />
+					</div>
+					<h4>Used by</h4>
+					<div class="list">
+							<code><code><a href="class-WC_API_Server.html#_serve_request">WC_API_Server::serve_request()</a></code></code> <br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="sort_callback_params" id="_sort_callback_params">
+
+			<td class="attributes"><code>
+				 protected 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_sort_callback_params">#</a>
+			<code><a href="source-class-WC_API_Server.html#372-408" title="Go to source code">sort_callback_params</a>( <span>callable|array <var>$callback</var></span>, <span>array <var>$provided</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Sort parameters by order specified in method declaration</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Sort parameters by order specified in method declaration</p>
+
+<p>Takes a callback and a list of available params, then filters and sorts by
+the parameters the method actually needs, using the Reflection API</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$callback</var></dt>
+						<dd><code>callable|array</code><br>$callback the endpoint callback</dd>
+						<dt><var>$provided</var></dt>
+						<dd><code>array</code><br>$provided the provided request parameters</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							2.1<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_index" id="_get_index">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_index">#</a>
+			<code><a href="source-class-WC_API_Server.html#410-471" title="Go to source code">get_index</a>( )</code>
+
+			<div class="description short">
+				
+<p>Get the site index.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the site index.</p>
+
+<p>This endpoint describes the capabilities of the site.</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br>Index entity<br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							2.1<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="send_status" id="_send_status">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_send_status">#</a>
+			<code><a href="source-class-WC_API_Server.html#473-481" title="Go to source code">send_status</a>( <span>integer <var>$code</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Send a HTTP status code</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Send a HTTP status code</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$code</var></dt>
+						<dd><code>integer</code><br>$code HTTP status</dd>
+					</dl></div>
+
+
+
+					<h4>Since</h4>
+					<div class="list">
+							2.1<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="header" id="_header">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_header">#</a>
+			<code><a href="source-class-WC_API_Server.html#483-493" title="Go to source code">header</a>( <span>string <var>$key</var></span>, <span>string <var>$value</var></span>, <span>boolean <var>$replace</var> = <span class="php-keyword1">true</span> </span> )</code>
+
+			<div class="description short">
+				
+<p>Send a HTTP header</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Send a HTTP header</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$key</var></dt>
+						<dd><code>string</code><br>$key Header key</dd>
+						<dt><var>$value</var></dt>
+						<dd><code>string</code><br>$value Header value</dd>
+						<dt><var>$replace</var></dt>
+						<dd><code>boolean</code><br>$replace Should we replace the existing header?</dd>
+					</dl></div>
+
+
+
+					<h4>Since</h4>
+					<div class="list">
+							2.1<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="link_header" id="_link_header">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_link_header">#</a>
+			<code><a href="source-class-WC_API_Server.html#495-523" title="Go to source code">link_header</a>( <span>string <var>$rel</var></span>, <span>string <var>$link</var></span>, <span>array <var>$other</var> = <span class="php-keyword1">array</span>() </span> )</code>
+
+			<div class="description short">
+				
+<p>Send a Link header</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Send a Link header</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$rel</var></dt>
+						<dd><code>string</code><br>$rel Link relation. Either a registered type, or an absolute URL</dd>
+						<dt><var>$link</var></dt>
+						<dd><code>string</code><br>$link Target IRI for the link</dd>
+						<dt><var>$other</var></dt>
+						<dd><code>array</code><br>$other Other parameters to send, as an associative array</dd>
+					</dl></div>
+
+
+
+					<h4>Since</h4>
+					<div class="list">
+							2.1<br />
+					</div>
+					<h4>Link</h4>
+					<div class="list">
+							<a href="http://tools.ietf.org/html/rfc5988">http://tools.ietf.org/html/rfc5988</a><br />
+							<a href="http://www.iana.org/assignments/link-relations/link-relations.xml">http://www.iana.org/assignments/link-relations/link-relations.xml</a><br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="add_pagination_headers" id="_add_pagination_headers">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_add_pagination_headers">#</a>
+			<code><a href="source-class-WC_API_Server.html#525-577" title="Go to source code">add_pagination_headers</a>( <span>WP_Query|WP_User_Query <var>$query</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Send pagination headers for resources</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Send pagination headers for resources</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$query</var></dt>
+						<dd><code>WP_Query|WP_User_Query</code><br>$query</dd>
+					</dl></div>
+
+
+
+					<h4>Since</h4>
+					<div class="list">
+							2.1<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_raw_data" id="_get_raw_data">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_raw_data">#</a>
+			<code><a href="source-class-WC_API_Server.html#600-616" title="Go to source code">get_raw_data</a>( )</code>
+
+			<div class="description short">
+				
+<p>Retrieve the raw request entity (body)</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Retrieve the raw request entity (body)</p>
+
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							2.1<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="parse_datetime" id="_parse_datetime">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_parse_datetime">#</a>
+			<code><a href="source-class-WC_API_Server.html#618-648" title="Go to source code">parse_datetime</a>( <span>string <var>$datetime</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Parse an RFC3339 datetime into a MySQl datetime</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Parse an RFC3339 datetime into a MySQl datetime</p>
+
+<p>Invalid dates default to unix epoch</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$datetime</var></dt>
+						<dd><code>string</code><br>$datetime RFC3339 datetime</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>MySQl datetime (YYYY-MM-DD HH:MM:SS)<br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							2.1<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="format_datetime" id="_format_datetime">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_format_datetime">#</a>
+			<code><a href="source-class-WC_API_Server.html#650-685" title="Go to source code">format_datetime</a>( <span>integer|string <var>$timestamp</var></span>, <span>boolean <var>$convert_to_utc</var> = <span class="php-keyword1">false</span> </span> )</code>
+
+			<div class="description short">
+				
+<p>Format a unix timestamp or MySQL datetime into an RFC3339 datetime</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Format a unix timestamp or MySQL datetime into an RFC3339 datetime</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$timestamp</var></dt>
+						<dd><code>integer|string</code><br>$timestamp unix timestamp or MySQL datetime</dd>
+						<dt><var>$convert_to_utc</var></dt>
+						<dd><code>boolean</code><br>$convert_to_utc</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>RFC3339 datetime<br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							2.1<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get_headers" id="_get_headers">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get_headers">#</a>
+			<code><a href="source-class-WC_API_Server.html#687-709" title="Go to source code">get_headers</a>( <span>array <var>$server</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Extract headers from a PHP-style $_SERVER array</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Extract headers from a PHP-style $_SERVER array</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$server</var></dt>
+						<dd><code>array</code><br>$server Associative array similar to $_SERVER</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>array</code><br>Headers extracted from the input<br />
+					</div>
+
+
+					<h4>Since</h4>
+					<div class="list">
+							2.1<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+		<h2>Constants summary</h2>
+		<table class="summary table table-bordered table-striped" id="constants">
+		<tr data-order="METHOD_GET" id="METHOD_GET">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-WC_API_Server.html#22" title="Go to source code"><b>METHOD_GET</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">1</span></code></td>
+			<td class="description"><div>
+				<a href="#METHOD_GET" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="METHOD_POST" id="METHOD_POST">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-WC_API_Server.html#23" title="Go to source code"><b>METHOD_POST</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">2</span></code></td>
+			<td class="description"><div>
+				<a href="#METHOD_POST" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="METHOD_PUT" id="METHOD_PUT">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-WC_API_Server.html#24" title="Go to source code"><b>METHOD_PUT</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">4</span></code></td>
+			<td class="description"><div>
+				<a href="#METHOD_PUT" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="METHOD_PATCH" id="METHOD_PATCH">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-WC_API_Server.html#25" title="Go to source code"><b>METHOD_PATCH</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">8</span></code></td>
+			<td class="description"><div>
+				<a href="#METHOD_PATCH" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="METHOD_DELETE" id="METHOD_DELETE">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-WC_API_Server.html#26" title="Go to source code"><b>METHOD_DELETE</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">16</span></code></td>
+			<td class="description"><div>
+				<a href="#METHOD_DELETE" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="READABLE" id="READABLE">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-WC_API_Server.html#28" title="Go to source code"><b>READABLE</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">1</span></code></td>
+			<td class="description"><div>
+				<a href="#READABLE" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="CREATABLE" id="CREATABLE">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-WC_API_Server.html#29" title="Go to source code"><b>CREATABLE</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">2</span></code></td>
+			<td class="description"><div>
+				<a href="#CREATABLE" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="EDITABLE" id="EDITABLE">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-WC_API_Server.html#30" title="Go to source code"><b>EDITABLE</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">14</span></code></td>
+			<td class="description"><div>
+				<a href="#EDITABLE" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="DELETABLE" id="DELETABLE">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-WC_API_Server.html#31" title="Go to source code"><b>DELETABLE</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">16</span></code></td>
+			<td class="description"><div>
+				<a href="#DELETABLE" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="ALLMETHODS" id="ALLMETHODS">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-WC_API_Server.html#32" title="Go to source code"><b>ALLMETHODS</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">31</span></code></td>
+			<td class="description"><div>
+				<a href="#ALLMETHODS" class="anchor">#</a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="ACCEPT_RAW_DATA" id="ACCEPT_RAW_DATA">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-WC_API_Server.html#34-37" title="Go to source code"><b>ACCEPT_RAW_DATA</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">64</span></code></td>
+			<td class="description"><div>
+				<a href="#ACCEPT_RAW_DATA" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Does the endpoint accept a raw request body?</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Does the endpoint accept a raw request body?</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="ACCEPT_DATA" id="ACCEPT_DATA">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-WC_API_Server.html#39-40" title="Go to source code"><b>ACCEPT_DATA</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">128</span></code></td>
+			<td class="description"><div>
+				<a href="#ACCEPT_DATA" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Does the endpoint accept a request body? (either JSON or XML)</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Does the endpoint accept a request body? (either JSON or XML)</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="HIDDEN_ENDPOINT" id="HIDDEN_ENDPOINT">
+
+			<td class="attributes"><code>integer</code></td>
+			<td class="name"><code>
+					<a href="source-class-WC_API_Server.html#42-45" title="Go to source code"><b>HIDDEN_ENDPOINT</b></a>
+			</code></td>
+			<td class="value"><code><span class="php-num">256</span></code></td>
+			<td class="description"><div>
+				<a href="#HIDDEN_ENDPOINT" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Should we hide this endpoint from the index?</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Should we hide this endpoint from the index?</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+
+		<h2>Properties summary</h2>
+		<table class="summary table table-bordered table-striped" id="properties">
+		<tr data-order="method_map" id="$method_map">
+			<td class="attributes"><code>
+				public static 
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-WC_API_Server.html#47-58" title="Go to source code"><var>$method_map</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$method_map" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Map of HTTP verbs to constants</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Map of HTTP verbs to constants</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="path" id="$path">
+			<td class="attributes"><code>
+				public  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-WC_API_Server.html#60-65" title="Go to source code"><var>$path</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$path" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Requested path (relative to the API root, wp-json.php)</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Requested path (relative to the API root, wp-json.php)</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="method" id="$method">
+			<td class="attributes"><code>
+				public  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-WC_API_Server.html#67-72" title="Go to source code"><var>$method</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$method" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Requested method (GET/HEAD/POST/PUT/PATCH/DELETE)</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Requested method (GET/HEAD/POST/PUT/PATCH/DELETE)</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="params" id="$params">
+			<td class="attributes"><code>
+				public  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-WC_API_Server.html#74-82" title="Go to source code"><var>$params</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$params" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Request parameters</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Request parameters</p>
+
+<p>This acts as an abstraction of the superglobals (GET =&gt; $_GET, POST =&gt;
+$_POST)</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="headers" id="$headers">
+			<td class="attributes"><code>
+				public  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-WC_API_Server.html#84-89" title="Go to source code"><var>$headers</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$headers" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Request headers</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Request headers</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="files" id="$files">
+			<td class="attributes"><code>
+				public  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-WC_API_Server.html#91-96" title="Go to source code"><var>$files</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$files" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Request files (matches $_FILES)</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Request files (matches $_FILES)</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="handler" id="$handler">
+			<td class="attributes"><code>
+				public  
+				<code><a href="class-WC_API_Handler.html">WC_API_Handler</a></code>
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-WC_API_Server.html#98-104" title="Go to source code"><var>$handler</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$handler" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Request/Response handler, either JSON by default or XML if requested by
+client</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Request/Response handler, either JSON by default or XML if requested by
+client</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		WooCommerce API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</body>
+</html>
