@@ -6,7 +6,7 @@ A docset of [WooCommerce][1] for the popular Mac OS X app [Dash][2].
 
 1. Download a Zip archive of this repository
 2. Extract the file to your Desktop
-3. Copy **WooCommerce.docset** to `~/Library/Application Support/Dash/Docsets`
+3. Copy **WooCommerce.docset** to `~/Library/Application Support/Dash/Docsets/WooCommerce`
 4. Launch Dash
 5. Open Dash's Preferences (⌘,) then select the **Docsets** tab
 6. Click the **Rescan** button
