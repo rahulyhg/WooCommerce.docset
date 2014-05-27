@@ -1250,7 +1250,7 @@
 </span><span id="1231" class="l"><a class="l" href="#1231">1231 </a>        <span class="php-keyword1">return</span> add_query_arg( <span class="php-keyword1">array</span>(
 </span><span id="1232" class="l"><a class="l" href="#1232">1232 </a>            <span class="php-quote">'download_file'</span> =&gt; <span class="php-var">$product_id</span>,
 </span><span id="1233" class="l"><a class="l" href="#1233">1233 </a>            <span class="php-quote">'order'</span>         =&gt; <span class="php-var">$this</span>-&gt;order_key,
-</span><span id="1234" class="l"><a class="l" href="#1234">1234 </a>            <span class="php-quote">'email'</span>         =&gt; <span class="php-var">$this</span>-&gt;billing_email,
+</span><span id="1234" class="l"><a class="l" href="#1234">1234 </a>            <span class="php-quote">'email'</span>         =&gt; <span class="php-keyword2">urlencode</span>( <span class="php-var">$this</span>-&gt;billing_email ),
 </span><span id="1235" class="l"><a class="l" href="#1235">1235 </a>            <span class="php-quote">'key'</span>           =&gt; <span class="php-var">$download_id</span>
 </span><span id="1236" class="l"><a class="l" href="#1236">1236 </a>        ), trailingslashit( home_url() ) );
 </span><span id="1237" class="l"><a class="l" href="#1237">1237 </a>    }

@@ -271,7 +271,7 @@
 </span><span id="252" class="l"><a class="l" href="#252">252 </a>
 </span><span id="253" class="l"><a class="l" href="#253">253 </a>                <span class="php-var">$extra_rate</span> = <span class="php-var">$rate</span>;
 </span><span id="254" class="l"><a class="l" href="#254">254 </a>
-</span><span id="255" class="l"><a class="l" href="#255">255 </a>                <span class="php-var">$extra_rate</span>[<span class="php-quote">'id'</span>]    = <span class="php-var">$this</span>-&gt;id . <span class="php-quote">':'</span> . <span class="php-var">$this_option</span>[<span class="php-num">0</span>];
+</span><span id="255" class="l"><a class="l" href="#255">255 </a>                <span class="php-var">$extra_rate</span>[<span class="php-quote">'id'</span>]    = <span class="php-var">$this</span>-&gt;id . <span class="php-quote">':'</span> . <span class="php-keyword2">urldecode</span>( sanitize_title( <span class="php-var">$this_option</span>[<span class="php-num">0</span>] ) );
 </span><span id="256" class="l"><a class="l" href="#256">256 </a>                <span class="php-var">$extra_rate</span>[<span class="php-quote">'label'</span>] = <span class="php-var">$this_option</span>[<span class="php-num">0</span>];
 </span><span id="257" class="l"><a class="l" href="#257">257 </a>                <span class="php-var">$this_cost</span>           = <span class="php-var">$this_option</span>[<span class="php-num">1</span>];
 </span><span id="258" class="l"><a class="l" href="#258">258 </a>                <span class="php-var">$this_cost_percents</span>  = <span class="php-quote">''</span>;
@@ -684,7 +684,7 @@
 </span><span id="665" class="l"><a class="l" href="#665">665 </a>                }
 </span><span id="666" class="l"><a class="l" href="#666">666 </a>
 </span><span id="667" class="l"><a class="l" href="#667">667 </a>                <span class="php-comment">// Add to flat rates array</span>
-</span><span id="668" class="l"><a class="l" href="#668">668 </a>                <span class="php-var">$flat_rates</span>[ <span class="php-var">$flat_rate_class</span>[ <span class="php-var">$i</span> ] ] = <span class="php-keyword1">array</span>(
+</span><span id="668" class="l"><a class="l" href="#668">668 </a>                <span class="php-var">$flat_rates</span>[ <span class="php-keyword2">urldecode</span>( sanitize_title( <span class="php-var">$flat_rate_class</span>[ <span class="php-var">$i</span> ] ) ) ] = <span class="php-keyword1">array</span>(
 </span><span id="669" class="l"><a class="l" href="#669">669 </a>                    <span class="php-quote">'cost'</span> =&gt; <span class="php-var">$flat_rate_cost</span>[ <span class="php-var">$i</span> ],
 </span><span id="670" class="l"><a class="l" href="#670">670 </a>                    <span class="php-quote">'fee'</span>  =&gt; <span class="php-var">$flat_rate_fee</span>[ <span class="php-var">$i</span> ],
 </span><span id="671" class="l"><a class="l" href="#671">671 </a>                );

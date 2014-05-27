@@ -124,7 +124,7 @@
 </span><span id="105" class="l"><a class="l" href="#105">105 </a>                text-align: center;
 </span><span id="106" class="l"><a class="l" href="#106">106 </a>                position: absolute;
 </span><span id="107" class="l"><a class="l" href="#107">107 </a>                top: <span class="php-num">0</span>;
-</span><span id="108" class="l"><a class="l" href="#108">108 </a>                left: <span class="php-num">0</span>;
+</span><span id="108" class="l"><a class="l" href="#108">108 </a>                <span class="xlang">&lt;?php</span> <span class="php-keyword1">echo</span> get_bloginfo( <span class="php-quote">'text_direction'</span> ) === <span class="php-quote">'rtl'</span> ? <span class="php-quote">'right'</span> : <span class="php-quote">'left'</span>; <span class="xlang">?&gt;</span>: <span class="php-num">0</span>;
 </span><span id="109" class="l"><a class="l" href="#109">109 </a>                margin: <span class="php-num">0</span>;
 </span><span id="110" class="l"><a class="l" href="#110">110 </a>                vertical-align: middle;
 </span><span id="111" class="l"><a class="l" href="#111">111 </a>            }
@@ -146,7 +146,7 @@
 </span><span id="127" class="l"><a class="l" href="#127">127 </a>            .about-wrap .wc-badge {
 </span><span id="128" class="l"><a class="l" href="#128">128 </a>                position: absolute;
 </span><span id="129" class="l"><a class="l" href="#129">129 </a>                top: <span class="php-num">0</span>;
-</span><span id="130" class="l"><a class="l" href="#130">130 </a>                right: <span class="php-num">0</span>;
+</span><span id="130" class="l"><a class="l" href="#130">130 </a>                <span class="xlang">&lt;?php</span> <span class="php-keyword1">echo</span> get_bloginfo( <span class="php-quote">'text_direction'</span> ) === <span class="php-quote">'rtl'</span> ? <span class="php-quote">'left'</span> : <span class="php-quote">'right'</span>; <span class="xlang">?&gt;</span>: <span class="php-num">0</span>;
 </span><span id="131" class="l"><a class="l" href="#131">131 </a>            }
 </span><span id="132" class="l"><a class="l" href="#132">132 </a>            .about-wrap .wc-feature {
 </span><span id="133" class="l"><a class="l" href="#133">133 </a>                overflow: visible !important;
@@ -162,14 +162,14 @@
 </span><span id="143" class="l"><a class="l" href="#143">143 </a>            }
 </span><span id="144" class="l"><a class="l" href="#144">144 </a>            .about-wrap .feature-rest div {
 </span><span id="145" class="l"><a class="l" href="#145">145 </a>                width: <span class="php-num">50</span>% !important;
-</span><span id="146" class="l"><a class="l" href="#146">146 </a>                padding-right: <span class="php-num">100</span>px;
+</span><span id="146" class="l"><a class="l" href="#146">146 </a>                padding-<span class="xlang">&lt;?php</span> <span class="php-keyword1">echo</span> get_bloginfo( <span class="php-quote">'text_direction'</span> ) === <span class="php-quote">'rtl'</span> ? <span class="php-quote">'left'</span> : <span class="php-quote">'right'</span>; <span class="xlang">?&gt;</span>: <span class="php-num">100</span>px;
 </span><span id="147" class="l"><a class="l" href="#147">147 </a>                -moz-box-sizing: border-box;
 </span><span id="148" class="l"><a class="l" href="#148">148 </a>                box-sizing: border-box;
 </span><span id="149" class="l"><a class="l" href="#149">149 </a>                margin: <span class="php-num">0</span> !important;
 </span><span id="150" class="l"><a class="l" href="#150">150 </a>            }
 </span><span id="151" class="l"><a class="l" href="#151">151 </a>            .about-wrap .feature-rest div.last-feature {
-</span><span id="152" class="l"><a class="l" href="#152">152 </a>                padding-left: <span class="php-num">100</span>px;
-</span><span id="153" class="l"><a class="l" href="#153">153 </a>                padding-right: <span class="php-num">0</span>;
+</span><span id="152" class="l"><a class="l" href="#152">152 </a>                padding-<span class="xlang">&lt;?php</span> <span class="php-keyword1">echo</span> get_bloginfo( <span class="php-quote">'text_direction'</span> ) === <span class="php-quote">'rtl'</span> ? <span class="php-quote">'right'</span> : <span class="php-quote">'left'</span>; <span class="xlang">?&gt;</span>: <span class="php-num">100</span>px;
+</span><span id="153" class="l"><a class="l" href="#153">153 </a>                padding-<span class="xlang">&lt;?php</span> <span class="php-keyword1">echo</span> get_bloginfo( <span class="php-quote">'text_direction'</span> ) === <span class="php-quote">'rtl'</span> ? <span class="php-quote">'left: '</span> : <span class="php-quote">'right'</span>; <span class="xlang">?&gt;</span>: <span class="php-num">0</span>;
 </span><span id="154" class="l"><a class="l" href="#154">154 </a>            }
 </span><span id="155" class="l"><a class="l" href="#155">155 </a>            .about-wrap div.icon {
 </span><span id="156" class="l"><a class="l" href="#156">156 </a>                width: <span class="php-num">0</span> !important;
@@ -187,7 +187,7 @@
 </span><span id="168" class="l"><a class="l" href="#168">168 </a>                position: relative;
 </span><span id="169" class="l"><a class="l" href="#169">169 </a>                text-align: center;
 </span><span id="170" class="l"><a class="l" href="#170">170 </a>                speak: none;
-</span><span id="171" class="l"><a class="l" href="#171">171 </a>                margin: <span class="php-num">0</span> <span class="php-num">0</span> <span class="php-num">0</span> -<span class="php-num">100</span>px;
+</span><span id="171" class="l"><a class="l" href="#171">171 </a>                margin: <span class="xlang">&lt;?php</span> <span class="php-keyword1">echo</span> get_bloginfo( <span class="php-quote">'text_direction'</span> ) === <span class="php-quote">'rtl'</span> ? <span class="php-quote">'0 -100px 0 0'</span> : <span class="php-quote">'0 0 0 -100px'</span>; <span class="xlang">?&gt;</span>;
 </span><span id="172" class="l"><a class="l" href="#172">172 </a>                content: <span class="php-quote">&quot;\e01d&quot;</span>;
 </span><span id="173" class="l"><a class="l" href="#173">173 </a>                -webkit-font-smoothing: antialiased;
 </span><span id="174" class="l"><a class="l" href="#174">174 </a>                -moz-osx-font-smoothing: grayscale;

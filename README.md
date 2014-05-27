@@ -25,9 +25,10 @@ An even more succinct version is:
 
 1. `mkdir -p ~/"Library/Application Support/Dash/DocSets/WooCommerce" && cd "$_" && curl -#kL https://github.com/ryanjbonnell/WooCommerce.docset/archive/master.tar.gz | tar -xz --strip-components 1 && open WooCommerce.docset`
 
-## Changelog
+### Changelog
 
-**Version 2.1.8** (30 April 2014)
+* 2.1.9 — 27 May 2014
+* 2.1.8 — 30 April 2014
 
 [1]: http://www.woothemes.com/woocommerce/
 [2]: http://kapeli.com/dash

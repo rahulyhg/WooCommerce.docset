@@ -54,7 +54,7 @@
 		
 		
 		
-		<b>Package:</b> <a href="package-WooCommerce.html">WooCommerce</a>\<a href="package-WooCommerce.Classes.html">Classes</a>\<a href="package-WooCommerce.Classes.Products.html">Products</a><br />
+		<b>Package:</b> WooCommerce\Classes\Products<br />
 
 				<b>Category:</b>
 				Class<br />
@@ -64,7 +64,7 @@
 				2.0.0<br />
 				<b>Class:</b>
 				WC_Product_Variable<br />
-		<b>Located at</b> <a href="source-class-WC_Product_Variable.html#5-555" title="Go to source code">includes/class-wc-product-variable.php</a><br />
+		<b>Located at</b> <a href="source-class-WC_Product_Variable.html#5-556" title="Go to source code">includes/class-wc-product-variable.php</a><br />
 	</div>
 
 
@@ -202,7 +202,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_set_stock">#</a>
-			<code><a href="source-class-WC_Product_Variable.html#78-90" title="Go to source code">set_stock</a>( <span>mixed <var>$amount</var> = <span class="php-keyword1">null</span> </span> )</code>
+			<code><a href="source-class-WC_Product_Variable.html#78-91" title="Go to source code">set_stock</a>( <span>mixed <var>$amount</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$mode</var> = <span class="php-quote">'set'</span> </span> )</code>
 
 			<div class="description short">
 				
@@ -220,6 +220,8 @@
 					<div class="list"><dl>
 						<dt><var>$amount</var></dt>
 						<dd><code>mixed</code><br>$amount (default: null)</dd>
+						<dt><var>$mode</var></dt>
+						<dd><code>string</code><br>$mode can be set, add, or subtract</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -246,7 +248,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_get_children">#</a>
-			<code><a href="source-class-WC_Product_Variable.html#92-128" title="Go to source code">get_children</a>( <span>boolean <var>$visible_only</var> = <span class="php-keyword1">false</span> </span> )</code>
+			<code><a href="source-class-WC_Product_Variable.html#93-129" title="Go to source code">get_children</a>( <span>boolean <var>$visible_only</var> = <span class="php-keyword1">false</span> </span> )</code>
 
 			<div class="description short">
 				
@@ -290,7 +292,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_get_child">#</a>
-			<code><a href="source-class-WC_Product_Variable.html#131-143" title="Go to source code">get_child</a>( <span>mixed <var>$child_id</var></span> )</code>
+			<code><a href="source-class-WC_Product_Variable.html#132-144" title="Go to source code">get_child</a>( <span>mixed <var>$child_id</var></span> )</code>
 
 			<div class="description short">
 				
@@ -332,7 +334,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_has_child">#</a>
-			<code><a href="source-class-WC_Product_Variable.html#146-154" title="Go to source code">has_child</a>( )</code>
+			<code><a href="source-class-WC_Product_Variable.html#147-155" title="Go to source code">has_child</a>( )</code>
 
 			<div class="description short">
 				
@@ -371,7 +373,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_is_on_sale">#</a>
-			<code><a href="source-class-WC_Product_Variable.html#157-175" title="Go to source code">is_on_sale</a>( )</code>
+			<code><a href="source-class-WC_Product_Variable.html#158-176" title="Go to source code">is_on_sale</a>( )</code>
 
 			<div class="description short">
 				
@@ -410,7 +412,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_get_variation_regular_price">#</a>
-			<code><a href="source-class-WC_Product_Variable.html#177-199" title="Go to source code">get_variation_regular_price</a>( <span>string <var>$min_or_max</var> = <span class="php-quote">'min'</span></span>, <span>boolean <var>$display</var> = <span class="php-keyword1">false</span> </span> )</code>
+			<code><a href="source-class-WC_Product_Variable.html#178-200" title="Go to source code">get_variation_regular_price</a>( <span>string <var>$min_or_max</var> = <span class="php-quote">'min'</span></span>, <span>boolean <var>$display</var> = <span class="php-keyword1">false</span> </span> )</code>
 
 			<div class="description short">
 				
@@ -454,7 +456,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_get_variation_sale_price">#</a>
-			<code><a href="source-class-WC_Product_Variable.html#201-223" title="Go to source code">get_variation_sale_price</a>( <span>string <var>$min_or_max</var> = <span class="php-quote">'min'</span></span>, <span>boolean <var>$display</var> = <span class="php-keyword1">false</span> </span> )</code>
+			<code><a href="source-class-WC_Product_Variable.html#202-224" title="Go to source code">get_variation_sale_price</a>( <span>string <var>$min_or_max</var> = <span class="php-quote">'min'</span></span>, <span>boolean <var>$display</var> = <span class="php-keyword1">false</span> </span> )</code>
 
 			<div class="description short">
 				
@@ -498,7 +500,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_get_variation_price">#</a>
-			<code><a href="source-class-WC_Product_Variable.html#225-248" title="Go to source code">get_variation_price</a>( <span>string <var>$min_or_max</var> = <span class="php-quote">'min'</span></span>, <span>boolean <var>$display</var> = <span class="php-keyword1">false</span> </span> )</code>
+			<code><a href="source-class-WC_Product_Variable.html#226-249" title="Go to source code">get_variation_price</a>( <span>string <var>$min_or_max</var> = <span class="php-quote">'min'</span></span>, <span>boolean <var>$display</var> = <span class="php-keyword1">false</span> </span> )</code>
 
 			<div class="description short">
 				
@@ -542,7 +544,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_get_price_html">#</a>
-			<code><a href="source-class-WC_Product_Variable.html#250-289" title="Go to source code">get_price_html</a>( <span>string <var>$price</var> = <span class="php-quote">''</span> </span> )</code>
+			<code><a href="source-class-WC_Product_Variable.html#251-290" title="Go to source code">get_price_html</a>( <span>string <var>$price</var> = <span class="php-quote">''</span> </span> )</code>
 
 			<div class="description short">
 				
@@ -586,7 +588,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_get_variation_attributes">#</a>
-			<code><a href="source-class-WC_Product_Variable.html#292-364" title="Go to source code">get_variation_attributes</a>( )</code>
+			<code><a href="source-class-WC_Product_Variable.html#293-365" title="Go to source code">get_variation_attributes</a>( )</code>
 
 			<div class="description short">
 				
@@ -625,7 +627,7 @@ values.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_get_variation_default_attributes">#</a>
-			<code><a href="source-class-WC_Product_Variable.html#366-377" title="Go to source code">get_variation_default_attributes</a>( )</code>
+			<code><a href="source-class-WC_Product_Variable.html#367-378" title="Go to source code">get_variation_default_attributes</a>( )</code>
 
 			<div class="description short">
 				
@@ -662,7 +664,7 @@ values.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_get_available_variations">#</a>
-			<code><a href="source-class-WC_Product_Variable.html#379-439" title="Go to source code">get_available_variations</a>( )</code>
+			<code><a href="source-class-WC_Product_Variable.html#380-440" title="Go to source code">get_available_variations</a>( )</code>
 
 			<div class="description short">
 				
@@ -699,7 +701,7 @@ values.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_variable_product_sync">#</a>
-			<code><a href="source-class-WC_Product_Variable.html#441-464" title="Go to source code">variable_product_sync</a>( <span>mixed <var>$product_id</var> = <span class="php-quote">''</span> </span> )</code>
+			<code><a href="source-class-WC_Product_Variable.html#442-465" title="Go to source code">variable_product_sync</a>( <span>mixed <var>$product_id</var> = <span class="php-quote">''</span> </span> )</code>
 
 			<div class="description short">
 				
@@ -732,7 +734,7 @@ values.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_sync">#</a>
-			<code><a href="source-class-WC_Product_Variable.html#466-554" title="Go to source code">sync</a>( <span>mixed <var>$product_id</var></span> )</code>
+			<code><a href="source-class-WC_Product_Variable.html#467-555" title="Go to source code">sync</a>( <span>mixed <var>$product_id</var></span> )</code>
 
 			<div class="description short">
 				

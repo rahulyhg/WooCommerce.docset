@@ -78,11 +78,11 @@
 </span><span id="59" class="l"><a class="l" href="#59"> 59 </a>                    <span class="php-comment">// If this is a term slug, get the term's nice name</span>
 </span><span id="60" class="l"><a class="l" href="#60"> 60 </a>                    <span class="php-keyword1">if</span> ( taxonomy_exists( <span class="php-var">$attribute_key</span> ) ) {
 </span><span id="61" class="l"><a class="l" href="#61"> 61 </a>                        <span class="php-var">$term</span> = get_term_by( <span class="php-quote">'slug'</span>, <span class="php-var">$meta_value</span>, <span class="php-var">$attribute_key</span> );
-</span><span id="62" class="l"><a class="l" href="#62"> 62 </a>                            
-</span><span id="63" class="l"><a class="l" href="#63"> 63 </a>                        <span class="php-keyword1">if</span> ( ! is_wp_error( <span class="php-var">$term</span> ) &amp;&amp; <span class="php-var">$term</span>-&gt;name ) {
+</span><span id="62" class="l"><a class="l" href="#62"> 62 </a>
+</span><span id="63" class="l"><a class="l" href="#63"> 63 </a>                        <span class="php-keyword1">if</span> ( ! is_wp_error( <span class="php-var">$term</span> ) &amp;&amp; <span class="php-keyword2">is_object</span>( <span class="php-var">$term</span> ) &amp;&amp; <span class="php-var">$term</span>-&gt;name ) {
 </span><span id="64" class="l"><a class="l" href="#64"> 64 </a>                            <span class="php-var">$meta_value</span> = <span class="php-var">$term</span>-&gt;name;
 </span><span id="65" class="l"><a class="l" href="#65"> 65 </a>                        }
-</span><span id="66" class="l"><a class="l" href="#66"> 66 </a>                    
+</span><span id="66" class="l"><a class="l" href="#66"> 66 </a>
 </span><span id="67" class="l"><a class="l" href="#67"> 67 </a>                    <span class="php-comment">// If we have a product, and its not a term, try to find its non-sanitized name</span>
 </span><span id="68" class="l"><a class="l" href="#68"> 68 </a>                    } <span class="php-keyword1">elseif</span> ( <span class="php-var">$this</span>-&gt;product ) {
 </span><span id="69" class="l"><a class="l" href="#69"> 69 </a>                        <span class="php-var">$product_attributes</span> = <span class="php-var">$this</span>-&gt;product-&gt;get_attributes();
@@ -121,7 +121,7 @@
 </span><span id="102" class="l"><a class="l" href="#102">102 </a>            <span class="php-keyword1">else</span>
 </span><span id="103" class="l"><a class="l" href="#103">103 </a>                <span class="php-keyword1">echo</span> <span class="php-var">$output</span>;
 </span><span id="104" class="l"><a class="l" href="#104">104 </a>        }
-</span><span id="105" class="l"><a class="l" href="#105">105 </a>    
+</span><span id="105" class="l"><a class="l" href="#105">105 </a>
 </span><span id="106" class="l"><a class="l" href="#106">106 </a>        <span class="php-keyword1">return</span> <span class="php-quote">''</span>;
 </span><span id="107" class="l"><a class="l" href="#107">107 </a>    }
 </span><span id="108" class="l"><a class="l" href="#108">108 </a></span>}</code></pre>

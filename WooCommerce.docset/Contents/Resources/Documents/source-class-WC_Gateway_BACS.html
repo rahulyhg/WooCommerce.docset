@@ -241,98 +241,94 @@
 </span></span><span id="222" class="l"><a class="l" href="#222">222 </a><span class="php-comment">     * @return void
 </span></span><span id="223" class="l"><a class="l" href="#223">223 </a><span class="php-comment">     */</span>
 </span><span id="224" class="l"><a class="l" href="#224">224 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_email_instructions" href="#_email_instructions">email_instructions</a>( <span class="php-var">$order</span>, <span class="php-var">$sent_to_admin</span>, <span class="php-var">$plain_text</span> = <span class="php-keyword1">false</span> ) {
-</span><span id="225" class="l"><a class="l" href="#225">225 </a>
-</span><span id="226" class="l"><a class="l" href="#226">226 </a>        <span class="php-keyword1">if</span> ( <span class="php-var">$sent_to_admin</span> || <span class="php-var">$order</span>-&gt;status !== <span class="php-quote">'on-hold'</span> || <span class="php-var">$order</span>-&gt;payment_method !== <span class="php-quote">'bacs'</span> ) {
-</span><span id="227" class="l"><a class="l" href="#227">227 </a>            <span class="php-keyword1">return</span>;
-</span><span id="228" class="l"><a class="l" href="#228">228 </a>        }
-</span><span id="229" class="l"><a class="l" href="#229">229 </a>
-</span><span id="230" class="l"><a class="l" href="#230">230 </a>        <span class="php-keyword1">if</span> ( <span class="php-var">$this</span>-&gt;instructions ) {
-</span><span id="231" class="l"><a class="l" href="#231">231 </a>            <span class="php-keyword1">echo</span> wpautop( wptexturize( <span class="php-var">$this</span>-&gt;instructions ) ) . PHP_EOL;
-</span><span id="232" class="l"><a class="l" href="#232">232 </a>        }
-</span><span id="233" class="l"><a class="l" href="#233">233 </a>
-</span><span id="234" class="l"><a class="l" href="#234">234 </a>        <span class="php-var">$this</span>-&gt;bank_details( <span class="php-var">$order</span>-&gt;id );
-</span><span id="235" class="l"><a class="l" href="#235">235 </a>    }
-</span><span id="236" class="l"><a class="l" href="#236">236 </a>
-</span><span id="237" class="l"><a class="l" href="#237">237 </a>    <span class="php-comment">/**
-</span></span><span id="238" class="l"><a class="l" href="#238">238 </a><span class="php-comment">     * Get bank details and place into a list format
-</span></span><span id="239" class="l"><a class="l" href="#239">239 </a><span class="php-comment">     */</span>
-</span><span id="240" class="l"><a class="l" href="#240">240 </a>    <span class="php-keyword1">private</span> <span class="php-keyword1">function</span> <a id="_bank_details" href="#_bank_details">bank_details</a>( <span class="php-var">$order_id</span> = <span class="php-quote">''</span> ) {
-</span><span id="241" class="l"><a class="l" href="#241">241 </a>        <span class="php-keyword1">if</span> ( <span class="php-keyword1">empty</span>( <span class="php-var">$this</span>-&gt;account_details ) ) {
-</span><span id="242" class="l"><a class="l" href="#242">242 </a>            <span class="php-keyword1">return</span>;
-</span><span id="243" class="l"><a class="l" href="#243">243 </a>        }
+</span><span id="225" class="l"><a class="l" href="#225">225 </a>        <span class="php-keyword1">if</span> ( ! <span class="php-var">$sent_to_admin</span> &amp;&amp; <span class="php-quote">'bacs'</span> === <span class="php-var">$order</span>-&gt;payment_method &amp;&amp; <span class="php-quote">'on-hold'</span> === <span class="php-var">$order</span>-&gt;status ) {
+</span><span id="226" class="l"><a class="l" href="#226">226 </a>            <span class="php-keyword1">if</span> ( <span class="php-var">$this</span>-&gt;instructions ) {
+</span><span id="227" class="l"><a class="l" href="#227">227 </a>                <span class="php-keyword1">echo</span> wpautop( wptexturize( <span class="php-var">$this</span>-&gt;instructions ) ) . PHP_EOL;
+</span><span id="228" class="l"><a class="l" href="#228">228 </a>            }
+</span><span id="229" class="l"><a class="l" href="#229">229 </a>            <span class="php-var">$this</span>-&gt;bank_details( <span class="php-var">$order</span>-&gt;id );
+</span><span id="230" class="l"><a class="l" href="#230">230 </a>        }
+</span><span id="231" class="l"><a class="l" href="#231">231 </a>    }
+</span><span id="232" class="l"><a class="l" href="#232">232 </a>
+</span><span id="233" class="l"><a class="l" href="#233">233 </a>    <span class="php-comment">/**
+</span></span><span id="234" class="l"><a class="l" href="#234">234 </a><span class="php-comment">     * Get bank details and place into a list format
+</span></span><span id="235" class="l"><a class="l" href="#235">235 </a><span class="php-comment">     */</span>
+</span><span id="236" class="l"><a class="l" href="#236">236 </a>    <span class="php-keyword1">private</span> <span class="php-keyword1">function</span> <a id="_bank_details" href="#_bank_details">bank_details</a>( <span class="php-var">$order_id</span> = <span class="php-quote">''</span> ) {
+</span><span id="237" class="l"><a class="l" href="#237">237 </a>        <span class="php-keyword1">if</span> ( <span class="php-keyword1">empty</span>( <span class="php-var">$this</span>-&gt;account_details ) ) {
+</span><span id="238" class="l"><a class="l" href="#238">238 </a>            <span class="php-keyword1">return</span>;
+</span><span id="239" class="l"><a class="l" href="#239">239 </a>        }
+</span><span id="240" class="l"><a class="l" href="#240">240 </a>
+</span><span id="241" class="l"><a class="l" href="#241">241 </a>        <span class="php-keyword1">echo</span> <span class="php-quote">'&lt;h2&gt;'</span> . __( <span class="php-quote">'Our Bank Details'</span>, <span class="php-quote">'woocommerce'</span> ) . <span class="php-quote">'&lt;/h2&gt;'</span> . PHP_EOL;
+</span><span id="242" class="l"><a class="l" href="#242">242 </a>
+</span><span id="243" class="l"><a class="l" href="#243">243 </a>        <span class="php-var">$bacs_accounts</span> = apply_filters( <span class="php-quote">'woocommerce_bacs_accounts'</span>, <span class="php-var">$this</span>-&gt;account_details );
 </span><span id="244" class="l"><a class="l" href="#244">244 </a>
-</span><span id="245" class="l"><a class="l" href="#245">245 </a>        <span class="php-keyword1">echo</span> <span class="php-quote">'&lt;h2&gt;'</span> . __( <span class="php-quote">'Our Bank Details'</span>, <span class="php-quote">'woocommerce'</span> ) . <span class="php-quote">'&lt;/h2&gt;'</span> . PHP_EOL;
-</span><span id="246" class="l"><a class="l" href="#246">246 </a>
-</span><span id="247" class="l"><a class="l" href="#247">247 </a>        <span class="php-var">$bacs_accounts</span> = apply_filters( <span class="php-quote">'woocommerce_bacs_accounts'</span>, <span class="php-var">$this</span>-&gt;account_details );
+</span><span id="245" class="l"><a class="l" href="#245">245 </a>        <span class="php-keyword1">if</span> ( ! <span class="php-keyword1">empty</span>( <span class="php-var">$bacs_accounts</span> ) ) {
+</span><span id="246" class="l"><a class="l" href="#246">246 </a>            <span class="php-keyword1">foreach</span> ( <span class="php-var">$bacs_accounts</span> <span class="php-keyword1">as</span> <span class="php-var">$bacs_account</span> ) {
+</span><span id="247" class="l"><a class="l" href="#247">247 </a>                <span class="php-keyword1">echo</span> <span class="php-quote">'&lt;ul class=&quot;order_details bacs_details&quot;&gt;'</span> . PHP_EOL;
 </span><span id="248" class="l"><a class="l" href="#248">248 </a>
-</span><span id="249" class="l"><a class="l" href="#249">249 </a>        <span class="php-keyword1">if</span> ( ! <span class="php-keyword1">empty</span>( <span class="php-var">$bacs_accounts</span> ) ) {
-</span><span id="250" class="l"><a class="l" href="#250">250 </a>            <span class="php-keyword1">foreach</span> ( <span class="php-var">$bacs_accounts</span> <span class="php-keyword1">as</span> <span class="php-var">$bacs_account</span> ) {
-</span><span id="251" class="l"><a class="l" href="#251">251 </a>                <span class="php-keyword1">echo</span> <span class="php-quote">'&lt;ul class=&quot;order_details bacs_details&quot;&gt;'</span> . PHP_EOL;
-</span><span id="252" class="l"><a class="l" href="#252">252 </a>
-</span><span id="253" class="l"><a class="l" href="#253">253 </a>                <span class="php-var">$bacs_account</span> = (object) <span class="php-var">$bacs_account</span>;
-</span><span id="254" class="l"><a class="l" href="#254">254 </a>
-</span><span id="255" class="l"><a class="l" href="#255">255 </a>                <span class="php-comment">// BACS account fields shown on the thanks page and in emails</span>
-</span><span id="256" class="l"><a class="l" href="#256">256 </a>                <span class="php-var">$account_fields</span> = apply_filters( <span class="php-quote">'woocommerce_bacs_account_fields'</span>, <span class="php-keyword1">array</span>(
-</span><span id="257" class="l"><a class="l" href="#257">257 </a>                    <span class="php-quote">'account_number'</span>=&gt; <span class="php-keyword1">array</span>(
-</span><span id="258" class="l"><a class="l" href="#258">258 </a>                        <span class="php-quote">'label'</span> =&gt; __( <span class="php-quote">'Account Number'</span>, <span class="php-quote">'woocommerce'</span> ),
-</span><span id="259" class="l"><a class="l" href="#259">259 </a>                        <span class="php-quote">'value'</span> =&gt; <span class="php-var">$bacs_account</span>-&gt;account_number
+</span><span id="249" class="l"><a class="l" href="#249">249 </a>                <span class="php-var">$bacs_account</span> = (object) <span class="php-var">$bacs_account</span>;
+</span><span id="250" class="l"><a class="l" href="#250">250 </a>
+</span><span id="251" class="l"><a class="l" href="#251">251 </a>                <span class="php-comment">// BACS account fields shown on the thanks page and in emails</span>
+</span><span id="252" class="l"><a class="l" href="#252">252 </a>                <span class="php-var">$account_fields</span> = apply_filters( <span class="php-quote">'woocommerce_bacs_account_fields'</span>, <span class="php-keyword1">array</span>(
+</span><span id="253" class="l"><a class="l" href="#253">253 </a>                    <span class="php-quote">'account_number'</span>=&gt; <span class="php-keyword1">array</span>(
+</span><span id="254" class="l"><a class="l" href="#254">254 </a>                        <span class="php-quote">'label'</span> =&gt; __( <span class="php-quote">'Account Number'</span>, <span class="php-quote">'woocommerce'</span> ),
+</span><span id="255" class="l"><a class="l" href="#255">255 </a>                        <span class="php-quote">'value'</span> =&gt; <span class="php-var">$bacs_account</span>-&gt;account_number
+</span><span id="256" class="l"><a class="l" href="#256">256 </a>                    ),
+</span><span id="257" class="l"><a class="l" href="#257">257 </a>                    <span class="php-quote">'sort_code'</span>     =&gt; <span class="php-keyword1">array</span>(
+</span><span id="258" class="l"><a class="l" href="#258">258 </a>                        <span class="php-quote">'label'</span> =&gt; __( <span class="php-quote">'Sort Code'</span>, <span class="php-quote">'woocommerce'</span> ),
+</span><span id="259" class="l"><a class="l" href="#259">259 </a>                        <span class="php-quote">'value'</span> =&gt; <span class="php-var">$bacs_account</span>-&gt;sort_code
 </span><span id="260" class="l"><a class="l" href="#260">260 </a>                    ),
-</span><span id="261" class="l"><a class="l" href="#261">261 </a>                    <span class="php-quote">'sort_code'</span>     =&gt; <span class="php-keyword1">array</span>(
-</span><span id="262" class="l"><a class="l" href="#262">262 </a>                        <span class="php-quote">'label'</span> =&gt; __( <span class="php-quote">'Sort Code'</span>, <span class="php-quote">'woocommerce'</span> ),
-</span><span id="263" class="l"><a class="l" href="#263">263 </a>                        <span class="php-quote">'value'</span> =&gt; <span class="php-var">$bacs_account</span>-&gt;sort_code
+</span><span id="261" class="l"><a class="l" href="#261">261 </a>                    <span class="php-quote">'iban'</span>          =&gt; <span class="php-keyword1">array</span>(
+</span><span id="262" class="l"><a class="l" href="#262">262 </a>                        <span class="php-quote">'label'</span> =&gt; __( <span class="php-quote">'IBAN'</span>, <span class="php-quote">'woocommerce'</span> ),
+</span><span id="263" class="l"><a class="l" href="#263">263 </a>                        <span class="php-quote">'value'</span> =&gt; <span class="php-var">$bacs_account</span>-&gt;iban
 </span><span id="264" class="l"><a class="l" href="#264">264 </a>                    ),
-</span><span id="265" class="l"><a class="l" href="#265">265 </a>                    <span class="php-quote">'iban'</span>          =&gt; <span class="php-keyword1">array</span>(
-</span><span id="266" class="l"><a class="l" href="#266">266 </a>                        <span class="php-quote">'label'</span> =&gt; __( <span class="php-quote">'IBAN'</span>, <span class="php-quote">'woocommerce'</span> ),
-</span><span id="267" class="l"><a class="l" href="#267">267 </a>                        <span class="php-quote">'value'</span> =&gt; <span class="php-var">$bacs_account</span>-&gt;iban
-</span><span id="268" class="l"><a class="l" href="#268">268 </a>                    ),
-</span><span id="269" class="l"><a class="l" href="#269">269 </a>                    <span class="php-quote">'bic'</span>           =&gt; <span class="php-keyword1">array</span>(
-</span><span id="270" class="l"><a class="l" href="#270">270 </a>                        <span class="php-quote">'label'</span> =&gt; __( <span class="php-quote">'BIC'</span>, <span class="php-quote">'woocommerce'</span> ),
-</span><span id="271" class="l"><a class="l" href="#271">271 </a>                        <span class="php-quote">'value'</span> =&gt; <span class="php-var">$bacs_account</span>-&gt;bic
-</span><span id="272" class="l"><a class="l" href="#272">272 </a>                    )
-</span><span id="273" class="l"><a class="l" href="#273">273 </a>                ), <span class="php-var">$order_id</span> );
+</span><span id="265" class="l"><a class="l" href="#265">265 </a>                    <span class="php-quote">'bic'</span>           =&gt; <span class="php-keyword1">array</span>(
+</span><span id="266" class="l"><a class="l" href="#266">266 </a>                        <span class="php-quote">'label'</span> =&gt; __( <span class="php-quote">'BIC'</span>, <span class="php-quote">'woocommerce'</span> ),
+</span><span id="267" class="l"><a class="l" href="#267">267 </a>                        <span class="php-quote">'value'</span> =&gt; <span class="php-var">$bacs_account</span>-&gt;bic
+</span><span id="268" class="l"><a class="l" href="#268">268 </a>                    )
+</span><span id="269" class="l"><a class="l" href="#269">269 </a>                ), <span class="php-var">$order_id</span> );
+</span><span id="270" class="l"><a class="l" href="#270">270 </a>
+</span><span id="271" class="l"><a class="l" href="#271">271 </a>                <span class="php-keyword1">if</span> ( <span class="php-var">$bacs_account</span>-&gt;account_name || <span class="php-var">$bacs_account</span>-&gt;bank_name ) {
+</span><span id="272" class="l"><a class="l" href="#272">272 </a>                    <span class="php-keyword1">echo</span> <span class="php-quote">'&lt;h3&gt;'</span> . <span class="php-keyword2">implode</span>( <span class="php-quote">' - '</span>, <span class="php-keyword2">array_filter</span>( <span class="php-keyword1">array</span>( <span class="php-var">$bacs_account</span>-&gt;account_name, <span class="php-var">$bacs_account</span>-&gt;bank_name ) ) ) . <span class="php-quote">'&lt;/h3&gt;'</span> . PHP_EOL;
+</span><span id="273" class="l"><a class="l" href="#273">273 </a>                }
 </span><span id="274" class="l"><a class="l" href="#274">274 </a>
-</span><span id="275" class="l"><a class="l" href="#275">275 </a>                <span class="php-keyword1">if</span> ( <span class="php-var">$bacs_account</span>-&gt;account_name || <span class="php-var">$bacs_account</span>-&gt;bank_name ) {
-</span><span id="276" class="l"><a class="l" href="#276">276 </a>                    <span class="php-keyword1">echo</span> <span class="php-quote">'&lt;h3&gt;'</span> . <span class="php-keyword2">implode</span>( <span class="php-quote">' - '</span>, <span class="php-keyword2">array_filter</span>( <span class="php-keyword1">array</span>( <span class="php-var">$bacs_account</span>-&gt;account_name, <span class="php-var">$bacs_account</span>-&gt;bank_name ) ) ) . <span class="php-quote">'&lt;/h3&gt;'</span> . PHP_EOL;
-</span><span id="277" class="l"><a class="l" href="#277">277 </a>                }
-</span><span id="278" class="l"><a class="l" href="#278">278 </a>
-</span><span id="279" class="l"><a class="l" href="#279">279 </a>                <span class="php-keyword1">foreach</span> ( <span class="php-var">$account_fields</span> <span class="php-keyword1">as</span> <span class="php-var">$field_key</span> =&gt; <span class="php-var">$field</span> ) {
-</span><span id="280" class="l"><a class="l" href="#280">280 </a>                    <span class="php-keyword1">if</span> ( ! <span class="php-keyword1">empty</span>( <span class="php-var">$field</span>[<span class="php-quote">'value'</span>] ) ) {
-</span><span id="281" class="l"><a class="l" href="#281">281 </a>                        <span class="php-keyword1">echo</span> <span class="php-quote">'&lt;li class=&quot;'</span> . esc_attr( <span class="php-var">$field_key</span> ) . <span class="php-quote">'&quot;&gt;'</span> . esc_attr( <span class="php-var">$field</span>[<span class="php-quote">'label'</span>] ) . <span class="php-quote">': &lt;strong&gt;'</span> . wptexturize( <span class="php-var">$field</span>[<span class="php-quote">'value'</span>] ) . <span class="php-quote">'&lt;/strong&gt;&lt;/li&gt;'</span> . PHP_EOL;
-</span><span id="282" class="l"><a class="l" href="#282">282 </a>                    }
-</span><span id="283" class="l"><a class="l" href="#283">283 </a>                }
-</span><span id="284" class="l"><a class="l" href="#284">284 </a>
-</span><span id="285" class="l"><a class="l" href="#285">285 </a>                <span class="php-keyword1">echo</span> <span class="php-quote">'&lt;/ul&gt;'</span>;
-</span><span id="286" class="l"><a class="l" href="#286">286 </a>            }
-</span><span id="287" class="l"><a class="l" href="#287">287 </a>        }
-</span><span id="288" class="l"><a class="l" href="#288">288 </a>    }
-</span><span id="289" class="l"><a class="l" href="#289">289 </a>
-</span><span id="290" class="l"><a class="l" href="#290">290 </a>    <span class="php-comment">/**
-</span></span><span id="291" class="l"><a class="l" href="#291">291 </a><span class="php-comment">     * Process the payment and return the result
-</span></span><span id="292" class="l"><a class="l" href="#292">292 </a><span class="php-comment">     *
-</span></span><span id="293" class="l"><a class="l" href="#293">293 </a><span class="php-comment">     * @param int $order_id
-</span></span><span id="294" class="l"><a class="l" href="#294">294 </a><span class="php-comment">     * @return array
-</span></span><span id="295" class="l"><a class="l" href="#295">295 </a><span class="php-comment">     */</span>
-</span><span id="296" class="l"><a class="l" href="#296">296 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_process_payment" href="#_process_payment">process_payment</a>( <span class="php-var">$order_id</span> ) {
-</span><span id="297" class="l"><a class="l" href="#297">297 </a>
-</span><span id="298" class="l"><a class="l" href="#298">298 </a>        <span class="php-var">$order</span> = <span class="php-keyword1">new</span> WC_Order( <span class="php-var">$order_id</span> );
-</span><span id="299" class="l"><a class="l" href="#299">299 </a>
-</span><span id="300" class="l"><a class="l" href="#300">300 </a>        <span class="php-comment">// Mark as on-hold (we're awaiting the payment)</span>
-</span><span id="301" class="l"><a class="l" href="#301">301 </a>        <span class="php-var">$order</span>-&gt;update_status( <span class="php-quote">'on-hold'</span>, __( <span class="php-quote">'Awaiting BACS payment'</span>, <span class="php-quote">'woocommerce'</span> ) );
-</span><span id="302" class="l"><a class="l" href="#302">302 </a>
-</span><span id="303" class="l"><a class="l" href="#303">303 </a>        <span class="php-comment">// Reduce stock levels</span>
-</span><span id="304" class="l"><a class="l" href="#304">304 </a>        <span class="php-var">$order</span>-&gt;reduce_order_stock();
-</span><span id="305" class="l"><a class="l" href="#305">305 </a>
-</span><span id="306" class="l"><a class="l" href="#306">306 </a>        <span class="php-comment">// Remove cart</span>
-</span><span id="307" class="l"><a class="l" href="#307">307 </a>        WC()-&gt;cart-&gt;empty_cart();
-</span><span id="308" class="l"><a class="l" href="#308">308 </a>
-</span><span id="309" class="l"><a class="l" href="#309">309 </a>        <span class="php-comment">// Return thankyou redirect</span>
-</span><span id="310" class="l"><a class="l" href="#310">310 </a>        <span class="php-keyword1">return</span> <span class="php-keyword1">array</span>(
-</span><span id="311" class="l"><a class="l" href="#311">311 </a>            <span class="php-quote">'result'</span>    =&gt; <span class="php-quote">'success'</span>,
-</span><span id="312" class="l"><a class="l" href="#312">312 </a>            <span class="php-quote">'redirect'</span>  =&gt; <span class="php-var">$this</span>-&gt;get_return_url( <span class="php-var">$order</span> )
-</span><span id="313" class="l"><a class="l" href="#313">313 </a>        );
-</span><span id="314" class="l"><a class="l" href="#314">314 </a>    }
-</span><span id="315" class="l"><a class="l" href="#315">315 </a>}
-</span><span id="316" class="l"><a class="l" href="#316">316 </a></span></code></pre>
+</span><span id="275" class="l"><a class="l" href="#275">275 </a>                <span class="php-keyword1">foreach</span> ( <span class="php-var">$account_fields</span> <span class="php-keyword1">as</span> <span class="php-var">$field_key</span> =&gt; <span class="php-var">$field</span> ) {
+</span><span id="276" class="l"><a class="l" href="#276">276 </a>                    <span class="php-keyword1">if</span> ( ! <span class="php-keyword1">empty</span>( <span class="php-var">$field</span>[<span class="php-quote">'value'</span>] ) ) {
+</span><span id="277" class="l"><a class="l" href="#277">277 </a>                        <span class="php-keyword1">echo</span> <span class="php-quote">'&lt;li class=&quot;'</span> . esc_attr( <span class="php-var">$field_key</span> ) . <span class="php-quote">'&quot;&gt;'</span> . esc_attr( <span class="php-var">$field</span>[<span class="php-quote">'label'</span>] ) . <span class="php-quote">': &lt;strong&gt;'</span> . wptexturize( <span class="php-var">$field</span>[<span class="php-quote">'value'</span>] ) . <span class="php-quote">'&lt;/strong&gt;&lt;/li&gt;'</span> . PHP_EOL;
+</span><span id="278" class="l"><a class="l" href="#278">278 </a>                    }
+</span><span id="279" class="l"><a class="l" href="#279">279 </a>                }
+</span><span id="280" class="l"><a class="l" href="#280">280 </a>
+</span><span id="281" class="l"><a class="l" href="#281">281 </a>                <span class="php-keyword1">echo</span> <span class="php-quote">'&lt;/ul&gt;'</span>;
+</span><span id="282" class="l"><a class="l" href="#282">282 </a>            }
+</span><span id="283" class="l"><a class="l" href="#283">283 </a>        }
+</span><span id="284" class="l"><a class="l" href="#284">284 </a>    }
+</span><span id="285" class="l"><a class="l" href="#285">285 </a>
+</span><span id="286" class="l"><a class="l" href="#286">286 </a>    <span class="php-comment">/**
+</span></span><span id="287" class="l"><a class="l" href="#287">287 </a><span class="php-comment">     * Process the payment and return the result
+</span></span><span id="288" class="l"><a class="l" href="#288">288 </a><span class="php-comment">     *
+</span></span><span id="289" class="l"><a class="l" href="#289">289 </a><span class="php-comment">     * @param int $order_id
+</span></span><span id="290" class="l"><a class="l" href="#290">290 </a><span class="php-comment">     * @return array
+</span></span><span id="291" class="l"><a class="l" href="#291">291 </a><span class="php-comment">     */</span>
+</span><span id="292" class="l"><a class="l" href="#292">292 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_process_payment" href="#_process_payment">process_payment</a>( <span class="php-var">$order_id</span> ) {
+</span><span id="293" class="l"><a class="l" href="#293">293 </a>
+</span><span id="294" class="l"><a class="l" href="#294">294 </a>        <span class="php-var">$order</span> = <span class="php-keyword1">new</span> WC_Order( <span class="php-var">$order_id</span> );
+</span><span id="295" class="l"><a class="l" href="#295">295 </a>
+</span><span id="296" class="l"><a class="l" href="#296">296 </a>        <span class="php-comment">// Mark as on-hold (we're awaiting the payment)</span>
+</span><span id="297" class="l"><a class="l" href="#297">297 </a>        <span class="php-var">$order</span>-&gt;update_status( <span class="php-quote">'on-hold'</span>, __( <span class="php-quote">'Awaiting BACS payment'</span>, <span class="php-quote">'woocommerce'</span> ) );
+</span><span id="298" class="l"><a class="l" href="#298">298 </a>
+</span><span id="299" class="l"><a class="l" href="#299">299 </a>        <span class="php-comment">// Reduce stock levels</span>
+</span><span id="300" class="l"><a class="l" href="#300">300 </a>        <span class="php-var">$order</span>-&gt;reduce_order_stock();
+</span><span id="301" class="l"><a class="l" href="#301">301 </a>
+</span><span id="302" class="l"><a class="l" href="#302">302 </a>        <span class="php-comment">// Remove cart</span>
+</span><span id="303" class="l"><a class="l" href="#303">303 </a>        WC()-&gt;cart-&gt;empty_cart();
+</span><span id="304" class="l"><a class="l" href="#304">304 </a>
+</span><span id="305" class="l"><a class="l" href="#305">305 </a>        <span class="php-comment">// Return thankyou redirect</span>
+</span><span id="306" class="l"><a class="l" href="#306">306 </a>        <span class="php-keyword1">return</span> <span class="php-keyword1">array</span>(
+</span><span id="307" class="l"><a class="l" href="#307">307 </a>            <span class="php-quote">'result'</span>    =&gt; <span class="php-quote">'success'</span>,
+</span><span id="308" class="l"><a class="l" href="#308">308 </a>            <span class="php-quote">'redirect'</span>  =&gt; <span class="php-var">$this</span>-&gt;get_return_url( <span class="php-var">$order</span> )
+</span><span id="309" class="l"><a class="l" href="#309">309 </a>        );
+</span><span id="310" class="l"><a class="l" href="#310">310 </a>    }
+</span><span id="311" class="l"><a class="l" href="#311">311 </a>}
+</span><span id="312" class="l"><a class="l" href="#312">312 </a></span></code></pre>
 	</div>
 
 	<div id="footer">
