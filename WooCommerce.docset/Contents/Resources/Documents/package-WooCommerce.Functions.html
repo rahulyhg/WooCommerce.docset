@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Package WooCommerce\Functions | WooCommerce</title>
+
+	<script type="text/javascript" src="resources/combined.js?843538251"></script>
+	<script type="text/javascript" src="elementlist.js?68466187"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?2450451432" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?1319793728" />
+
+</head>
+
+<body>
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="package">
+	<h1>Package <a href="package-WooCommerce.html">WooCommerce</a>\Functions</h1>
+
+	<h2>Packages summary</h2>
+	<table class="summary table table-bordered table-striped" id="packages">
+	<tr>
+		<td class="name"><a href="package-WooCommerce.Functions.Archives.html">WooCommerce\Functions\Archives</a></td>
+	</tr>
+	<tr>
+		<td class="name"><a href="package-WooCommerce.Functions.Cart.html">WooCommerce\Functions\Cart</a></td>
+	</tr>
+	<tr>
+		<td class="name"><a href="package-WooCommerce.Functions.Checkout.html">WooCommerce\Functions\Checkout</a></td>
+	</tr>
+	<tr>
+		<td class="name"><a href="package-WooCommerce.Functions.Forms.html">WooCommerce\Functions\Forms</a></td>
+	</tr>
+	<tr>
+		<td class="name"><a href="package-WooCommerce.Functions.Loop.html">WooCommerce\Functions\Loop</a></td>
+	</tr>
+	<tr>
+		<td class="name"><a href="package-WooCommerce.Functions.Orders.html">WooCommerce\Functions\Orders</a></td>
+	</tr>
+	<tr>
+		<td class="name"><a href="package-WooCommerce.Functions.Product.html">WooCommerce\Functions\Product</a></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+<h2>Functions summary</h2>
+<table class="summary table table-bordered table-striped" id="functions">
+<tr>
+	<td class="name"><a href="function-_wc_get_product_terms_parent_usort_callback.html">_wc_get_product_terms_parent_usort_callback</a></td>
+	<td>Sort by parent</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-_wc_term_recount.html">_wc_term_recount</a></td>
+	<td>Function for recounting product terms, ignoring hidden products.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-_woocommerce_term_recount.html">_woocommerce_term_recount</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-add_woocommerce_term_meta.html">add_woocommerce_term_meta</a></td>
+	<td>WooCommerce Term Meta API - Add term meta</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-delete_woocommerce_term_meta.html">delete_woocommerce_term_meta</a></td>
+	<td>WooCommerce Term Meta API - Delete term meta</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-get_product.html">get_product</a></td>
+	<td>Main function for returning products, uses the WC_Product_Factory class.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-get_woocommerce_api_url.html">get_woocommerce_api_url</a></td>
+	<td>Get the URL to the WooCommerce REST API</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-get_woocommerce_currencies.html">get_woocommerce_currencies</a></td>
+	<td>Get full list of currency codes.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-get_woocommerce_currency.html">get_woocommerce_currency</a></td>
+	<td>Get Base Currency Code.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-get_woocommerce_currency_symbol.html">get_woocommerce_currency_symbol</a></td>
+	<td>Get Currency symbol.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-get_woocommerce_price_format.html">get_woocommerce_price_format</a></td>
+	<td>Get the price format depending on the currency position</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-get_woocommerce_term_meta.html">get_woocommerce_term_meta</a></td>
+	<td>WooCommerce Term Meta API - Get term meta</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-is_account_page.html">is_account_page</a></td>
+	<td>is_account_page - Returns true when viewing an account page.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-is_add_payment_method_page.html">is_add_payment_method_page</a></td>
+	<td>is_add_payment_method_page - Returns true when viewing the add payment method
+page.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-is_ajax.html">is_ajax</a></td>
+	<td>is_ajax - Returns true when the page is loaded via ajax.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-is_cart.html">is_cart</a></td>
+	<td>is_cart - Returns true when viewing the cart page.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-is_checkout.html">is_checkout</a></td>
+	<td>is_checkout - Returns true when viewing the checkout page.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-is_checkout_pay_page.html">is_checkout_pay_page</a></td>
+	<td>is_checkout_pay - Returns true when viewing the checkout's pay page.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-is_filtered.html">is_filtered</a></td>
+	<td>is_filtered - Returns true when filtering products using layered nav or price
+sliders.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-is_order_received_page.html">is_order_received_page</a></td>
+	<td>is_order_received_page - Returns true when viewing the order received page.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-is_product.html">is_product</a></td>
+	<td>is_product - Returns true when viewing a single product.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-is_product_category.html">is_product_category</a></td>
+	<td>is_product_category - Returns true when viewing a product category.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-is_product_tag.html">is_product_tag</a></td>
+	<td>is_product_tag - Returns true when viewing a product tag.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-is_product_taxonomy.html">is_product_taxonomy</a></td>
+	<td>is_product_taxonomy - Returns true when viewing a product taxonomy archive.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-is_shop.html">is_shop</a></td>
+	<td>is_shop - Returns true when viewing the product type archive (shop).</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-is_store_notice_showing.html">is_store_notice_showing</a></td>
+	<td>is_store_notice_showing - Returns true when store notice is active.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-is_wc_endpoint_url.html">is_wc_endpoint_url</a></td>
+	<td>is_wc_endpoint_url - Check if an endpoint is showing</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-is_woocommerce.html">is_woocommerce</a></td>
+	<td>is_woocommerce - Returns true if on a page which uses WooCommerce templates
+(cart and checkout are standard pages with shortcodes and thus are not included)</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-meta_is_product_attribute.html">meta_is_product_attribute</a></td>
+	<td>Returns true when the passed meta name is a product attribute.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-taxonomy_is_product_attribute.html">taxonomy_is_product_attribute</a></td>
+	<td>Returns true when the passed taxonomy name is a product attribute.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-update_woocommerce_term_meta.html">update_woocommerce_term_meta</a></td>
+	<td>WooCommerce Term Meta API - Update term meta</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_add_notice.html">wc_add_notice</a></td>
+	<td>Add and store a notice</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_add_order_item.html">wc_add_order_item</a></td>
+	<td>Add a item to an order (for example a line item).</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_add_order_item_meta.html">wc_add_order_item_meta</a></td>
+	<td>WooCommerce Order Item Meta API - Add term meta</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_add_to_cart_message.html">wc_add_to_cart_message</a></td>
+	<td>Add to cart messages.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_array_overlay.html">wc_array_overlay</a></td>
+	<td>Merge two arrays</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_attribute_label.html">wc_attribute_label</a></td>
+	<td>Get a product attributes label.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_attribute_orderby.html">wc_attribute_orderby</a></td>
+	<td>Get a product attributes orderby setting.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_attribute_taxonomy_name.html">wc_attribute_taxonomy_name</a></td>
+	<td>Get a product attributes name.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_body_class.html">wc_body_class</a></td>
+	<td>Add body classes for WC pages</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_cancel_unpaid_orders.html">wc_cancel_unpaid_orders</a></td>
+	<td>Cancel all unpaid orders after held duration to prevent stock lock for those
+products</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_cart_totals_coupon_html.html">wc_cart_totals_coupon_html</a></td>
+	<td>Get a coupon value</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_cart_totals_coupon_label.html">wc_cart_totals_coupon_label</a></td>
+	<td>Get a coupon label</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_cart_totals_fee_html.html">wc_cart_totals_fee_html</a></td>
+	<td>Get the fee value</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_cart_totals_order_total_html.html">wc_cart_totals_order_total_html</a></td>
+	<td>Get order total html including inc tax if needed</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_cart_totals_shipping_html.html">wc_cart_totals_shipping_html</a></td>
+	<td>Get shipping methods</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_cart_totals_shipping_method_label.html">wc_cart_totals_shipping_method_label</a></td>
+	<td>Get a shipping methods full label including price</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_cart_totals_subtotal_html.html">wc_cart_totals_subtotal_html</a></td>
+	<td>Get the subtotal</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_cart_totals_taxes_total_html.html">wc_cart_totals_taxes_total_html</a></td>
+	<td>Get taxes total</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_change_term_counts.html">wc_change_term_counts</a></td>
+	<td>Overrides the original term count for product categories and tags with the
+product count that takes catalog visibility into account.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_clean.html">wc_clean</a></td>
+	<td>Clean variables</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_clear_cart_after_payment.html">wc_clear_cart_after_payment</a></td>
+	<td>Clear cart after payment.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_clear_notices.html">wc_clear_notices</a></td>
+	<td>Unset all notices</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_create_new_customer.html">wc_create_new_customer</a></td>
+	<td>Create a new customer</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_customer_bought_product.html">wc_customer_bought_product</a></td>
+	<td>Checks if a user (by email) has bought an item</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_customer_edit_account_url.html">wc_customer_edit_account_url</a></td>
+	<td>Get the link to the edit account details page</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_customer_has_capability.html">wc_customer_has_capability</a></td>
+	<td>Checks if a user has a certain capability</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_date_format.html">wc_date_format</a></td>
+	<td>WooCommerce Date Format - Allows to change date format for everything
+WooCommerce</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_delete_order_item.html">wc_delete_order_item</a></td>
+	<td>Delete an item from the order it belongs to based on item id</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_delete_order_item_meta.html">wc_delete_order_item_meta</a></td>
+	<td>WooCommerce Order Item Meta API - Delete term meta</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_delete_product_transients.html">wc_delete_product_transients</a></td>
+	<td>Clear all transients cache for product data.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_delete_shop_order_transients.html">wc_delete_shop_order_transients</a></td>
+	<td>Clear all transients cache for order data.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_disable_admin_bar.html">wc_disable_admin_bar</a></td>
+	<td>Prevent any user who cannot 'edit_posts' (subscribers, customers etc) from
+seeing the admin bar</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_downloadable_file_permission.html">wc_downloadable_file_permission</a></td>
+	<td>Grant downloadable product access to the file identified by $download_id</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_downloadable_product_permissions.html">wc_downloadable_product_permissions</a></td>
+	<td>Order Status completed - GIVE DOWNLOADABLE PRODUCT ACCESS TO CUSTOMER</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_empty_cart.html">wc_empty_cart</a></td>
+	<td>Clears the cart session when called</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_enqueue_js.html">wc_enqueue_js</a></td>
+	<td>Queue some JavaScript code to be output in the footer.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_float_to_string.html">wc_float_to_string</a></td>
+	<td>Convert a float to a string without locale formatting which PHP adds when
+changing floats to strings</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_format_decimal.html">wc_format_decimal</a></td>
+	<td>Format decimal numbers ready for DB storage</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_format_hex.html">wc_format_hex</a></td>
+	<td>Format string as hex</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_format_localized_decimal.html">wc_format_localized_decimal</a></td>
+	<td>Format a decimal with PHP Locale settings</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_format_localized_price.html">wc_format_localized_price</a></td>
+	<td>Format a price with WC Currency Locale settings</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_format_phone_number.html">wc_format_phone_number</a></td>
+	<td>format_phone function.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_format_postcode.html">wc_format_postcode</a></td>
+	<td>Format the postcode according to the country and length of the postcode</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_generator_tag.html">wc_generator_tag</a></td>
+	<td>Output generator tag to aid debugging.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_get_attachment_image_attributes.html">wc_get_attachment_image_attributes</a></td>
+	<td>wc_get_attachment_image_attributes function.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_get_attribute_taxonomies.html">wc_get_attribute_taxonomies</a></td>
+	<td>Get attribute taxonomies.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_get_attribute_taxonomy_names.html">wc_get_attribute_taxonomy_names</a></td>
+	<td>Get an array of product attribute taxonomies.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_get_coupon_type.html">wc_get_coupon_type</a></td>
+	<td>Get a coupon type's name.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_get_coupon_types.html">wc_get_coupon_types</a></td>
+	<td>Get coupon types.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_get_dimension.html">wc_get_dimension</a></td>
+	<td>Normalise dimensions, unify to cm then convert to wanted unit value</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_get_endpoint_url.html">wc_get_endpoint_url</a></td>
+	<td>Get endpoint URL</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_get_featured_product_ids.html">wc_get_featured_product_ids</a></td>
+	<td>Function that returns an array containing the IDs of the featured products.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_get_filename_from_url.html">wc_get_filename_from_url</a></td>
+	<td>Gets the filename part of a download URL</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_get_formatted_variation.html">wc_get_formatted_variation</a></td>
+	<td>Variation Formatting</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_get_image_size.html">wc_get_image_size</a></td>
+	<td>Get an image size.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_get_notices.html">wc_get_notices</a></td>
+	<td>Returns all queued notices, optionally filtered by a notice type.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_get_order_id_by_order_key.html">wc_get_order_id_by_order_key</a></td>
+	<td>Finds an Order ID based on an order key.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_get_order_item_meta.html">wc_get_order_item_meta</a></td>
+	<td>WooCommerce Order Item Meta API - Get term meta</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_get_page_id.html">wc_get_page_id</a></td>
+	<td>Retrieve page ids - used for myaccount, edit_address, shop, cart, checkout, pay,
+view_order, terms. returns -1 if no page is found</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_get_product_ids_on_sale.html">wc_get_product_ids_on_sale</a></td>
+	<td>Function that returns an array containing the IDs of the products that are on
+sale.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_get_product_terms.html">wc_get_product_terms</a></td>
+	<td>Wrapper for wp_get_post_terms which supports ordering by parent.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_get_template.html">wc_get_template</a></td>
+	<td>Get other templates (e.g. product attributes) passing attributes and including
+the file.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_get_template_part.html">wc_get_template_part</a></td>
+	<td>Get template part (for templates like the shop-loop).</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_get_weight.html">wc_get_weight</a></td>
+	<td>Normalise weights, unify to cm then convert to wanted unit value</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_has_notice.html">wc_has_notice</a></td>
+	<td>See if a notice has already been added</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_hex_darker.html">wc_hex_darker</a></td>
+	<td>Hex darker/lighter/contrast functions for colours</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_hex_lighter.html">wc_hex_lighter</a></td>
+	<td>Hex darker/lighter/contrast functions for colours</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_let_to_num.html">wc_let_to_num</a></td>
+	<td>let_to_num function.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_light_or_dark.html">wc_light_or_dark</a></td>
+	<td>Detect if we should use a light or dark colour on a background colour</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_list_pages.html">wc_list_pages</a></td>
+	<td>Fix active class in wp_list_pages for shop page.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_load_persistent_cart.html">wc_load_persistent_cart</a></td>
+	<td>Load the cart upon login</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_locate_template.html">wc_locate_template</a></td>
+	<td>Locate a template and return the path for inclusion.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_lostpassword_url.html">wc_lostpassword_url</a></td>
+	<td>Returns the url to the lost password endpoint url</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_mail.html">wc_mail</a></td>
+	<td>Send HTML emails from WooCommerce</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_nav_menu_item_classes.html">wc_nav_menu_item_classes</a></td>
+	<td>Fix active class in nav for shop page.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_nav_menu_items.html">wc_nav_menu_items</a></td>
+	<td>Hide menu items conditionally</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_notice_count.html">wc_notice_count</a></td>
+	<td>Get the count of notices added, either for all notices (default) or for one
+particular notice type specified by $notice_type.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_paying_customer.html">wc_paying_customer</a></td>
+	<td>Order Status completed - This is a paying customer</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_placeholder_img.html">wc_placeholder_img</a></td>
+	<td>Get the placeholder image</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_placeholder_img_src.html">wc_placeholder_img_src</a></td>
+	<td>Get the placeholder image URL for products etc</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_prepare_attachment_for_js.html">wc_prepare_attachment_for_js</a></td>
+	<td>wc_prepare_attachment_for_js function.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_price.html">wc_price</a></td>
+	<td>Format the price with a currency symbol.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_print_js.html">wc_print_js</a></td>
+	<td>Output any queued javascript code in the footer.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_print_notice.html">wc_print_notice</a></td>
+	<td>Print a single notice immediately</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_print_notices.html">wc_print_notices</a></td>
+	<td>Prints messages and errors which are stored in the session, then clears them.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_processing_order_count.html">wc_processing_order_count</a></td>
+	<td>Return the count of processing orders.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_product_dimensions_enabled.html">wc_product_dimensions_enabled</a></td>
+	<td>Returns whether or not product dimensions (HxWxD) are enabled.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_product_dropdown_categories.html">wc_product_dropdown_categories</a></td>
+	<td>WooCommerce Dropdown categories</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_product_post_class.html">wc_product_post_class</a></td>
+	<td>Adds extra post classes for products</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_product_post_type_link.html">wc_product_post_type_link</a></td>
+	<td>Filter to allow product_cat in the permalinks for products.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_product_sku_enabled.html">wc_product_sku_enabled</a></td>
+	<td>Returns whether or not SKUS are enabled.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_product_weight_enabled.html">wc_product_weight_enabled</a></td>
+	<td>Returns whether or not product weights are enabled.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_products_rss_feed.html">wc_products_rss_feed</a></td>
+	<td>Products RSS Feed.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_protected_product_add_to_cart.html">wc_protected_product_add_to_cart</a></td>
+	<td>Prevent password protected products being added to the cart</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_recount_after_stock_change.html">wc_recount_after_stock_change</a></td>
+	<td>Recount terms after the stock amount changes</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_reorder_terms.html">wc_reorder_terms</a></td>
+	<td>Move a term before the a given element of its hierarchy level</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_rgb_from_hex.html">wc_rgb_from_hex</a></td>
+	<td>Hex darker/lighter/contrast functions for colours</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_round_tax_total.html">wc_round_tax_total</a></td>
+	<td>Round a tax amount</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_sanitize_taxonomy_name.html">wc_sanitize_taxonomy_name</a></td>
+	<td>Sanitize taxonomy names. Slug format (no spaces, lowercase).</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_scheduled_sales.html">wc_scheduled_sales</a></td>
+	<td>Function which handles the start and end of scheduled sales via cron.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_set_customer_auth_cookie.html">wc_set_customer_auth_cookie</a></td>
+	<td>Login a customer (set auth cookie and set global user object)</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_set_term_order.html">wc_set_term_order</a></td>
+	<td>Set the sort order of a term</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_setcookie.html">wc_setcookie</a></td>
+	<td>Set a cookie - wrapper for setcookie using WP constants</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_setup_product_data.html">wc_setup_product_data</a></td>
+	<td>When the_post is called, put product data into a global.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_taxonomy_metadata_wpdbfix.html">wc_taxonomy_metadata_wpdbfix</a></td>
+	<td>WooCommerce Term/Order item Meta API - set table name</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_template_redirect.html">wc_template_redirect</a></td>
+	<td>Handle redirects before content is output - hooked into template_redirect so
+is_page works.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_terms_clauses.html">wc_terms_clauses</a></td>
+	<td>Add term ordering to get_terms</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_time_format.html">wc_time_format</a></td>
+	<td>WooCommerce Time Format - Allows to change time format for everything
+WooCommerce</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_timezone_string.html">wc_timezone_string</a></td>
+	<td>WooCommerce Timezone - helper to retrieve the timezone string for a site until a
+WP core method exists (see <a
+href="http://core.trac.wordpress.org/ticket/24730">http://core.trac.wordpress.org/ticket/24730</a>)</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_track_product_view.html">wc_track_product_view</a></td>
+	<td>Track product views</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_trim_zeros.html">wc_trim_zeros</a></td>
+	<td>Trim trailing zeros off prices.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_update_new_customer_past_orders.html">wc_update_new_customer_past_orders</a></td>
+	<td>Get past orders (by email) and update them</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_update_order_item_meta.html">wc_update_order_item_meta</a></td>
+	<td>WooCommerce Order Item Meta API - Update term meta</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_update_product_stock.html">wc_update_product_stock</a></td>
+	<td>Update a product's stock amount</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_update_product_stock_status.html">wc_update_product_stock_status</a></td>
+	<td>Update a product's stock status</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-wc_walk_category_dropdown_tree.html">wc_walk_category_dropdown_tree</a></td>
+	<td>Walk the Product Categories.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_add_order_item.html">woocommerce_add_order_item</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_add_order_item_meta.html">woocommerce_add_order_item_meta</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_add_to_cart_message.html">woocommerce_add_to_cart_message</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_admin_scripts.html">woocommerce_admin_scripts</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_array_overlay.html">woocommerce_array_overlay</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_breadcrumb.html">woocommerce_breadcrumb</a></td>
+	<td>Output the WooCommerce Breadcrumb</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_cancel_unpaid_orders.html">woocommerce_cancel_unpaid_orders</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_cart_totals_coupon_html.html">woocommerce_cart_totals_coupon_html</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_cart_totals_fee_html.html">woocommerce_cart_totals_fee_html</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_cart_totals_order_total_html.html">woocommerce_cart_totals_order_total_html</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_cart_totals_shipping_html.html">woocommerce_cart_totals_shipping_html</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_cart_totals_shipping_method_label.html">woocommerce_cart_totals_shipping_method_label</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_cart_totals_subtotal_html.html">woocommerce_cart_totals_subtotal_html</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_change_term_counts.html">woocommerce_change_term_counts</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_clean.html">woocommerce_clean</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_clear_cart_after_payment.html">woocommerce_clear_cart_after_payment</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_content.html">woocommerce_content</a></td>
+	<td>Output WooCommerce content.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_create_new_customer.html">woocommerce_create_new_customer</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_create_page.html">woocommerce_create_page</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_cross_sell_display.html">woocommerce_cross_sell_display</a></td>
+	<td>Output the cart cross-sells.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_customer_bought_product.html">woocommerce_customer_bought_product</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_customer_edit_account_url.html">woocommerce_customer_edit_account_url</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_customer_has_capability.html">woocommerce_customer_has_capability</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_date_format.html">woocommerce_date_format</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_datepicker_js.html">woocommerce_datepicker_js</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_default_product_tabs.html">woocommerce_default_product_tabs</a></td>
+	<td>Add default product tabs to product pages.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_delete_order_item.html">woocommerce_delete_order_item</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_delete_order_item_meta.html">woocommerce_delete_order_item_meta</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_demo_store.html">woocommerce_demo_store</a></td>
+	<td>Adds a demo store banner to the site if enabled</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_deprecated_filter_mapping.html">woocommerce_deprecated_filter_mapping</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_disable_admin_bar.html">woocommerce_disable_admin_bar</a></td>
+	<td>Customer functions (soft deprecated)</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_downloadable_file_permission.html">woocommerce_downloadable_file_permission</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_downloadable_product_permissions.html">woocommerce_downloadable_product_permissions</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_empty_cart.html">woocommerce_empty_cart</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_format_decimal.html">woocommerce_format_decimal</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_format_hex.html">woocommerce_format_hex</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_get_attachment_image_attributes.html">woocommerce_get_attachment_image_attributes</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_get_dimension.html">woocommerce_get_dimension</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_get_endpoint_url.html">woocommerce_get_endpoint_url</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_get_featured_product_ids.html">woocommerce_get_featured_product_ids</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_get_filename_from_url.html">woocommerce_get_filename_from_url</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_get_formatted_variation.html">woocommerce_get_formatted_variation</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_get_order_id_by_order_key.html">woocommerce_get_order_id_by_order_key</a></td>
+	<td>Order functions (soft deprecated)</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_get_order_item_meta.html">woocommerce_get_order_item_meta</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_get_page_id.html">woocommerce_get_page_id</a></td>
+	<td>Page functions (soft deprecated)</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_get_product_ids_on_sale.html">woocommerce_get_product_ids_on_sale</a></td>
+	<td>Product functions - soft deprecated</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_get_product_schema.html">woocommerce_get_product_schema</a></td>
+	<td>Get a products Schema</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_get_product_terms.html">woocommerce_get_product_terms</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_get_sidebar.html">woocommerce_get_sidebar</a></td>
+	<td>Get the shop sidebar template.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_get_template.html">woocommerce_get_template</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_get_template_part.html">woocommerce_get_template_part</a></td>
+	<td>Core functions (soft deprecated)</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_get_weight.html">woocommerce_get_weight</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_hex_darker.html">woocommerce_hex_darker</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_hex_lighter.html">woocommerce_hex_lighter</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_legacy_paypal_ipn.html">woocommerce_legacy_paypal_ipn</a></td>
+	<td>Handle IPN requests for the legacy paypal gateway by calling gateways manually
+if needed.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_let_to_num.html">woocommerce_let_to_num</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_light_or_dark.html">woocommerce_light_or_dark</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_list_pages.html">woocommerce_list_pages</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_load_persistent_cart.html">woocommerce_load_persistent_cart</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_locate_template.html">woocommerce_locate_template</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_lostpassword_url.html">woocommerce_lostpassword_url</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_mail.html">woocommerce_mail</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_mini_cart.html">woocommerce_mini_cart</a></td>
+	<td>Output the Mini-cart - used by cart widget</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_nav_menu_item_classes.html">woocommerce_nav_menu_item_classes</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_nav_menu_items.html">woocommerce_nav_menu_items</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_order_terms.html">woocommerce_order_terms</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_output_content_wrapper.html">woocommerce_output_content_wrapper</a></td>
+	<td>Output the start of the page wrapper.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_output_content_wrapper_end.html">woocommerce_output_content_wrapper_end</a></td>
+	<td>Output the end of the page wrapper.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_page_title.html">woocommerce_page_title</a></td>
+	<td>woocommerce_page_title function.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_paying_customer.html">woocommerce_paying_customer</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_placeholder_img.html">woocommerce_placeholder_img</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_placeholder_img_src.html">woocommerce_placeholder_img_src</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_prepare_attachment_for_js.html">woocommerce_prepare_attachment_for_js</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_price.html">woocommerce_price</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_processing_order_count.html">woocommerce_processing_order_count</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_product_dropdown_categories.html">woocommerce_product_dropdown_categories</a></td>
+	<td>Attribute functions - soft deprecated</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_product_loop_end.html">woocommerce_product_loop_end</a></td>
+	<td>Output the end of a product loop. By default this is a UL</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_product_loop_start.html">woocommerce_product_loop_start</a></td>
+	<td>Output the start of a product loop. By default this is a UL</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_product_post_type_link.html">woocommerce_product_post_type_link</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_protected_product_add_to_cart.html">woocommerce_protected_product_add_to_cart</a></td>
+	<td>Cart functions (soft deprecated)</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_quantity_input.html">woocommerce_quantity_input</a></td>
+	<td>Output the quantity input for add to cart forms.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_readfile_chunked.html">woocommerce_readfile_chunked</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_recount_after_stock_change.html">woocommerce_recount_after_stock_change</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_related_products.html">woocommerce_related_products</a></td>
+	<td>Output the related products.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_rgb_from_hex.html">woocommerce_rgb_from_hex</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_round_tax_total.html">woocommerce_round_tax_total</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_sanitize_taxonomy_name.html">woocommerce_sanitize_taxonomy_name</a></td>
+	<td>Formatting functions (soft deprecated)</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_scheduled_sales.html">woocommerce_scheduled_sales</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_set_customer_auth_cookie.html">woocommerce_set_customer_auth_cookie</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_set_term_order.html">woocommerce_set_term_order</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_show_messages.html">woocommerce_show_messages</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_sort_product_tabs.html">woocommerce_sort_product_tabs</a></td>
+	<td>Sort tabs by priority</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_taxonomy_metadata_wpdbfix.html">woocommerce_taxonomy_metadata_wpdbfix</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_terms_clauses.html">woocommerce_terms_clauses</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_time_format.html">woocommerce_time_format</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_timezone_string.html">woocommerce_timezone_string</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_tooltip_js.html">woocommerce_tooltip_js</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_track_product_view.html">woocommerce_track_product_view</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_trim_zeros.html">woocommerce_trim_zeros</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_update_new_customer_past_orders.html">woocommerce_update_new_customer_past_orders</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_update_order_item_meta.html">woocommerce_update_order_item_meta</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_upsell_display.html">woocommerce_upsell_display</a></td>
+	<td>Output product up sells.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_walk_category_dropdown_tree.html">woocommerce_walk_category_dropdown_tree</a></td>
+	<td></td>
+</tr>
+<tr>
+	<td class="name"><a href="function-woocommerce_weekend_area_js.html">woocommerce_weekend_area_js</a></td>
+	<td></td>
+</tr>
+</table>
+</div>
+	</div>
+
+	<div id="footer">
+		WooCommerce API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</body>
+</html>

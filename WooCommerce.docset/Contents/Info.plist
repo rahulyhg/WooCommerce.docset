@@ -13,7 +13,7 @@
         <string>woocommerce</string>
 
         <key>dashIndexFilePath</key>
-        <string>package-WooCommerce.html</string>
+        <string>index.html</string>
 
         <key>isJavaScriptEnabled</key>
         <true />

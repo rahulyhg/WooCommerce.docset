@@ -39,6 +39,7 @@ An even more succinct version is:
 
 ### Changelog
 
+* 2.1.10 — 04 June 2014
 * 2.1.9 — 27 May 2014
 * 2.1.8 — 30 April 2014
 
